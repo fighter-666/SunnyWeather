@@ -1,11 +1,9 @@
 package com.example.sunnyweather.logic
 
-import android.content.Context
-import kotlinx.coroutines.Dispatchers
+import android.util.Log
 import androidx.lifecycle.liveData
 import com.example.sunnyweather.logic.network.SunnyWeatherNetwork
-import kotlinx.coroutines.CoroutineScope
-import java.lang.Exception
+import kotlinx.coroutines.Dispatchers
 import kotlin.coroutines.CoroutineContext
 
 
@@ -13,10 +11,14 @@ object Repository {
     fun searchPlaces(query: String) = fire(Dispatchers.IO){
         val placeResponse = SunnyWeatherNetwork.searchPlaces(query)
         if(placeResponse.status == "ok") {
-            val plsces = placeResponse.place
-            Result.success(plsces)
+            val places = placeResponse.places
+            Log.d("Repository","success")
+            Result.success(places)
+
         }else{
+            Log.d("Repository","failure")
             Result.failure(RuntimeException("response status is ${placeResponse.status}"))
+
         }
     }
 

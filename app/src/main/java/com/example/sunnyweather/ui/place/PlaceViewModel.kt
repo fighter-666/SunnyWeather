@@ -16,9 +16,6 @@ class PlaceViewModel: ViewModel() {
         Repository.searchPlaces(query)
     }
 
-
-
-
     fun searchPlaces(query: String){
         searchLiveData.value = query
     }
