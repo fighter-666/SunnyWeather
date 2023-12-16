@@ -22,7 +22,7 @@ class PlaceFragment : Fragment() {
     private lateinit var adapter: PlaceAdapter
     private lateinit var binding: FragmentPlaceBinding
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentPlaceBinding.inflate(inflater, container, false)
         return binding.root
     }

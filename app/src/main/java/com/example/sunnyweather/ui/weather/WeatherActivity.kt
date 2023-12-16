@@ -1,13 +1,12 @@
 package com.example.sunnyweather.ui.weather
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.sunnyweather.R
@@ -15,8 +14,10 @@ import com.example.sunnyweather.databinding.ActivityWeatherBinding
 import com.example.sunnyweather.logic.model.Weather
 import com.example.sunnyweather.logic.model.getSky
 import com.gyf.immersionbar.ImmersionBar
+import com.scwang.smart.refresh.layout.listener.OnRefreshListener
 import java.text.SimpleDateFormat
 import java.util.Locale
+
 
 class WeatherActivity : AppCompatActivity() {
     private lateinit var binding: ActivityWeatherBinding
@@ -51,6 +52,15 @@ class WeatherActivity : AppCompatActivity() {
                 result.exceptionOrNull()?.printStackTrace()
             }
         })
+        refreshWeather()
+        binding.refreshLayout.setOnRefreshListener(OnRefreshListener { refreshlayout ->
+            refreshlayout.finishRefresh(2000 /*,false*/) //传入false表示刷新失败
+            refreshWeather()
+        })
+
+    }
+
+    fun refreshWeather(){
         viewModel.refreshWeather(viewModel.locationLng,viewModel.locationLat)
 
     }
