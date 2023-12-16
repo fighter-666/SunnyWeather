@@ -1,5 +1,6 @@
 package com.example.sunnyweather.ui.place
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sunnyweather.databinding.FragmentPlaceBinding
+import com.example.sunnyweather.ui.weather.WeatherActivity
+import com.gyf.immersionbar.ImmersionBar
 
 class PlaceFragment : Fragment() {
 
@@ -26,6 +29,12 @@ class PlaceFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //沉浸式
+        ImmersionBar.with(this).transparentStatusBar()  //透明状态栏，不写默认透明色
+            .titleBar(binding.actionBarLayout)    //解决状态栏和布局重叠问题，任选其一
+            .statusBarDarkFont(true)   //状态栏字体是深色，不写默认为亮色
+            .init()
+
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
         adapter = PlaceAdapter(this, viewModel.placeList)
         binding.recyclerView.adapter = adapter
@@ -57,6 +66,17 @@ class PlaceFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        if (viewModel.isPlaceSaved()){
+            val place = viewModel.getSavedPlace()
+            val intent = Intent(context,WeatherActivity::class.java).apply {
+                putExtra("location_lng",place.location.lng)
+                putExtra("location_lat",place.location.lat)
+                putExtra("place_name",place.name)
+            }
+            startActivity(intent)
+            activity?.finish()
+            return
+        }
 
     }
 

@@ -14,6 +14,7 @@ import com.example.sunnyweather.R
 import com.example.sunnyweather.databinding.ActivityWeatherBinding
 import com.example.sunnyweather.logic.model.Weather
 import com.example.sunnyweather.logic.model.getSky
+import com.gyf.immersionbar.ImmersionBar
 import java.text.SimpleDateFormat
 import java.util.Locale
 
@@ -27,6 +28,11 @@ class WeatherActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityWeatherBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        //沉浸式
+        ImmersionBar.with(this).transparentStatusBar()  //透明状态栏，不写默认透明色
+            .statusBarDarkFont(true)   //状态栏字体是深色，不写默认为亮色
+            .init()
+
         if (viewModel.locationLng.isEmpty()){
             viewModel.locationLng = intent.getStringExtra("location_lng") ?: ""
         }
@@ -81,23 +87,6 @@ class WeatherActivity : AppCompatActivity() {
             temperatureInfo.text = tempText
             binding.forecast.forecastLayout.addView(view)
         }
-/*        for (i in 0 until days) {
-            val skycon = daily.skycon[i]
-            val temperature = daily.temperature[i]
-            val view = LayoutInflater.from(this).inflate(R.layout.forecast_item, binding.forecast.forecastLayout, false)
-            val dateInfo = view.findViewById(R.id.dateInfo) as TextView
-            val skyIcon = view.findViewById(R.id.skyIcon) as ImageView
-            val skyInfo = view.findViewById(R.id.skyInfo) as TextView
-            val temperatureInfo = view.findViewById(R.id.temperatureInfo) as TextView
-            val simpleDateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
-            dateInfo.text = simpleDateFormat.format(skycon.date)
-            val sky = getSky(skycon.value)
-            skyIcon.setImageResource(sky.icon)
-            skyInfo.text = sky.info
-            val tempText = "${temperature.min.toInt()} ~ ${temperature.max.toInt()} ℃"
-            temperatureInfo.text = tempText
-            binding.forecast.forecastLayout.addView(view)
-        }*/
         //填充 life_index.xml 布局中的数据
         val lifeIndex = daily.lifeIndex
         binding.lifeIndex.run {
