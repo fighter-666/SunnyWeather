@@ -4,6 +4,10 @@ import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
 
+/*
+* 全局的context
+* 彩云天气的令牌值TOKEN
+* */
 class SunnyWeatherApplication : Application() {
 
     companion object {

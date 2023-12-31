@@ -1,36 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.scwang.smart.refresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/refreshLayout"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <com.scwang.smart.refresh.header.ClassicsHeader
+    android:layout_height="wrap_content">
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <ScrollView
-        android:id="@+id/weatherLayout"
+        android:layout_height="match_parent">
+
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ScrollView
+            android:id="@+id/weatherLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/now"
+                    layout="@layout/now" />
+
+                <include
+                    android:id="@+id/forecast"
+                    layout="@layout/forecast" />
+
+                <include
+                    android:id="@+id/life_index"
+                    layout="@layout/life_index" />
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="none"
-        android:overScrollMode="never"
-        android:visibility="invisible"
-        >
+        android:background="@color/colorPrimary"
+        android:layout_gravity="start"
+        android:clickable="true"
+        android:focusable="true">
 
-        <LinearLayout
+        <fragment
+            android:id="@+id/placeFragment"
+            android:name="com.example.sunnyweather.ui.place.PlaceFragment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp" />
+    </FrameLayout>
 
-            <include layout="@layout/now"
-                android:id="@+id/now"/>
+</androidx.drawerlayout.widget.DrawerLayout>
 
-            <include layout="@layout/forecast"
-                android:id="@+id/forecast"/>
-
-            <include layout="@layout/life_index"
-                android:id="@+id/life_index"/>
-        </LinearLayout>
-
-
-    </ScrollView>
-
-</com.scwang.smart.refresh.layout.SmartRefreshLayout>
