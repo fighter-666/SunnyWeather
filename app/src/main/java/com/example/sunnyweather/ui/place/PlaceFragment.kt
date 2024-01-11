@@ -19,6 +19,7 @@ import com.gyf.immersionbar.ImmersionBar
 
 class PlaceFragment : Fragment() {
 
+    //lazy 函数实现懒加载
     val viewModel by lazy { ViewModelProvider(this).get(PlaceViewModel::class.java) }
 
     private lateinit var adapter: PlaceAdapter
@@ -40,6 +41,7 @@ class PlaceFragment : Fragment() {
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
         adapter = PlaceAdapter(this, viewModel.placeList)
         binding.recyclerView.adapter = adapter
+        //监听搜索框内容的变化情况
         binding.searchPlaceEdit.addTextChangedListener { editable ->
             val content = editable.toString()
             if (content.isNotEmpty()) {
@@ -51,6 +53,7 @@ class PlaceFragment : Fragment() {
                 adapter.notifyDataSetChanged()
             }
         }
+        //对PlaceViewModel 中的placeLiveData 对象进行观察，当有数据变化时，就会回调到传入的Observer 接口中实现
         viewModel.placeLiveData.observe(requireActivity(), Observer{ result ->
             val places = result.getOrNull()
             if (places != null) {
