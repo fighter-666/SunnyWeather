@@ -38,6 +38,7 @@ class WeatherActivity : AppCompatActivity() {
             .statusBarDarkFont(true)   //状态栏字体是深色，不写默认为亮色
             .init()
 
+        //从Intent中获取数据,并赋值到viewModel中
         if (viewModel.locationLng.isEmpty()){
             viewModel.locationLng = intent.getStringExtra("location_lng") ?: ""
         }
@@ -47,6 +48,8 @@ class WeatherActivity : AppCompatActivity() {
         if (viewModel.placeName.isEmpty()){
             viewModel.placeName = intent.getStringExtra("place_name") ?: ""
         }
+        //对weatherLiveData 对象进行观察，当获取到服务器返回的天气数据时，就调用
+        //showWeatherInfo()方法来更新UI
         viewModel.weatherLiveData.observe(this, Observer { result->
             val weather = result.getOrNull()
             if (weather != null){
@@ -56,15 +59,19 @@ class WeatherActivity : AppCompatActivity() {
                 result.exceptionOrNull()?.printStackTrace()
             }
         })
+        //最后，调用 refreshWeather()方法来刷新天气信息
         refreshWeather()
-        binding.refreshLayout.setOnRefreshListener(OnRefreshListener { refreshlayout ->
+        
+        binding.refreshLayout.setOnRefreshListener{ refreshlayout ->
             refreshlayout.finishRefresh(2000 /*,false*/) //传入false表示刷新失败
             refreshWeather()
-        })
+        }
 
+        //调用DrawerLayout的openDrawer()方法来打开滑动菜单
         binding.now.navBtn.setOnClickListener {
             binding.drawerLayout.openDrawer(GravityCompat.START)
         }
+        //当滑动菜单被隐藏的时候，同时也要隐藏输入法
         binding.drawerLayout.addDrawerListener(object : DrawerLayout.DrawerListener{
             override fun onDrawerSlide(drawerView: View, slideOffset: Float) {
             }
@@ -73,6 +80,15 @@ class WeatherActivity : AppCompatActivity() {
             }
 
             override fun onDrawerClosed(drawerView: View) {
+                //调用getSystemService方法并传入Context.INPUT_METHOD_SERVICE作为参数，
+                // 获取到了一个InputMethodManager对象，并将其赋值给manager变量。
+                //
+                //然后，通过调用manager的hideSoftInputFromWindow方法来隐藏输入法键盘。该方法接收两个参数，
+                // 第一个参数是一个View对象的windowToken，它表示当前窗口的令牌，用于指定隐藏键盘的目标窗口。
+                // 在这里，drawerView是一个View对象，通过调用其getWindowToken方法获取到了窗口令牌。
+                //
+                //第二个参数是一个整型值，表示隐藏键盘的标志。在这里，传入的是InputMethodManager.HIDE_NOT_ALWAYS常量，
+                // 表示如果输入法窗口当前是显示的，则隐藏它；如果输入法当前是隐藏的，则不进行任何操作。
                 val manager = getSystemService(Context.INPUT_METHOD_SERVICE)
                         as InputMethodManager
                 manager.hideSoftInputFromWindow(drawerView.windowToken,InputMethodManager.HIDE_NOT_ALWAYS)
@@ -88,20 +104,22 @@ class WeatherActivity : AppCompatActivity() {
 
     fun refreshWeather(){
         viewModel.refreshWeather(viewModel.locationLng,viewModel.locationLat)
-
     }
 
     private fun showWeatherInfo(weather: Weather) {
-        binding.now.placeName.text = viewModel.placeName
         val realtime = weather.realtime
         val daily = weather.daily
-        //填充now.xml 布局中的数据
-        val currentTempText = "${realtime.temperature.toInt()}℃"
-        binding.now.currentTemp.text = currentTempText
-        binding.now.currentSky.text = getSky(realtime.skycon).info
-        val currentPM25Text = "空气指数 ${realtime.airQuality.aqi.chn.toInt()}"
-        binding.now.currentAQI.text = currentPM25Text
-        binding.now.nowLayout.setBackgroundResource(getSky(realtime.skycon).bg)
+        binding.now.run {
+            placeName.text = viewModel.placeName
+            //填充now.xml 布局中的数据
+            val currentTempText = "${realtime.temperature.toInt()}℃"
+            currentTemp.text = currentTempText
+            currentSky.text = getSky(realtime.skycon).info
+            val currentPM25Text = "空气指数 ${realtime.airQuality.aqi.chn.toInt()}"
+            currentAQI.text = currentPM25Text
+            nowLayout.setBackgroundResource(getSky(realtime.skycon).bg)
+        }
+
         //填充 forecast.xml 布局中的数据
         binding.forecast.forecastLayout.removeAllViews()
         val days = daily.skycon.size

@@ -28,6 +28,7 @@ class PlaceAdapter(private val fragment: PlaceFragment, private val placeList: L
             val position = holder.adapterPosition
             val place = placeList[position]
             val activity = fragment.activity
+            //判断是否在 WeatherActivity中，那么就关闭滑动菜单，给WeatherActivity重新赋值，并刷新城市天气信息
             if (activity is WeatherActivity) {
                 val drawerLayout = activity.findViewById<DrawerLayout>(R.id.drawerLayout)
                 drawerLayout.closeDrawers()

@@ -2,6 +2,7 @@ package com.example.sunnyweather.logic
 
 import android.util.Log
 import androidx.lifecycle.liveData
+import com.example.sunnyweather.logic.dao.PlaceDao
 import com.example.sunnyweather.logic.model.Place
 import com.example.sunnyweather.logic.model.Weather
 import com.example.sunnyweather.logic.network.SunnyWeatherNetwork
@@ -31,6 +32,11 @@ object Repository {
 
     fun refreshWeather(lng: String, lat: String) = fire(Dispatchers.IO) {
         coroutineScope {
+            /*
+            * 只需要分别在两个 async 函数中发起网络请求，然后再分别调用他们的await()方法，
+            * 就可以保证只有在两个网络请求都成功响应后，才会进一步执行程序
+            *
+            * 另外由于async 函数必须在协程作用域内才能调用，所以这里使用 coroutineScope 函数创建一个协程作用域*/
             val deferredRealtime = async {
                 SunnyWeatherNetwork.getRealtimeWeather(lng, lat)
             }

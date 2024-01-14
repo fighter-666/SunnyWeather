@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <!--第一个子控件用于显示主屏幕中的内容-->
     <com.scwang.smart.refresh.layout.SmartRefreshLayout
         android:id="@+id/refreshLayout"
         android:layout_width="match_parent"
@@ -44,6 +45,7 @@
 
     </com.scwang.smart.refresh.layout.SmartRefreshLayout>
 
+    <!--第二个子控件用于显示滑动菜单的内容-->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -57,7 +59,7 @@
             android:name="com.example.sunnyweather.ui.place.PlaceFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="20dp" />
+            />
     </FrameLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>
