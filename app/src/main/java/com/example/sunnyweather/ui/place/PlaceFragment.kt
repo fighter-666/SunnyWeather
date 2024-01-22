@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sunnyweather.MainActivity
 import com.example.sunnyweather.databinding.FragmentPlaceBinding
+import com.example.sunnyweather.ui.fragment.ComponentsFragment
 import com.example.sunnyweather.ui.weather.WeatherActivity
 import com.gyf.immersionbar.ImmersionBar
 
@@ -72,7 +73,7 @@ class PlaceFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         //判断当前的PlaceFragment 是MainActivity，并且之前已存储，把数据解析成Place对象
-        if (activity is MainActivity && viewModel.isPlaceSaved()){
+        if (activity is ComponentsFragment && viewModel.isPlaceSaved()){
             val place = viewModel.getSavedPlace()
             val intent = Intent(context,WeatherActivity::class.java).apply {
                 putExtra("location_lng",place.location.lng)
