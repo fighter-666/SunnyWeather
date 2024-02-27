@@ -72,6 +72,8 @@ dependencies {
         implementation  ("io.github.scwang90:refresh-layout-kernel:2.1.0")      //核心必须依赖   // 下拉刷新
         implementation  ("io.github.scwang90:refresh-header-classics:2.1.0")    //经典刷新头
 
+        implementation  ("com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50")
+
         implementation(platform("androidx.compose:compose-bom:2023.03.00"))
         implementation("androidx.compose.ui:ui")
         implementation("androidx.compose.ui:ui-graphics")
@@ -80,7 +82,24 @@ dependencies {
         implementation("androidx.appcompat:appcompat:1.6.1")
         implementation("androidx.annotation:annotation:1.7.0")
         implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-        testImplementation("junit:junit:4.13.2")
+    implementation("androidx.databinding:databinding-runtime:8.2.2")
+
+    //room
+    implementation("androidx.room:room-runtime:2.4.2")
+    implementation("androidx.room:room-ktx:2.4.2")
+
+    //glide
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
+    implementation ("androidx.core:core-ktx:+")
+    implementation("androidx.wear.compose:compose-foundation:1.3.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
+
+    //ResponseBaseData里面的Element
+    implementation ("org.simpleframework:simple-xml:2.7.1")
+
+
+
+    testImplementation("junit:junit:4.13.2")
         androidTestImplementation("androidx.test.ext:junit:1.1.5")
         androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
         androidTestImplementation(platform("androidx.compose:compose-bom:2023.03.00"))

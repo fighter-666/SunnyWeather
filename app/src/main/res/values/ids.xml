@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item type="id" name="decode"/>
+    <item type="id" name="decode_failed"/>
+    <item type="id" name="decode_succeeded"/>
+    <item type="id" name="launch_product_query"/>
+    <item type="id" name="quit"/>
+    <item type="id" name="restart_preview"/>
+    <item type="id" name="return_scan_result"/>
+    <item type="id" name="charge_decode"/>
+    <item type="id" name="ivHead"/>
+    <item type="id" name="tvTitle"/>
+    <item type="id" name="twoLevelMsgTitle"/>
+    <item type="id" name="dailyUsageCardView"/>
+    <item type="id" name="locationServiceView"/>
+    <item type="id" name="networkMeasurement"/>
+    <item type="id" name="familyCardView"/>
+    <item type="id" name="broadBandCardView"/>
+    <item type="id" name="watchStreamCardView"/>
+    <item type="id" name="privacySentinelView"/>
+    <item type="id" name="oneClickDiagnosisView"/>
+    <item type="id" name="baseStationConnectCardView"/>
+    <item type="id" name="homePagePhoneCardView"/>
+    <item name="selectPackageBottomBar" type="id" />
+    <item name="itemHasMargin" type="id" />
+
+    <item name="model_key" type="id" />
+
+    <item name="banner_data_key" type="id"/>
+    <item name="banner_pos_key" type="id"/>
+    <item name="tag_view_binding" type="id" />
+</resources>

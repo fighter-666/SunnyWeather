@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlTitleBar"
+    android:layout_width="match_parent"
+    android:layout_height="51dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17.5dp"
+        android:maxLines="1"
+        android:text="消息"
+        android:textColor="@color/black_121212"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvIsRead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:maxLines="1"
+        android:textColor="@color/black_111111"
+        android:textSize="13dp"
+        android:visibility="gone"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvTitle"
+        app:layout_constraintLeft_toRightOf="@id/tvTitle"
+        tools:text="(123)" />
+
+    <TextView
+        android:id="@+id/tvClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:drawableLeft="@drawable/ic_message_clear"
+        android:drawablePadding="4.5dp"
+        android:text="清除未读"
+        android:textColor="@color/gray_666666"
+        android:textSize="14dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvTitle"
+        app:layout_constraintLeft_toRightOf="@id/tvIsRead" />
+
+    <ImageView
+        android:id="@+id/ivCusButton2"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintRight_toLeftOf="@id/ivCusButton1"
+        app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+
+    <ImageView
+        android:id="@+id/ivCusButton1"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintRight_toLeftOf="@id/ivMessageSetting"
+        app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+    <ImageView
+        android:id="@+id/ivMessageSetting"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="8dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_message_setting"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
