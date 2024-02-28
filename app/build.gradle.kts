@@ -72,8 +72,6 @@ dependencies {
         implementation  ("io.github.scwang90:refresh-layout-kernel:2.1.0")      //核心必须依赖   // 下拉刷新
         implementation  ("io.github.scwang90:refresh-header-classics:2.1.0")    //经典刷新头
 
-        implementation  ("com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50")
-
         implementation(platform("androidx.compose:compose-bom:2023.03.00"))
         implementation("androidx.compose.ui:ui")
         implementation("androidx.compose.ui:ui-graphics")
