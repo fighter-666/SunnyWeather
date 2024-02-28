@@ -1,0 +1,1117 @@
+{
+    "serviceMessageClassifyList": [
+      {
+        "title": "服务提醒",
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/17/111705462484580748.png",
+        "linkType": "61",
+        "link": "https://www.bilibili.com",
+        "oneLevelMsgId": "5",
+        "redDotMsgNum": ""
+      },
+      {
+        "title": "订单物流",
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/17/111705462517870963.png",
+        "linkType": "61",
+        "link": "https://www.bilibili.com",
+        "oneLevelMsgId": "6",
+        "redDotMsgNum": ""
+      },
+      {
+        "title": "实用功能",
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/17/111705462527603233.png",
+        "linkType": "61",
+        "link": "https://www.bilibili.com",
+        "oneLevelMsgId": "7",
+        "redDotMsgNum": ""
+      },
+      {
+        "title": "IM互动",
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/13/111705133641958364.png",
+        "linkType": "61",
+        "link": "https://www.bilibili.com",
+        "oneLevelMsgId": "8",
+        "redDotMsgNum": "0"
+      }
+    ],
+    "serviceMessageList": [
+      {
+        "title": "服务提醒",
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/17/111705462484580748.png",
+        "subtitle": "333",
+        "showTime": "18:00",
+        "link": "https://www.bilibili.com",
+        "linkType": "2"
+      },
+      {
+        "title": "服务提醒",
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/17/111705462484580748.png",
+        "subtitle": "333",
+        "showTime": "18:00",
+        "link": "https://www.bilibili.com",
+        "linkType": "2"
+      },
+      {
+        "title": "服务提醒",
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/17/111705462484580748.png",
+        "subtitle": "333",
+        "showTime": "18:00",
+        "link": "https://www.bilibili.com",
+        "linkType": "2"
+      },
+      {
+        "title": "服务提醒",
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/17/111705462484580748.png",
+        "subtitle": "333",
+        "showTime": "18:00",
+        "link": "https://www.bilibili.com",
+        "linkType": "2"
+      }
+    ],
+    "marketingMessageList": [
+      {
+        "title": "视频彩铃",
+        "subtitle": "【元宵大礼】来电庆团圆，开盲盒赢话费、京东卡福利！",
+        "iconUrl": "https://w.189.cn/bigdata/2024/2/4/111707032391390979.png",
+        "showTime": "02/22",
+        "redDotMsgNum": "",
+        "msgType": "1",
+        "linkType": "",
+        "link": "",
+        "provinceCode": "",
+        "sceneId": "hg_xx_qlxx##15735##default##105782800001##010001002000##3##N##104705800001##215##N##N##1057828",
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "215",
+        "threeLevelMsgId": "65d5dcde7b125f20cba02d6b",
+        "recommender": "cc-010001002000.rmc-hg_xx_qlxx.fd-3.od-215.eoc-105782800001",
+        "order": "0",
+        "isOutOfTime": "0"
+      },
+      {
+        "title": "政企资讯",
+        "subtitle": "燃气卫士丨点击预约，防患于未“燃”",
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/24/111706063445590987.png",
+        "showTime": "02/04",
+        "redDotMsgNum": "",
+        "msgType": "1",
+        "linkType": "",
+        "link": "",
+        "provinceCode": "",
+        "sceneId": "hg_xx_qlxx##15735##default##104792400001##010001002000##3##N##104705800001##212##N##N##1047924",
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "212",
+        "threeLevelMsgId": "65c03f5a733bf64badb1dbc3",
+        "recommender": "cc-010001002000.rmc-hg_xx_qlxx.fd-3.od-212.eoc-104792400001",
+        "order": "1",
+        "isOutOfTime": "1"
+      },
+      {
+        "title": "聚惠套餐",
+        "subtitle": "跨省办套餐",
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/24/111706063370615203.png",
+        "showTime": "01/24",
+        "redDotMsgNum": "",
+        "msgType": "1",
+        "linkType": "",
+        "link": "",
+        "provinceCode": "",
+        "sceneId": "hg_xx_qlxx##15735##default##104801600001##010001002000##3##N##104705800001##210##N##N##1048016",
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "210",
+        "threeLevelMsgId": "65b86967733bf64badc1b3be",
+        "recommender": "cc-010001002000.rmc-hg_xx_qlxx.fd-3.od-210.eoc-104801600001",
+        "order": "2",
+        "isOutOfTime": "1"
+      },
+      {
+        "title": "宽带助手",
+        "subtitle": "智慧家庭",
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/24/111706063299351686.png",
+        "showTime": "14:52",
+        "redDotMsgNum": "",
+        "msgType": "1",
+        "linkType": "",
+        "link": "",
+        "provinceCode": "",
+        "sceneId": "hg_xx_qlxx##15735##default##104818200001##010001002000##3##N##104705800001##209##N##N##1048182",
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "209",
+        "threeLevelMsgId": "65ded8f3f9dca00d2752f700",
+        "recommender": "cc-010001002000.rmc-hg_xx_qlxx.fd-3.od-209.eoc-104818200001",
+        "order": "3",
+        "isOutOfTime": "0"
+      },
+      {
+        "title": "电信星播客",
+        "subtitle": "【火爆新片】《金手指》刘德华梁朝伟双雄对决",
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/24/111706063255980733.png",
+        "showTime": "08:00",
+        "redDotMsgNum": "",
+        "msgType": "1",
+        "linkType": "",
+        "link": "",
+        "provinceCode": "",
+        "sceneId": "hg_xx_qlxx##15735##default##104816900001##010001002000##3##N##104705800001##207##N##N##1048169",
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "207",
+        "threeLevelMsgId": "65d71e73965f6e0c79fce6e2",
+        "recommender": "cc-010001002000.rmc-hg_xx_qlxx.fd-3.od-207.eoc-104816900001",
+        "order": "4",
+        "isOutOfTime": "0"
+      },
+      {
+        "title": "翼支付专区",
+        "subtitle": "38狂欢节，领至高100元券包，更多爆款3.8折起~",
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/24/111706063182099924.png",
+        "showTime": "09:00",
+        "redDotMsgNum": "",
+        "msgType": "1",
+        "linkType": "",
+        "link": "",
+        "provinceCode": "",
+        "sceneId": "hg_xx_qlxx##15735##default##104811300001##010001002000##3##N##104705800001##206##N##N##1048113",
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "206",
+        "threeLevelMsgId": "65dc55a1bf4388315c3eb7b7",
+        "recommender": "cc-010001002000.rmc-hg_xx_qlxx.fd-3.od-206.eoc-104811300001",
+        "order": "5",
+        "isOutOfTime": "0"
+      },
+      {
+        "title": "闲置好物交易市场",
+        "subtitle": "【二手99新】华为Mate 50 8G+256G 曜金黑(昆仑玻璃)  直屏旗舰 北斗卫星消息",
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/24/111706063113911903.png",
+        "showTime": "08:00",
+        "redDotMsgNum": "",
+        "msgType": "1",
+        "linkType": "",
+        "link": "",
+        "provinceCode": "",
+        "sceneId": "hg_xx_qlxx##15735##default##104800600001##010001002000##3##N##104705800001##205##N##N##1048006",
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "205",
+        "threeLevelMsgId": "65dd560380259d7573c548d3",
+        "recommender": "cc-010001002000.rmc-hg_xx_qlxx.fd-3.od-205.eoc-104800600001",
+        "order": "6",
+        "isOutOfTime": "0"
+      },
+      {
+        "title": "优惠购机",
+        "subtitle": "周三秒杀！10点开抢！1元抢数据线！",
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/24/111706063089175829.png",
+        "showTime": "00:00",
+        "redDotMsgNum": "",
+        "msgType": "1",
+        "linkType": "",
+        "link": "",
+        "provinceCode": "",
+        "sceneId": "hg_xx_qlxx##15735##default##104800400001##010001002000##3##N##104705800001##204##N##N##1048004",
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "204",
+        "threeLevelMsgId": "65dd8dca8c067627ccacc3e7",
+        "recommender": "cc-010001002000.rmc-hg_xx_qlxx.fd-3.od-204.eoc-104800400001",
+        "order": "7",
+        "isOutOfTime": "0"
+      },
+      {
+        "title": "热门推荐",
+        "subtitle": "不换号、一卡畅游天地",
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/24/111706062926829455.png",
+        "showTime": "01/22",
+        "redDotMsgNum": "",
+        "msgType": "1",
+        "linkType": "",
+        "link": "",
+        "provinceCode": "",
+        "sceneId": "hg_xx_qlxx##15735##default##104696300001##010001002000##3##N##104705800001##203##N##N##1046963",
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "203",
+        "threeLevelMsgId": "65b85ebc3bdf830993676b20",
+        "recommender": "cc-010001002000.rmc-hg_xx_qlxx.fd-3.od-203.eoc-104696300001",
+        "order": "8",
+        "isOutOfTime": "1"
+      },
+      {
+        "title": "金豆乐园",
+        "subtitle": "新春好礼，万事兴隆，金豆兑春节好运壁纸",
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/24/111706062872212146.png",
+        "showTime": "01/30",
+        "redDotMsgNum": "",
+        "msgType": "1",
+        "linkType": "",
+        "link": "",
+        "provinceCode": "",
+        "sceneId": "hg_xx_qlxx##15735##default##104696200001##010001002000##3##N##104705800001##202##N##N##1046962",
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "202",
+        "threeLevelMsgId": "65b8a1ea3bdf8309937868f7",
+        "recommender": "cc-010001002000.rmc-hg_xx_qlxx.fd-3.od-202.eoc-104696200001",
+        "order": "9",
+        "isOutOfTime": "1"
+      },
+      {
+        "title": "福利中心",
+        "subtitle": "开年福利，50元话费限时限量！",
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/24/111706062835349518.png",
+        "showTime": "02/18",
+        "redDotMsgNum": "",
+        "msgType": "1",
+        "linkType": "",
+        "link": "",
+        "provinceCode": "",
+        "sceneId": "hg_xx_qlxx##15735##default##104676600001##010001002000##3##N##104705800001##201##N##N##1046766",
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "201",
+        "threeLevelMsgId": "65bc495070116765caf32503",
+        "recommender": "cc-010001002000.rmc-hg_xx_qlxx.fd-3.od-201.eoc-104676600001",
+        "order": "10",
+        "isOutOfTime": "1"
+      }
+    ],
+    "marketingMessageTip": {
+      "title": "1周前的消息，提醒将弱化",
+      "iconUrl": ""
+    },
+    "messageIdInfos": [
+      {
+        "oneLevelMsgId": "2",
+        "twoLevelMsgId": "11",
+        "threeLevelMsgId": "0B3468F321424D6EE063B81410AC28F5",
+        "failureTime": "1711728000000"
+      },
+      {
+        "oneLevelMsgId": "1",
+        "twoLevelMsgId": "19",
+        "threeLevelMsgId": "11DC74686D7C23A1E063B81410AC5ED6",
+        "failureTime": "1711853661000"
+      },
+      {
+        "oneLevelMsgId": "1",
+        "twoLevelMsgId": "2",
+        "threeLevelMsgId": "1010A5B11E9933D7E063B41410AC9D5A",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "1",
+        "twoLevelMsgId": "2",
+        "threeLevelMsgId": "1010A4F4B8E648F2E063B81410AC22C5",
+        "failureTime": "1709136000000"
+      },
+      {
+        "oneLevelMsgId": "1",
+        "twoLevelMsgId": "2",
+        "threeLevelMsgId": "102734069FD06F47E063B81410ACE465",
+        "failureTime": "1709136000000"
+      },
+      {
+        "oneLevelMsgId": "1",
+        "twoLevelMsgId": "2",
+        "threeLevelMsgId": "108636570B494405E063B61410ACED45",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "1",
+        "twoLevelMsgId": "2",
+        "threeLevelMsgId": "108636570B4A4405E063B61410ACED45",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "1",
+        "twoLevelMsgId": "2",
+        "threeLevelMsgId": "1086263CA1274A40E063B61410AC529D",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "1",
+        "twoLevelMsgId": "2",
+        "threeLevelMsgId": "1086198D6A952E5BE063B81410AC1D79",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "1",
+        "twoLevelMsgId": "2",
+        "threeLevelMsgId": "1086198D6A962E5BE063B81410AC1D79",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "1",
+        "twoLevelMsgId": "2",
+        "threeLevelMsgId": "1086261C33FF0F28E063B81410AC0261",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "1",
+        "twoLevelMsgId": "2",
+        "threeLevelMsgId": "1086198D6A992E5BE063B81410AC1D79",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "1",
+        "twoLevelMsgId": "2",
+        "threeLevelMsgId": "1086261C34000F28E063B81410AC0261",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "1",
+        "twoLevelMsgId": "2",
+        "threeLevelMsgId": "1086261C34080F28E063B81410AC0261",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "1",
+        "twoLevelMsgId": "2",
+        "threeLevelMsgId": "1086395D5328740EE063B41410ACF22C",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "201",
+        "threeLevelMsgId": "65b8dc674019782ee94f56f4",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "201",
+        "threeLevelMsgId": "65b8dc6a733bf64badc64688",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "201",
+        "threeLevelMsgId": "65bc495070116765caf32503",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "201",
+        "threeLevelMsgId": "65bc49585c3b6600e06f094a",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "201",
+        "threeLevelMsgId": "65bce68470116765ca0a8d89",
+        "failureTime": "1711900799000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "201",
+        "threeLevelMsgId": "65c04493733bf64badb330e7",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "202",
+        "threeLevelMsgId": "65b8a1ea3bdf8309937868f7",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "204",
+        "threeLevelMsgId": "65c05243c532424deb5a5324",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "204",
+        "threeLevelMsgId": "65c05244c532424deb5a5345",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "204",
+        "threeLevelMsgId": "65c0524648ed933fda7315bc",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "204",
+        "threeLevelMsgId": "65c0524706311f04eeeab25b",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "204",
+        "threeLevelMsgId": "65c052485c3b6600e01b441b",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "204",
+        "threeLevelMsgId": "65c0524b5c3b6600e01b4479",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "204",
+        "threeLevelMsgId": "65c0524c4019782ee9d3298c",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "204",
+        "threeLevelMsgId": "65c05251733bf64badb622a4",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "204",
+        "threeLevelMsgId": "65c0525a70116765ca48d575",
+        "failureTime": "1709654399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "204",
+        "threeLevelMsgId": "65c0525d06311f04eeeab59a",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "204",
+        "threeLevelMsgId": "65c0ab9e733bf64badc1e6f9",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "204",
+        "threeLevelMsgId": "65c1b6eb737b681509dfd8dc",
+        "failureTime": "1709740799000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "204",
+        "threeLevelMsgId": "65d2f4d6e0d79945e7d8935d",
+        "failureTime": "1709654399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "204",
+        "threeLevelMsgId": "65d40e10f9dca00d27d12aec",
+        "failureTime": "1710691200000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "204",
+        "threeLevelMsgId": "65d6f03d149f9b372e35ae9d",
+        "failureTime": "1709308799000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "204",
+        "threeLevelMsgId": "65d6f39fe0d79945e71cf54a",
+        "failureTime": "1709308799000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "204",
+        "threeLevelMsgId": "65d6f3a0e0d79945e71cf54f",
+        "failureTime": "1710863999000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "204",
+        "threeLevelMsgId": "65d6f70bbf4388315c0ec176",
+        "failureTime": "1711123200000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "204",
+        "threeLevelMsgId": "65d6f70e8c067627cc0ea68e",
+        "failureTime": "1711123200000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "204",
+        "threeLevelMsgId": "65dd8128965f6e0c796db9c3",
+        "failureTime": "1710172799000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "204",
+        "threeLevelMsgId": "65dd8dca8c067627ccacc3e7",
+        "failureTime": "1709135999000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "205",
+        "threeLevelMsgId": "65bb355fc532424deb04d775",
+        "failureTime": "1710863999000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "205",
+        "threeLevelMsgId": "65d7fe578c067627cc2042f1",
+        "failureTime": "1709827199000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "205",
+        "threeLevelMsgId": "65dd560380259d7573c548d3",
+        "failureTime": "1709395199000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "205",
+        "threeLevelMsgId": "65dd5610965f6e0c796a3294",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "205",
+        "threeLevelMsgId": "65dd9223aca21b55716ac734",
+        "failureTime": "1711209599000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "206",
+        "threeLevelMsgId": "65c07e53c532424deb602a71",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "206",
+        "threeLevelMsgId": "65dc55a1bf4388315c3eb7b7",
+        "failureTime": "1709913599000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "207",
+        "threeLevelMsgId": "65bcae1e733bf64bad36ce08",
+        "failureTime": "1714665599000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "207",
+        "threeLevelMsgId": "65bcae2770116765ca03e394",
+        "failureTime": "1714665599000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "207",
+        "threeLevelMsgId": "65bcc06b4019782ee93a3469",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "207",
+        "threeLevelMsgId": "65bf35034019782ee9b4dff0",
+        "failureTime": "1714579199000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "207",
+        "threeLevelMsgId": "65bf35160782dd3bff884681",
+        "failureTime": "1714579199000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "207",
+        "threeLevelMsgId": "65bf351770116765ca391e66",
+        "failureTime": "1714579199000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "207",
+        "threeLevelMsgId": "65bf35185c3b6600e0fea5a9",
+        "failureTime": "1714579199000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "207",
+        "threeLevelMsgId": "65c0d6df737b681509da7f40",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "207",
+        "threeLevelMsgId": "65c0d70348ed933fda7d1a9a",
+        "failureTime": "1709740799000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "207",
+        "threeLevelMsgId": "65c45986c532424debb27fae",
+        "failureTime": "1715183999000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "207",
+        "threeLevelMsgId": "65c45999737b681509f07275",
+        "failureTime": "1715183999000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "207",
+        "threeLevelMsgId": "65c459be737b681509f073b0",
+        "failureTime": "1715183999000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "207",
+        "threeLevelMsgId": "65c459c00782dd3bffc85c3c",
+        "failureTime": "1715183999000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "207",
+        "threeLevelMsgId": "65c4c25470116765ca99dcad",
+        "failureTime": "1715183999000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "207",
+        "threeLevelMsgId": "65d1b3de06311f04ee59d6a2",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "207",
+        "threeLevelMsgId": "65d5dcd27b125f20cba02c70",
+        "failureTime": "1710777599000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "207",
+        "threeLevelMsgId": "65d71e6c149f9b372e37de94",
+        "failureTime": "1716566399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "207",
+        "threeLevelMsgId": "65d71e717b125f20cbad6e07",
+        "failureTime": "1716566399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "207",
+        "threeLevelMsgId": "65d71e73965f6e0c79fce6e2",
+        "failureTime": "1716566399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "209",
+        "threeLevelMsgId": "65d80cdf7b125f20cbb51e14",
+        "failureTime": "1716566399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "209",
+        "threeLevelMsgId": "65d83b66e0d79945e72b5f40",
+        "failureTime": "1716566399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "209",
+        "threeLevelMsgId": "65ded8f3f9dca00d2752f700",
+        "failureTime": "1716566399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "212",
+        "threeLevelMsgId": "65c03f5a733bf64badb1dbc3",
+        "failureTime": "1714751999000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "215",
+        "threeLevelMsgId": "65bf52d048ed933fda649d84",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "215",
+        "threeLevelMsgId": "65c03f570782dd3bff99a4d1",
+        "failureTime": "1709654399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "215",
+        "threeLevelMsgId": "65c03f5b0782dd3bff99a550",
+        "failureTime": "1709654399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "215",
+        "threeLevelMsgId": "65c03f5fc532424deb585da7",
+        "failureTime": "1709654399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "215",
+        "threeLevelMsgId": "65c046d9c532424deb59475b",
+        "failureTime": "1710518399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "215",
+        "threeLevelMsgId": "65c046da48ed933fda71308d",
+        "failureTime": "1710518399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "215",
+        "threeLevelMsgId": "65c0d6d548ed933fda7d17cc",
+        "failureTime": "1709740799000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "215",
+        "threeLevelMsgId": "65c2e42cc532424deb9d85e1",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "215",
+        "threeLevelMsgId": "65d1b3e8737b681509387360",
+        "failureTime": "1709222399000"
+      },
+      {
+        "oneLevelMsgId": "9",
+        "twoLevelMsgId": "215",
+        "threeLevelMsgId": "65d5dcde7b125f20cba02d6b",
+        "failureTime": "1710777599000"
+      },
+      {
+        "oneLevelMsgId": "1",
+        "twoLevelMsgId": "23",
+        "threeLevelMsgId": "1012EE0F146964B3E063B41410AC3960",
+        "failureTime": "1709222400000"
+      },
+      {
+        "oneLevelMsgId": "1",
+        "twoLevelMsgId": "23",
+        "threeLevelMsgId": "0DF395658A2B6CF5E063B61410AC8FBA",
+        "failureTime": "1709222400000"
+      },
+      {
+        "oneLevelMsgId": "1",
+        "twoLevelMsgId": "23",
+        "threeLevelMsgId": "0B5B7DA2FF6B46F7E063B61410AC236D",
+        "failureTime": "1709222400000"
+      },
+      {
+        "oneLevelMsgId": "1",
+        "twoLevelMsgId": "23",
+        "threeLevelMsgId": "1026C2B4F0B6586BE063B61410AC7D5E",
+        "failureTime": "1711900800000"
+      },
+      {
+        "oneLevelMsgId": "1",
+        "twoLevelMsgId": "23",
+        "threeLevelMsgId": "108CC403992C7702E063B41410ACC598",
+        "failureTime": "1709222400000"
+      },
+      {
+        "oneLevelMsgId": "2",
+        "twoLevelMsgId": "33",
+        "threeLevelMsgId": "106359F696A07D1EE063B61410ACDB98",
+        "failureTime": "1709222400000"
+      },
+      {
+        "oneLevelMsgId": "2",
+        "twoLevelMsgId": "33",
+        "threeLevelMsgId": "10A01D12CDDA5695E063B81410AC41E4",
+        "failureTime": "1709222400000"
+      },
+      {
+        "oneLevelMsgId": "2",
+        "twoLevelMsgId": "4",
+        "threeLevelMsgId": "0FC24AC195DF09D1E063B81410AC5742",
+        "failureTime": "1711296000000"
+      },
+      {
+        "oneLevelMsgId": "2",
+        "twoLevelMsgId": "4",
+        "threeLevelMsgId": "0FD480A174C620EFE063B41410AC553C",
+        "failureTime": "1711555200000"
+      },
+      {
+        "oneLevelMsgId": "2",
+        "twoLevelMsgId": "4",
+        "threeLevelMsgId": "0FD482FA706A4D36E063B61410AC54E9",
+        "failureTime": "1711555200000"
+      },
+      {
+        "oneLevelMsgId": "2",
+        "twoLevelMsgId": "4",
+        "threeLevelMsgId": "0FD483BF1569061BE063B81410AC5624",
+        "failureTime": "1711555200000"
+      },
+      {
+        "oneLevelMsgId": "2",
+        "twoLevelMsgId": "4",
+        "threeLevelMsgId": "0FD47F3F17E90340E063B61410ACEFA4",
+        "failureTime": "1711555200000"
+      },
+      {
+        "oneLevelMsgId": "2",
+        "twoLevelMsgId": "4",
+        "threeLevelMsgId": "10632C8D4A7D5CEAE063B81410ACB264",
+        "failureTime": "1712073600000"
+      },
+      {
+        "oneLevelMsgId": "2",
+        "twoLevelMsgId": "4",
+        "threeLevelMsgId": "10632868E77427A9E063B41410AC4D74",
+        "failureTime": "1712073600000"
+      },
+      {
+        "oneLevelMsgId": "2",
+        "twoLevelMsgId": "4",
+        "threeLevelMsgId": "106368AEAC34327BE063B81410AC9A59",
+        "failureTime": "1709222400000"
+      },
+      {
+        "oneLevelMsgId": "2",
+        "twoLevelMsgId": "4",
+        "threeLevelMsgId": "10867DD6FEDB0808E063B61410AC05DF",
+        "failureTime": "1711987200000"
+      },
+      {
+        "oneLevelMsgId": "2",
+        "twoLevelMsgId": "4",
+        "threeLevelMsgId": "108685F9B14547F6E063B81410ACE520",
+        "failureTime": "1711987200000"
+      },
+      {
+        "oneLevelMsgId": "2",
+        "twoLevelMsgId": "4",
+        "threeLevelMsgId": "1086805747603393E063B41410AC73C2",
+        "failureTime": "1711987200000"
+      },
+      {
+        "oneLevelMsgId": "2",
+        "twoLevelMsgId": "4",
+        "threeLevelMsgId": "1086805747613393E063B41410AC73C2",
+        "failureTime": "1711987200000"
+      },
+      {
+        "oneLevelMsgId": "2",
+        "twoLevelMsgId": "4",
+        "threeLevelMsgId": "10A2A33D20102D6AE063B81410AC0C84",
+        "failureTime": "1709222400000"
+      },
+      {
+        "oneLevelMsgId": "2",
+        "twoLevelMsgId": "4",
+        "threeLevelMsgId": "10D6B8F1BA4808B9E063B61410ACF8F0",
+        "failureTime": "1712505600000"
+      },
+      {
+        "oneLevelMsgId": "2",
+        "twoLevelMsgId": "4",
+        "threeLevelMsgId": "10D6B26446E115B1E063B61410ACFA08",
+        "failureTime": "1712505600000"
+      },
+      {
+        "oneLevelMsgId": "2",
+        "twoLevelMsgId": "4",
+        "threeLevelMsgId": "10D6B26446E215B1E063B61410ACFA08",
+        "failureTime": "1712505600000"
+      },
+      {
+        "oneLevelMsgId": "2",
+        "twoLevelMsgId": "4",
+        "threeLevelMsgId": "10D6B33FB129485AE063B81410AC5AFA",
+        "failureTime": "1712505600000"
+      },
+      {
+        "oneLevelMsgId": "1",
+        "twoLevelMsgId": "6",
+        "threeLevelMsgId": "1025792067FE1D64E063B61410ACF2D7",
+        "failureTime": "1709222400000"
+      }
+    ],
+    "msgList": [
+      {
+        "headImage": "https://w.189.cn/bigdata/2023/1/10/111668994837837411.png",
+        "title": "您的专属营业员筱翼为您服务",
+        "subTitle": "24小时全天在线，有问题来问我~",
+        "link": "",
+        "linkType": "60",
+        "msgId": "105542000012024022820",
+        "msgType": "",
+        "functionBean": {
+          "iconUrl": "https://w.189.cn/bigdata/2023/1/10/111668753240265950.png",
+          "type": "1",
+          "showType": "2",
+          "phoneNum": "",
+          "title": "",
+          "link": "",
+          "linkType": "60",
+          "provinceCode": "",
+          "sceneId": "hg_sy_dtxx##6236##default##10554200001##010001002000##3##N##N##18##N##N##105542",
+          "recommender": "cc-010001002000.rmc-hg_sy_dtxx.fd-0.od-18.eoc-10554200001",
+          "startTime": "",
+          "endTime": ""
+        },
+        "isCanClose": "1",
+        "timestamp": "20240220142919",
+        "showTime": "",
+        "background": "https://w.189.cn/bigdata/2023/12/18/111702884607117701.gif",
+        "provinceCode": "",
+        "sceneId": "hg_sy_dtxx##6236##default##10554200001##010001002000##3##N##N##18##N##N##105542",
+        "recommender": "cc-010001002000.rmc-hg_sy_dtxx.fd-0.od-18.eoc-10554200001",
+        "isProprietaryCustomer": "",
+        "label": ""
+      },
+      {
+        "headImage": "https://w.189.cn/bigdata/2023/12/26/111703574751410166.png",
+        "title": "在线客服",
+        "subTitle": "需要帮助？请联系我们~",
+        "link": "",
+        "linkType": "30",
+        "msgId": "1038405000012024022820",
+        "msgType": "",
+        "functionBean": {
+          "iconUrl": "https://w.189.cn/bigdata/2023/12/26/111703574757266697.png",
+          "type": "1",
+          "showType": "1",
+          "phoneNum": "",
+          "title": "",
+          "link": "",
+          "linkType": "30",
+          "provinceCode": "",
+          "sceneId": "hg_sy_dtxx##6236##default##103840500001##010001002000##3##N##N##19##N##N##1038405",
+          "recommender": "cc-010001002000.rmc-hg_sy_dtxx.fd-0.od-19.eoc-103840500001",
+          "startTime": "",
+          "endTime": ""
+        },
+        "isCanClose": "0",
+        "timestamp": "20240214102335",
+        "showTime": "",
+        "background": "https://w.189.cn/bigdata/2023/12/26/111703574762092332.png",
+        "provinceCode": "",
+        "sceneId": "hg_sy_dtxx##6236##default##103840500001##010001002000##3##N##N##19##N##N##1038405",
+        "recommender": "cc-010001002000.rmc-hg_sy_dtxx.fd-0.od-19.eoc-103840500001",
+        "isProprietaryCustomer": "",
+        "label": ""
+      },
+      {
+        "headImage": "https://w.189.cn/bigdata/2023/9/8/111694144831996708.png",
+        "title": "",
+        "subTitle": "",
+        "link": "https%3A%2F%2Fxbk.189.cn%2FluntanSafe%2Fexternal%2Fredirect.do%3Fticket%3D%24ticket%24%26cmpid%3Dkhd-xbktgtokhd-syjh-jt%26indexUri%3DvideoDetailImmersion%26articleId%3D29522%26type%3D7%26isTopVideo%3D1&utm_scha=utm_ch-010001002009.utm_sch-hg_sy_dtxx-20.utm_af-1000000037.utm_as-106340900001.utm_sd1-default",
+        "linkType": "33",
+        "msgId": "1063409000012024022820",
+        "msgType": "",
+        "functionBean": {
+          "iconUrl": "https://w.189.cn/bigdata/2023/9/8/111694144835981562.png",
+          "type": "1",
+          "showType": "2",
+          "phoneNum": "",
+          "title": "",
+          "link": "https%3A%2F%2Fxbk.189.cn%2FluntanSafe%2Fexternal%2Fredirect.do%3Fticket%3D%24ticket%24%26cmpid%3Dkhd-xbktgtokhd-syjh-jt%26indexUri%3DvideoDetailImmersion%26articleId%3D29522%26type%3D7%26isTopVideo%3D1",
+          "linkType": "33",
+          "provinceCode": "",
+          "sceneId": "hg_sy_dtxx##6236##default##106340900001##010001002000##3##N##N##20##N##N##1063409",
+          "recommender": "cc-010001002000.rmc-hg_sy_dtxx.fd-0.od-20.eoc-106340900001",
+          "startTime": "",
+          "endTime": ""
+        },
+        "isCanClose": "1",
+        "timestamp": "20240227154018",
+        "showTime": "",
+        "background": "https://w.189.cn/bigdata/2024/2/27/111709014218481943.png",
+        "provinceCode": "",
+        "sceneId": "hg_sy_dtxx##6236##default##106340900001##010001002000##3##N##N##20##N##N##1063409",
+        "recommender": "cc-010001002000.rmc-hg_sy_dtxx.fd-0.od-20.eoc-106340900001",
+        "isProprietaryCustomer": "",
+        "label": ""
+      }
+    ],
+    "pRANConfigureBean": {
+      "background": "https://www.189.cn/client/iconUrl/beiJing.png",
+      "isShow": "1"
+    },
+    "messageSettingList": [
+      {
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/24/111706062835349518.png",
+        "title": "福利中心",
+        "isOpen": "1",
+        "twoLevelMsgId": "201"
+      },
+      {
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/24/111706062872212146.png",
+        "title": "金豆乐园",
+        "isOpen": "1",
+        "twoLevelMsgId": "202"
+      },
+      {
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/24/111706062926829455.png",
+        "title": "热门推荐",
+        "isOpen": "1",
+        "twoLevelMsgId": "203"
+      },
+      {
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/24/111706063089175829.png",
+        "title": "优惠购机",
+        "isOpen": "1",
+        "twoLevelMsgId": "204"
+      },
+      {
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/24/111706063113911903.png",
+        "title": "闲置好物交易市场",
+        "isOpen": "1",
+        "twoLevelMsgId": "205"
+      },
+      {
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/24/111706063182099924.png",
+        "title": "翼支付专区",
+        "isOpen": "1",
+        "twoLevelMsgId": "206"
+      },
+      {
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/24/111706063255980733.png",
+        "title": "电信星播客",
+        "isOpen": "1",
+        "twoLevelMsgId": "207"
+      },
+      {
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/24/111706063299351686.png",
+        "title": "宽带助手",
+        "isOpen": "1",
+        "twoLevelMsgId": "209"
+      },
+      {
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/24/111706063370615203.png",
+        "title": "聚惠套餐",
+        "isOpen": "1",
+        "twoLevelMsgId": "210"
+      },
+      {
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/24/111706063409645475.png",
+        "title": "附近的客户经理",
+        "isOpen": "1",
+        "twoLevelMsgId": "211"
+      },
+      {
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/24/111706063445590987.png",
+        "title": "政企资讯",
+        "isOpen": "1",
+        "twoLevelMsgId": "212"
+      },
+      {
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/30/111706622717198119.png",
+        "title": "本地专享",
+        "isOpen": "1",
+        "twoLevelMsgId": "213"
+      },
+      {
+        "iconUrl": "https://w.189.cn/bigdata/2024/1/30/111706622768071183.png",
+        "title": "营业厅公告",
+        "isOpen": "1",
+        "twoLevelMsgId": "214"
+      },
+      {
+        "iconUrl": "https://w.189.cn/bigdata/2024/2/4/111707032391390979.png",
+        "title": "视频彩铃",
+        "isOpen": "1",
+        "twoLevelMsgId": "215"
+      }
+    ],
+    "redDotMsgSumNum": "",
+    "bottomTip": "到底啦",
+    "serviceMessageSwitchDescription": "包含服务提醒、订单物流、实用功能、优惠奖励，为保证使用体验，服务消息暂不支持关闭",
+    "floatWindowSwitch": "1",
+    "topList": ""
+}

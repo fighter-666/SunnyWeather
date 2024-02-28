@@ -1,10 +1,5 @@
 package com.example.sunnyweather.widget
 
-import com.ct.client.intimateblue.widget.IntimateHorizontalScrollView
-import com.example.sunnyweather.R
-import com.example.sunnyweather.data.AdItem
-import com.example.sunnyweather.data.QueryMessageChannelData
-
 object MsgDataHelper {
 
     var currentSkidView: IntimateHorizontalScrollView? = null

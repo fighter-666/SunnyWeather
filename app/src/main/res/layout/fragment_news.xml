@@ -182,7 +182,7 @@
                             tools:visibility="visible">
 
                             <!--最多展示3条 写死高度并且禁止滑动-->
-                            <androidx.recyclerview.widget.RecyclerView
+                            <com.example.sunnyweather.widget.MaxHeightRecyclerView
                                 android:id="@+id/rvServiceMessage"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -211,7 +211,6 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="6dp"
                             android:background="@drawable/bg_white_corner_10dp"
-                            android:visibility="gone"
                             android:clickable="true"
                             android:focusable="true" />
 
@@ -223,7 +222,6 @@
                             android:layout_marginTop="12dp"
                             android:background="@drawable/bg_white_corner_10dp"
                             android:orientation="vertical"
-                            android:visibility="gone"
                             tools:visibility="visible">
 
                             <TextView

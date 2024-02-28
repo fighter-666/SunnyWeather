@@ -1,5 +1,7 @@
 package com.example.sunnyweather.adapter
 
+import android.util.Log
+import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ct.base.ext.dp
@@ -8,6 +10,7 @@ import com.example.sunnyweather.R
 import com.example.sunnyweather.SunnyWeatherApplication
 import com.example.sunnyweather.base.binding.BaseBindingFragment
 import com.example.sunnyweather.data.GetFeedTabData
+import com.example.sunnyweather.data.QueryMessageChannelData
 import com.example.sunnyweather.databinding.FragmentNewsBinding
 import com.google.gson.Gson
 import com.gyf.immersionbar.ImmersionBar
@@ -30,10 +33,10 @@ class NewsFragment : BaseBindingFragment<FragmentNewsBinding>(){
             .init()
 
         val json: String = // 从文件中读取 JSON 数据，这里使用 assets 文件夹中的示例
-            SunnyWeatherApplication.context.assets.open("getFeedTabData.json").bufferedReader().use { it.readText() }
+            SunnyWeatherApplication.context.assets.open("queryMessageChannel.json").bufferedReader().use { it.readText() }
         //使用了Gson库来将JSON数据转换为GetFeedTabData对象
         val gson = Gson()
-        val tabList = gson.fromJson(json, GetFeedTabData::class.java)
+        val data = gson.fromJson(json, QueryMessageChannelData::class.java)
 
         binding.run {
             // 消息分类列表
@@ -42,18 +45,20 @@ class NewsFragment : BaseBindingFragment<FragmentNewsBinding>(){
                 layoutManager = GridLayoutManager(context, 3)
                 adapter = messageClassifyAdapter
             }
-            //messageClassifyAdapter.setNewData(MsgDataHelper.getDefaultMessageClassify())
+            messageClassifyAdapter.setNewData(data.serviceMessageClassifyList)
 
             // 服务消息列表
             serviceMessageAdapter = ServiceMessageAdapter()
             rvServiceMessage.apply {
-                layoutManager = object : LinearLayoutManager(context){
+                layoutManager = object :LinearLayoutManager(context){
                     override fun canScrollVertically(): Boolean {
                         return false
                     }
                 }
                 adapter = serviceMessageAdapter
             }
+            serviceMessageAdapter.setNewData(data.serviceMessageList)
+            llServiceList.visibility = View.VISIBLE
 
             // 营销消息
             marketMessageAdapter = MarketMessageAdapter()
@@ -61,6 +66,7 @@ class NewsFragment : BaseBindingFragment<FragmentNewsBinding>(){
                 layoutManager = LinearLayoutManager(context)
                 adapter = marketMessageAdapter
             }
+            marketMessageAdapter.setNewData(data.marketingMessageList)
             rvMarketingMessage.addItemDecoration(
                 MessageMarketingDecoration(
                     SunnyWeatherApplication.context,

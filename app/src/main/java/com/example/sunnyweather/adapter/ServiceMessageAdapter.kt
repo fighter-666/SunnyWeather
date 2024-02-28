@@ -24,11 +24,7 @@ class ServiceMessageAdapter :
     override fun convert(helper: BaseBindingHolder, item: QueryMessageChannelData.MsgListBean) {
         helper.getViewBinding<AdapterServiceMessageBinding>().apply {
             item.run {
-                if (isScreenCapture || isPran){
-                    UtilGlide.showImage(headResId, ivLeft)
-                }else{
-                    UtilGlide.showImage(headImage, ivLeft)
-                }
+                UtilGlide.showImage(headImage, ivLeft)
 
                 tvTitle.text = title
                 tvSubTitle.text = subTitle
@@ -101,9 +97,9 @@ class ServiceMessageAdapter :
                 }
             }
 
-            val params = cvLeft.layoutParams
+            /*val params = cvLeft.layoutParams
             params.width = UtilPhoneParam.screenWidth - 36.dp
-            cvLeft.layoutParams = params
+            cvLeft.layoutParams = params*/
         }
     }
 

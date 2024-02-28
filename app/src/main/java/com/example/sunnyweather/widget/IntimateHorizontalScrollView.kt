@@ -1,4 +1,4 @@
-package com.ct.client.intimateblue.widget
+package com.example.sunnyweather.widget
 
 import android.content.Context
 import android.util.AttributeSet
