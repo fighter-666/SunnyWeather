@@ -74,6 +74,12 @@ dependencies {
 
     implementation ("com.github.cymchad:BaseRecyclerViewAdapterHelper:2.9.50") //改成2.9.50
 
+    implementation ("com.github.li-xiaojun:XPopup:2.4.9")     // 弹窗
+
+    implementation ("org.simpleframework:simple-xml:2.7.1")
+
+    // 已过时(禁止使用, 最后会移除)
+    implementation ("org.litepal.guolindev:core:3.2.2") // 数据库litePal
 
 
 

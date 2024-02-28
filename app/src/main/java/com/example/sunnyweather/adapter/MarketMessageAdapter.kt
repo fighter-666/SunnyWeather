@@ -1,14 +1,21 @@
 package com.example.sunnyweather.adapter
 
+import android.content.Intent
 import android.view.View
 import com.example.sunnyweather.widget.MsgDataHelper
 import com.example.sunnyweather.R
+import com.example.sunnyweather.base.Constants
 import com.example.sunnyweather.base.binding.BaseBindingQuickAdapter
 import com.example.sunnyweather.data.QueryMessageChannelData
 import com.example.sunnyweather.databinding.AdapterMarketingMessagesBinding
+import com.example.sunnyweather.helper.RedDotHelper
+import com.example.sunnyweather.util.CommonLinkItem
+import com.example.sunnyweather.util.GetScreenUtils
 import com.example.sunnyweather.util.UtilGlide
 import com.example.sunnyweather.util.UtilOther
 import com.example.sunnyweather.util.UtilPhoneParam
+import com.example.sunnyweather.widget.CustomCleanMsgPopupView
+import com.lxj.xpopup.XPopup
 
 /**
  * 营销消息适配器
@@ -57,7 +64,7 @@ class MarketMessageAdapter : BaseBindingQuickAdapter<QueryMessageChannelData.Mar
                     tvTop.text = "置顶"
                 }
 
-              /*  clLeft.setOnClickListener {
+                clLeft.setOnClickListener {
                     // 跳转类(三级)
                     if (msgType == QueryMessageChannelData.MarketingMessageListBean.MSG_TYPE.JUMP){
 
@@ -65,11 +72,11 @@ class MarketMessageAdapter : BaseBindingQuickAdapter<QueryMessageChannelData.Mar
                         linkItem.linkType = linkType
                         linkItem.link = link
                         linkItem.goTarget(mContext)
-                        val mMessageCenterHelper = MessageCenterHelper()
+                        //val mMessageCenterHelper = MessageCenterHelper()
 
                         if (realSum > 0){
                             // 接口设置已读
-                            mMessageCenterHelper.markReadMsg(mContext, MarkReadMsgTask.MARK_READ_FLAG.THREELEVELMSG,
+                          /*  mMessageCenterHelper.markReadMsg(mContext, MarkReadMsgTask.MARK_READ_FLAG.THREELEVELMSG,
                                 threeLevelMsgId = threeLevelMsgId).onMessageRead = {
                                 redDotMsgNum = "0"
                                 tvRedDot.setContent(0)
@@ -77,11 +84,11 @@ class MarketMessageAdapter : BaseBindingQuickAdapter<QueryMessageChannelData.Mar
                                 // 通知消息首页刷新红点数
                                 RedDotHelper.getInstance()
                                     .onRedDotListener(Constants.RedDotTabName.MSG_READ_REFRESH)
-                            }
+                            }*/
                         }
                         // 通知类(二级)
                     }else{
-                        val intent = Intent(mContext, MsgThreeLevelActivity::class.java)
+                      /*  val intent = Intent(mContext, MsgThreeLevelActivity::class.java)
                         intent.putExtra("bottomTip", mBottomTip)
                         intent.putExtra("MarketingMessageListBean", item)
                         mContext.startActivity(intent)
@@ -98,7 +105,7 @@ class MarketMessageAdapter : BaseBindingQuickAdapter<QueryMessageChannelData.Mar
                                 RedDotHelper.getInstance()
                                     .onRedDotListener(Constants.RedDotTabName.MSG_READ_REFRESH)
                             }
-                        }
+                        }*/
                     }
 
                     if (isOutOfTime == QueryMessageChannelData.MarketingMessageListBean.IS_OUT_OF_TIME.YES && !isTop){
@@ -130,7 +137,7 @@ class MarketMessageAdapter : BaseBindingQuickAdapter<QueryMessageChannelData.Mar
                     }
                 }
 
-                // 置顶
+               /* // 置顶
                 tvTop.setOnClickListener {
                     val mMessageCenterHelper = MessageCenterHelper()
                     if (msgType == QueryMessageChannelData.MarketingMessageListBean.MSG_TYPE.JUMP){
@@ -167,7 +174,7 @@ class MarketMessageAdapter : BaseBindingQuickAdapter<QueryMessageChannelData.Mar
                         }
                     }
 
-                   *//* if (isOutOfTime == QueryMessageChannelData.MarketingMessageListBean.IS_OUT_OF_TIME.YES){
+                 *//*   if (isOutOfTime == QueryMessageChannelData.MarketingMessageListBean.IS_OUT_OF_TIME.YES){
                         if (isTop){
                             HgXxSy.hitOutMsgMarketTop("取消置顶", item)
                         }else{
@@ -183,7 +190,7 @@ class MarketMessageAdapter : BaseBindingQuickAdapter<QueryMessageChannelData.Mar
                 }*/
 
                 val params = clLeft.layoutParams
-                params.width = UtilPhoneParam.screenWidth
+                params.width = GetScreenUtils.getScreenWidth(mContext)
                 clLeft.layoutParams = params
 
                 // 关闭展开的item

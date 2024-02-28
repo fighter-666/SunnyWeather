@@ -8,6 +8,7 @@ import com.example.sunnyweather.base.binding.BaseBindingQuickAdapter
 import com.example.sunnyweather.data.QueryMessageChannelData
 import com.example.sunnyweather.databinding.AdapterServiceMessageBinding
 import com.example.sunnyweather.util.CommonLinkItem
+import com.example.sunnyweather.util.GetScreenUtils
 import com.example.sunnyweather.util.UtilGlide
 import com.example.sunnyweather.util.UtilPhoneParam
 
@@ -97,9 +98,9 @@ class ServiceMessageAdapter :
                 }
             }
 
-            /*val params = cvLeft.layoutParams
-            params.width = UtilPhoneParam.screenWidth - 36.dp
-            cvLeft.layoutParams = params*/
+            val params = cvLeft.layoutParams
+            params.width = GetScreenUtils.getScreenWidth(mContext) - 36.dp
+            cvLeft.layoutParams = params
         }
     }
 
