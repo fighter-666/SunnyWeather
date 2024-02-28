@@ -3,8 +3,15 @@ package com.example.sunnyweather.util;
 import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import com.example.sunnyweather.base.Utils;
+import com.example.sunnyweather.base.UtilsBridge;
 
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Field;
@@ -59,5 +66,24 @@ public final class ActivityUtils {
 
    public static boolean isActivityAlive(final Context context) {
       return isActivityAlive(getActivityByContext(context));
+   }
+
+   /**
+    * Return the name of launcher activity.
+    *
+    * @param pkg The name of the package.
+    * @return the name of launcher activity
+    */
+   public static String getLauncherActivity(@NonNull final String pkg) {
+      if (UtilsBridge.isSpace(pkg)) return "";
+      Intent intent = new Intent(Intent.ACTION_MAIN, null);
+      intent.addCategory(Intent.CATEGORY_LAUNCHER);
+      intent.setPackage(pkg);
+      PackageManager pm = Utils.getApp().getPackageManager();
+      List<ResolveInfo> info = pm.queryIntentActivities(intent, 0);
+      if (info == null || info.size() == 0) {
+         return "";
+      }
+      return info.get(0).activityInfo.name;
    }
 }

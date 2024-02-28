@@ -92,6 +92,7 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:4.12.0")
     implementation ("androidx.core:core-ktx:+")
     implementation("androidx.wear.compose:compose-foundation:1.3.0")
+    implementation("org.chromium.net:cronet-embedded:119.6045.31")
     annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
 
     //ResponseBaseData里面的Element

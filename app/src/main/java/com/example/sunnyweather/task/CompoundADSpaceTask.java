@@ -3,11 +3,15 @@ package com.example.sunnyweather.task;
 import android.content.Context;
 
 import com.example.sunnyweather.base.BaseTask;
+import com.example.sunnyweather.base.CompoundADSpaceResponse;
 import com.example.sunnyweather.base.Constants;
+import com.example.sunnyweather.base.MyApplication;
+import com.example.sunnyweather.base.MyTaskCache;
 import com.example.sunnyweather.base.Response;
+import com.example.sunnyweather.base.UtilData;
 import com.example.sunnyweather.base.UtilEncryption;
+import com.example.sunnyweather.base.UtilLog;
 import com.example.sunnyweather.request.CompoundADSpaceRequest;
-import com.example.sunnyweather.response.CompoundADSpaceResponse;
 import com.example.sunnyweather.util.UtilText;
 
 
@@ -121,14 +125,14 @@ public class CompoundADSpaceTask extends BaseTask {
             }
         }
 
-        if (mOnTaskStart != null) {
+       /* if (mOnTaskStart != null) {
             Response response = (Response) MyTaskCache.getInstance(mContext).getCacheTaskJsonRetrofit(request);
             if(response!=null && response instanceof CompoundADSpaceResponse){
                 mOnTaskStart.onStart((CompoundADSpaceResponse)response);
             }else{
                 mOnTaskStart.onStart(null);
             }
-        }
+        }*/
     }
 
     @Override
