@@ -74,6 +74,22 @@ dependencies {
 
     implementation ("com.github.cymchad:BaseRecyclerViewAdapterHelper:2.9.50") //改成2.9.50
 
+
+
+
+    //room
+    implementation ("androidx.room:room-runtime:2.4.2")
+    implementation ("androidx.room:room-ktx:2.4.2")
+    implementation("androidx.databinding:databinding-runtime:8.2.2")
+    annotationProcessor("androidx.room:room-compiler:2.4.2")
+
+    implementation ("com.gongwen:marqueelibrary:1.1.3") //跑马灯
+
+
+    //glide
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
+
         implementation(platform("androidx.compose:compose-bom:2023.03.00"))
         implementation("androidx.compose.ui:ui")
         implementation("androidx.compose.ui:ui-graphics")

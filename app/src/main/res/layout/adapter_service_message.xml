@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:layout_marginBottom="10dp"
+    app:round_corner="10dp">
+
+    <com.ct.client.intimateblue.widget.IntimateHorizontalScrollView
+        android:id="@+id/intimateHorizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvDelete"
+                android:layout_width="82dp"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@id/cvLeft"
+                android:layout_alignBottom="@id/cvLeft"
+                android:layout_marginLeft="-20dp"
+                android:layout_toEndOf="@id/cvLeft"
+                android:background="@color/red_ff4343"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:text="删除"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvLeft"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/gray_f6f7fc"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                tools:layout_width="250dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_f6f7fc"
+                    android:orientation="vertical">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivLeft"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_default_5g"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearance="@style/shapeable_iv_circle"
+                        tools:src="@drawable/ic_default_5g" />
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9.5dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/black_333333"
+                        android:textSize="15dp"
+                        app:layout_constrainedWidth="true"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintLeft_toRightOf="@id/ivLeft"
+                        app:layout_constraintRight_toLeftOf="@id/tvLabel"
+                        app:layout_constraintTop_toTopOf="@id/ivLeft"
+                        tools:text="您成功您话费" />
+
+                    <TextView
+                        android:id="@+id/tvLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="9.5dp"
+                        android:background="@drawable/bg_eef4ff_corner_2dp_stroke_d6e0ff"
+                        android:paddingHorizontal="3dp"
+                        android:text="官方"
+                        android:textColor="@color/blue_5b82ff"
+                        android:textSize="10dp"
+                        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintLeft_toRightOf="@id/tvTitle"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+                    <TextView
+                        android:id="@+id/tvSubTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="13sp"
+                        app:layout_constrainedWidth="true"
+                        app:layout_constraintBottom_toBottomOf="@id/ivLeft"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintLeft_toLeftOf="@id/tvTitle"
+                        app:layout_constraintRight_toLeftOf="@id/tvTime"
+                        tools:text="余额可新余余额可新余余额可新余余额可新余" />
+
+
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="9.5dp"
+                        android:text="18:00"
+                        android:textColor="@color/gray_999999"
+                        android:textSize="10dp"
+                        app:layout_constraintBottom_toBottomOf="@id/tvSubTitle"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvSubTitle"
+                        tools:text="18:00" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+
+    </com.ct.client.intimateblue.widget.IntimateHorizontalScrollView>
+
+
+</RelativeLayout>

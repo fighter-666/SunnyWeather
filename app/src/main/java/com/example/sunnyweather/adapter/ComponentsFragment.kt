@@ -16,8 +16,7 @@ import com.gyf.immersionbar.ImmersionBar
 
 
 class ComponentsFragment : Fragment() {
-    private var _binding: FragmentComponentsBinding? = null
-    val binding get() = _binding!!
+    private lateinit var binding: FragmentComponentsBinding
 
 
     override fun onCreateView(
@@ -25,29 +24,18 @@ class ComponentsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        _binding = FragmentComponentsBinding.inflate(inflater, container, false)
-        val view = binding.root
-
+        binding = FragmentComponentsBinding.inflate(inflater, container, false)
         //沉浸式处理
         ImmersionBar.with(this)
             .transparentStatusBar()  //透明状态栏，不写默认透明色
             .statusBarDarkFont(true) //状态栏字体是深色，不写默认为亮色
             .init()
-        return view
+        return binding.root
 
 
 
     }
 
-    /*  companion object {
-          fun newInstance(text: String): ComponentsFragment {
-              val args = Bundle()
-              args.putString("text", text)
-              val fragment = ComponentsFragment()
-              fragment.arguments = args
-              return fragment
-          }
-      }*/
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -365,10 +353,6 @@ class ComponentsFragment : Fragment() {
 
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 }
 
 

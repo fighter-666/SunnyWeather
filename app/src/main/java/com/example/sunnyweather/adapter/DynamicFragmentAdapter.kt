@@ -10,7 +10,7 @@ class DynamicFragmentAdapter(fragmentManager: FragmentManager, lifecycle: Lifecy
     private val fragments = listOf(
         ComponentsFragment(),
         ComponentsFragment(),
-        ComponentsFragment(),
+        NewsFragment(),
         ComponentsFragment(),
         //加载更多的 Fragment 实例
     )

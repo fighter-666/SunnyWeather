@@ -25,11 +25,11 @@ class MyActivity : AppCompatActivity() {
         //沉浸式处理
         ImmersionBar.with(this)
             .transparentStatusBar()  //透明状态栏，不写默认透明色
-
+            .statusBarDarkFont(true)   //状态栏字体是深色，不写默认为亮色
             .init()
 
 
-        val tabs = arrayOf("Components", "Helper", "Lab", "Waterfall")
+        val tabs = arrayOf("Box", "Recommend", "News", "MYy")
         val pics = arrayOf(
             R.mipmap.ic_launcher,
             R.mipmap.ic_launcher,
@@ -40,6 +40,7 @@ class MyActivity : AppCompatActivity() {
         // offscreenPageLimit 离屏页面限制决定了在 ViewPager 的适配器中，当前页面两侧应该保留的页面数量
         // tabs.size 被用来动态地根据标签数量设置离屏页面限制
         binding.viewPager.offscreenPageLimit = tabs.size
+        binding.viewPager.isUserInputEnabled = false; //true:滑动，false：禁止滑动
         val adapter =
             DynamicFragmentAdapter(supportFragmentManager, lifecycle)
         binding.viewPager.adapter = adapter
