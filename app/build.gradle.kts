@@ -81,6 +81,8 @@ dependencies {
     // 已过时(禁止使用, 最后会移除)
     implementation ("org.litepal.guolindev:core:3.2.2") // 数据库litePal
 
+    implementation ("io.github.youth5201314:banner:2.2.2")                //轮播图
+
 
 
     //room

@@ -297,8 +297,8 @@
     },
     {
       "tabTitle": "订单物流",
-      "linkType": "",
-      "link": "",
+      "linkType": "2",
+      "link": "https://www.bilibili.com",
       "oneLevelMsgId": "6",
       "redDotMsgNum": "",
       "messageCardList": [

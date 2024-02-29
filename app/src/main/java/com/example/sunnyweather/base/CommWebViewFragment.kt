@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import androidx.databinding.DataBindingUtil.setContentView
 import com.example.sunnyweather.R
 import com.example.sunnyweather.databinding.ActivityWebviewBinding
@@ -40,5 +42,14 @@ class CommWebViewFragment: LazyFragment() {
             }
         }
         binding.webView.loadUrl(mUrl)
+        binding.webView.setWebViewClient(object : WebViewClient() {
+            @Deprecated("Deprecated in Java")
+            override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
+                //使用WebView加载显示url
+                view.loadUrl(url)
+                //返回true
+                return true
+            }
+        })
     }
 }

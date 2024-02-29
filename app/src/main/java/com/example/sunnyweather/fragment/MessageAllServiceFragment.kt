@@ -3,14 +3,18 @@ package com.example.sunnyweather.fragment
 import android.os.Build
 import android.view.View
 import android.widget.TextView
+import androidx.core.widget.NestedScrollView
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.ct.base.ext.isEmptyOrNull
 import com.example.sunnyweather.R
+import com.example.sunnyweather.activity.MessageAllServiceActivity
 import com.example.sunnyweather.adapter.MessageAllServiceAdapter
 import com.example.sunnyweather.base.binding.BaseBindingFragment
 import com.example.sunnyweather.data.QueryServiceMessageData
 import com.example.sunnyweather.data.QueryServiceMessageData.MessageClassifyListBean.MessageCardListBean
 import com.example.sunnyweather.databinding.FragmentMessageServiceBinding
+import com.google.gson.Gson
 
 
 /**
@@ -34,6 +38,8 @@ class MessageAllServiceFragment : BaseBindingFragment<FragmentMessageServiceBind
             .build()
         loadService = loadSir.register(binding.nestedScrollView)*/
         cardAdapter = MessageAllServiceAdapter(R.layout.adapter_message_all_service, mMessageCardList)
+
+
     }
 
     private fun initListener() {
@@ -61,7 +67,7 @@ class MessageAllServiceFragment : BaseBindingFragment<FragmentMessageServiceBind
                     }
                 }
 
-               /* nestedScrollView.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener { v, _, scrollY, _, oldScrollY ->
+                nestedScrollView.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener { v, _, scrollY, _, oldScrollY ->
                     if (scrollY > oldScrollY) {
                         val bottom = v.getChildAt(0).height - v.measuredHeight
                         if (scrollY >= bottom) {
@@ -69,7 +75,7 @@ class MessageAllServiceFragment : BaseBindingFragment<FragmentMessageServiceBind
                             (activity as? MessageAllServiceActivity)?.switchToNextNonWebTab()
                         }
                     }
-                })*/
+                })
             }
         }
     }
