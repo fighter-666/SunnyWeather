@@ -10,6 +10,8 @@ abstract class LazyFragment : Fragment() {
 
     var isLoaded = false
     var isLazy = true
+    @JvmField
+    var mExtraParams: ExtraParams? = null
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

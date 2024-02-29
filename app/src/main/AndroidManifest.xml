@@ -24,6 +24,9 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".activity.MessageAllServiceActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.weather.WeatherActivity"
             android:exported="false" />
         <activity

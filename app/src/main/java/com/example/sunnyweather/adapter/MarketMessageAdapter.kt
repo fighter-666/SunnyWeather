@@ -1,20 +1,16 @@
 package com.example.sunnyweather.adapter
 
-import android.content.Intent
 import android.view.View
-import com.example.sunnyweather.widget.MsgDataHelper
 import com.example.sunnyweather.R
-import com.example.sunnyweather.base.Constants
 import com.example.sunnyweather.base.binding.BaseBindingQuickAdapter
 import com.example.sunnyweather.data.QueryMessageChannelData
 import com.example.sunnyweather.databinding.AdapterMarketingMessagesBinding
-import com.example.sunnyweather.helper.RedDotHelper
 import com.example.sunnyweather.util.CommonLinkItem
 import com.example.sunnyweather.util.GetScreenUtils
 import com.example.sunnyweather.util.UtilGlide
 import com.example.sunnyweather.util.UtilOther
-import com.example.sunnyweather.util.UtilPhoneParam
 import com.example.sunnyweather.widget.CustomCleanMsgPopupView
+import com.example.sunnyweather.widget.MsgDataHelper
 import com.lxj.xpopup.XPopup
 
 /**
@@ -117,6 +113,7 @@ class MarketMessageAdapter : BaseBindingQuickAdapter<QueryMessageChannelData.Mar
 
                 // 删除
                 tvDelete.setOnClickListener {
+                    //remove(helper.layoutPosition)
                     val dialog = CustomCleanMsgPopupView(mContext).setData(item)
                     dialog.onMessageDelete = {
                         remove(helper.layoutPosition)
@@ -174,7 +171,7 @@ class MarketMessageAdapter : BaseBindingQuickAdapter<QueryMessageChannelData.Mar
                         }
                     }
 
-                 *//*   if (isOutOfTime == QueryMessageChannelData.MarketingMessageListBean.IS_OUT_OF_TIME.YES){
+                    if (isOutOfTime == QueryMessageChannelData.MarketingMessageListBean.IS_OUT_OF_TIME.YES){
                         if (isTop){
                             HgXxSy.hitOutMsgMarketTop("取消置顶", item)
                         }else{
@@ -186,7 +183,7 @@ class MarketMessageAdapter : BaseBindingQuickAdapter<QueryMessageChannelData.Mar
                         }else{
                             HgXxSy.hitMsgMarketTop("置顶", item)
                         }
-                    }*//*
+                    }
                 }*/
 
                 val params = clLeft.layoutParams

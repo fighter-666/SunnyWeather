@@ -1,0 +1,628 @@
+{
+  "messageClassifyList": [
+    {
+      "tabTitle": "服务提醒",
+      "linkType": "",
+      "link": "",
+      "oneLevelMsgId": "5",
+      "redDotMsgNum": "",
+      "messageCardList": [
+        {
+          "cardTypeInfo": {
+            "title": "翼支付标题超长惆怅长岑长错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错",
+            "iconUrl": "https://zsc.189.cn/bigdata/2024/1/4/111704362834133257.png",
+            "linkType": "2",
+            "link": "https://www.189.cn/?utm_scha=utm_ch-010001002009.utm_sch-hg_xxzx_fwxx-2-500090500001.utm_af-1000000037.utm_as-1951900164.utm_sd1-default",
+            "provinceCode": "600105",
+            "sceneId": "hg_xxzx_fwxx##100067##default##1951900164##010001002000##3##N##500090500001##2##N##N##19519",
+            "recommender": "cc-010001002000.rmc-hg_xxzx_fwxx.fd-2.od-2.eoc-1951900164"
+          },
+          "iconUrl": "https://zsc.189.cn/bigdata/2024/1/18/111705547040216553.png",
+          "title": "翼支付异网充值",
+          "subtitle": "副标题",
+          "link": "ww.baidu.com",
+          "linkType": "2",
+          "msgId": "500109500001",
+          "showTime": "昨天 14:13",
+          "provinceCode": "600105",
+          "sceneId": "hg_sy_dtxx##2876##default##500109500001##010001002000##3##N##N##1##N##N##5001095",
+          "recommender": "cc-010001002000.rmc-hg_sy_dtxx.fd-0.od-1.eoc-500109500001",
+          "messageAttributeList": [
+            {
+              "title": "内容1-1",
+              "content": "内容2-1",
+              "subtitle": "内容3-1",
+              "styleType": "1",
+              "type": "1",
+              "phoneNum": "",
+              "link": "https://www.189.cn/?utm_scha=utm_ch-010001002009.utm_sch-hg_xxzx_fwxx-2-500090500001.utm_af-1000000037.utm_as-1951900164.utm_sd1-default",
+              "linkType": "2",
+              "provinceCode": "600105",
+              "sceneId": null,
+              "recommender": null,
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "内容1-2",
+              "content": "内容2-2",
+              "subtitle": "内容3-2",
+              "styleType": "2",
+              "type": "1",
+              "phoneNum": "",
+              "link": "https://www.189.cn/?utm_scha=utm_ch-010001002009.utm_sch-hg_xxzx_fwxx-2-500090500001.utm_af-1000000037.utm_as-1951900164.utm_sd1-default",
+              "linkType": "2",
+              "provinceCode": "600105",
+              "sceneId": null,
+              "recommender": null,
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "内容1-3",
+              "content": "内容2-3",
+              "subtitle": "内容3-3",
+              "styleType": "3",
+              "type": "1",
+              "phoneNum": "",
+              "link": "https://www.189.cn/?utm_scha=utm_ch-010001002009.utm_sch-hg_xxzx_fwxx-2-500090500001.utm_af-1000000037.utm_as-1951900164.utm_sd1-default",
+              "linkType": "2",
+              "provinceCode": "600105",
+              "sceneId": null,
+              "recommender": null,
+              "startTime": "",
+              "endTime": ""
+            }
+          ],
+          "messageOperateList": [
+            {
+              "title": "内容超长惆怅长岑长错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错",
+              "content": "内容超长惆怅长岑长错错错错错错错错错错错错错错错错错错错错错错错错错",
+              "subtitle": "内容超长惆怅长岑长错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错",
+              "styleType": "4",
+              "type": "1",
+              "phoneNum": "",
+              "link": "https://www.189.cn/?utm_scha=utm_ch-010001002009.utm_sch-hg_xxzx_fwxx-2-500090500001.utm_af-1000000037.utm_as-1951900164.utm_sd1-default",
+              "linkType": "2",
+              "provinceCode": "600105",
+              "sceneId": null,
+              "recommender": null,
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "cardTypeInfo": {
+            "title": "",
+            "iconUrl": "https://zsc.189.cn/bigdata/2024/1/4/111704362834133257.png",
+            "linkType": "2",
+            "link": "https://www.189.cn/?utm_scha=utm_ch-010001002009.utm_sch-hg_xxzx_fwxx-3-500090500001.utm_af-1000000037.utm_as-500110000001.utm_sd1-default",
+            "provinceCode": "600105",
+            "sceneId": "hg_xxzx_fwxx##100067##default##500110000001##010001002000##3##N##500090500001##3##N##N##5001100",
+            "recommender": "cc-010001002000.rmc-hg_xxzx_fwxx.fd-2.od-3.eoc-500110000001"
+          },
+          "iconUrl": "https://zsc.189.cn/bigdata/2023/9/6/111693994164533246.jpg",
+          "title": "新人礼包",
+          "subtitle": "",
+          "link": "https://www.baidu.com/",
+          "linkType": "2",
+          "msgId": "1990300817199968019702024011917",
+          "showTime": "昨天 14:46",
+          "provinceCode": "600105",
+          "sceneId": "hg_sy_dtxx##2876##default##1990300817##010001002000##3##N##N##20##N##N##19903",
+          "recommender": "cc-010001002000.rmc-hg_sy_dtxx.fd-0.od-20.eoc-1990300817",
+          "messageAttributeList": [
+            {
+              "title": "内容1-1惆怅长岑长错错错错错错错错错错错错错错错错错错错错错错错错错错错错",
+              "content": "内容2-1惆怅长岑长错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错",
+              "subtitle": "没有跳转内容3-1惆怅长岑长错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错",
+              "styleType": "1",
+              "type": "1",
+              "phoneNum": "",
+              "link": "",
+              "linkType": "",
+              "provinceCode": "600105",
+              "sceneId": null,
+              "recommender": null,
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "内容1-2发发发发发发付付付付付付付付付付付付付付付付付付付付付付付付付付付付付付付付",
+              "content": "内容2-2顶顶顶顶顶的顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶",
+              "subtitle": "没有跳转链接内容3-2惆怅长岑长错错错错错错错错错错错错错错错错错错错错错错错错错",
+              "styleType": "2",
+              "type": "1",
+              "phoneNum": "",
+              "link": "",
+              "linkType": "",
+              "provinceCode": "600105",
+              "sceneId": null,
+              "recommender": null,
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "内容1-3",
+              "content": "内容2-3",
+              "subtitle": "没有跳转类型内容3-3",
+              "styleType": "3",
+              "type": "1",
+              "phoneNum": "",
+              "link": "www.tianya.cn",
+              "linkType": "",
+              "provinceCode": "600105",
+              "sceneId": null,
+              "recommender": null,
+              "startTime": "",
+              "endTime": ""
+            }
+          ],
+          "messageOperateList": [
+            {
+              "title": "内容1超长惆怅长岑长错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错",
+              "content": "内容2超长惆怅长岑长错错错错错错错错错错错错错错错错错错错错错错错错错",
+              "subtitle": "只是标题内容超长惆怅长岑长错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错",
+              "styleType": "4",
+              "type": "1",
+              "phoneNum": "",
+              "link": "",
+              "linkType": "",
+              "provinceCode": "600105",
+              "sceneId": null,
+              "recommender": null,
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "cardTypeInfo": {
+            "title": "宽带装移",
+            "iconUrl": "https://zsc.189.cn/bigdata/2024/1/4/111704362834133257.png",
+            "linkType": "2",
+            "link": "",
+            "provinceCode": "600105",
+            "sceneId": "hg_xxzx_fwxx##100067##default##1951900158##010001002000##3##N##500090500001##1##N##N##19519",
+            "recommender": "cc-010001002000.rmc-hg_xxzx_fwxx.fd-2.od-1.eoc-1951900158"
+          },
+          "iconUrl": "https://zsc.189.cn/bigdata/2024/1/18/111705547040216553.png",
+          "title": "宽带装移超长惆怅长岑长错错错错错错错错错错错错错错错错错错错错错错错",
+          "subtitle": "已受理惆怅长岑长错错错错错错错错错错错错错错错错错错错错错错错错错错错",
+          "link": "ww.baidu.com",
+          "linkType": "2",
+          "msgId": "500109200001199968019702024011917",
+          "showTime": "昨天 14:16",
+          "provinceCode": "600105",
+          "sceneId": "hg_sy_dtxx##2876##default##500109200001##010001002000##3##N##N##29##N##N##5001092",
+          "recommender": "cc-010001002000.rmc-hg_sy_dtxx.fd-0.od-29.eoc-500109200001",
+          "messageAttributeList": [
+            {
+              "title": "热门推荐",
+              "content": "内容2-1",
+              "subtitle": "内容3-1",
+              "styleType": "1",
+              "type": "1",
+              "phoneNum": "",
+              "link": "https://www.189.cn/?utm_scha=utm_ch-010001002009.utm_sch-hg_xxzx_fwxx-1-500090500001.utm_af-1000000037.utm_as-1951900158.utm_sd1-default",
+              "linkType": "2",
+              "provinceCode": "600105",
+              "sceneId": null,
+              "recommender": null,
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "热门推荐",
+              "content": "内容2-2",
+              "subtitle": "两个",
+              "styleType": "2",
+              "type": "1",
+              "phoneNum": "",
+              "link": "https://www.189.cn/?utm_scha=utm_ch-010001002009.utm_sch-hg_xxzx_fwxx-1-500090500001.utm_af-1000000037.utm_as-1951900158.utm_sd1-default",
+              "linkType": "2",
+              "provinceCode": "600105",
+              "sceneId": null,
+              "recommender": null,
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "热门推荐",
+              "content": "内容2-3",
+              "subtitle": "四个字字",
+              "styleType": "3",
+              "type": "1",
+              "phoneNum": "",
+              "link": "https://www.189.cn/?utm_scha=utm_ch-010001002009.utm_sch-hg_xxzx_fwxx-1-500090500001.utm_af-1000000037.utm_as-1951900158.utm_sd1-default",
+              "linkType": "2",
+              "provinceCode": "600105",
+              "sceneId": null,
+              "recommender": null,
+              "startTime": "",
+              "endTime": ""
+            }
+          ],
+          "messageOperateList": [
+            {
+              "title": "热门推荐",
+              "content": "内容超长惆怅长岑长错错错错错错错错错错错错错错错错错错错错错错错错错",
+              "subtitle": "内容超长惆怅长岑长错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错",
+              "styleType": "4",
+              "type": "1",
+              "phoneNum": "",
+              "link": "https://www.189.cn/?utm_scha=utm_ch-010001002009.utm_sch-hg_xxzx_fwxx-1-500090500001.utm_af-1000000037.utm_as-1951900158.utm_sd1-default",
+              "linkType": "2",
+              "provinceCode": "600105",
+              "sceneId": null,
+              "recommender": null,
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "cardTypeInfo": null,
+          "iconUrl": "",
+          "title": "话费充值",
+          "subtitle": "充值成功",
+          "link": "ww.baidu.com",
+          "linkType": "2",
+          "msgId": "500109300001199968019702024011917",
+          "showTime": "昨天 14:17",
+          "provinceCode": "600105",
+          "sceneId": "hg_sy_dtxx##2876##default##500109300001##010001002000##3##N##N##30##N##N##5001093",
+          "recommender": "cc-010001002000.rmc-hg_sy_dtxx.fd-0.od-30.eoc-500109300001",
+          "messageAttributeList": null,
+          "messageOperateList": [
+            {
+              "title": "查看详情",
+              "content": null,
+              "subtitle": null,
+              "styleType": "4",
+              "type": "1",
+              "phoneNum": null,
+              "link": "ww.baidu.com",
+              "linkType": "2",
+              "provinceCode": null,
+              "sceneId": null,
+              "recommender": null,
+              "startTime": null,
+              "endTime": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tabTitle": "订单物流",
+      "linkType": "",
+      "link": "",
+      "oneLevelMsgId": "6",
+      "redDotMsgNum": "",
+      "messageCardList": [
+        {
+          "cardTypeInfo": null,
+          "iconUrl": "https://zsc.189.cn/bigdata/2024/1/18/111705546533062494.png",
+          "title": "自营终端配件超长惆怅长岑长错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错",
+          "subtitle": "已确认超长惆怅长岑长错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错",
+          "link": "ww.baidu.com",
+          "linkType": "2",
+          "msgId": "500096400003199968019702024011917",
+          "showTime": "昨天 14:57",
+          "provinceCode": "600105",
+          "sceneId": "hg_sy_dtxx##2876##default##500096400003##010001002000##3##N##N##25##N##N##5000964",
+          "recommender": "cc-010001002000.rmc-hg_sy_dtxx.fd-0.od-25.eoc-500096400003",
+          "messageAttributeList": null,
+          "messageOperateList": [
+            {
+              "title": "查看详情",
+              "content": null,
+              "subtitle": null,
+              "styleType": "4",
+              "type": "1",
+              "phoneNum": null,
+              "link": "ww.baidu.com",
+              "linkType": "2",
+              "provinceCode": null,
+              "sceneId": null,
+              "recommender": null,
+              "startTime": null,
+              "endTime": null
+            }
+          ]
+        },
+        {
+          "cardTypeInfo": null,
+          "iconUrl": "https://zsc.189.cn/bigdata/2024/1/18/111705546533062494.png",
+          "title": "套餐号卡",
+          "subtitle": "已发货",
+          "link": "ww.baidu.com",
+          "linkType": "2",
+          "msgId": "500108500001199968019702024011917",
+          "showTime": "昨天 14:57",
+          "provinceCode": "600105",
+          "sceneId": "hg_sy_dtxx##2876##default##500108500001##010001002000##3##N##N##26##N##N##5001085",
+          "recommender": "cc-010001002000.rmc-hg_sy_dtxx.fd-0.od-26.eoc-500108500001",
+          "messageAttributeList": null,
+          "messageOperateList": [
+            {
+              "title": "查看详情",
+              "content": null,
+              "subtitle": null,
+              "styleType": "4",
+              "type": "1",
+              "phoneNum": null,
+              "link": "ww.baidu.com",
+              "linkType": "2",
+              "provinceCode": null,
+              "sceneId": null,
+              "recommender": null,
+              "startTime": null,
+              "endTime": null
+            }
+          ]
+        },
+        {
+          "cardTypeInfo": {
+            "title": "未配置内容2",
+            "iconUrl": "https://zsc.189.cn/bigdata/2024/1/19/111705647777169423.jpg",
+            "linkType": "2",
+            "link": "https://www.189.cn/?utm_scha=utm_ch-010001002009.utm_sch-hg_xxzx_fwxx-5-500090700001.utm_af-1000000037.utm_as-500110600001.utm_sd1-default",
+            "provinceCode": "600105",
+            "sceneId": "hg_xxzx_fwxx##100067##default##500110600001##010001002000##3##N##500090700001##5##N##N##5001106",
+            "recommender": "cc-010001002000.rmc-hg_xxzx_fwxx.fd-2.od-5.eoc-500110600001"
+          },
+          "iconUrl": "https://zsc.189.cn/bigdata/2024/1/18/111705546533062494.png",
+          "title": "金文订单，，，",
+          "subtitle": "已发货，，，",
+          "link": "ww.baidu.com",
+          "linkType": "2",
+          "msgId": "500108800001199968019702024011917",
+          "showTime": "15:01",
+          "provinceCode": "600105",
+          "sceneId": "hg_sy_dtxx##2876##default##500108800001##010001002000##3##N##N##27##N##N##5001088",
+          "recommender": "cc-010001002000.rmc-hg_sy_dtxx.fd-0.od-27.eoc-500108800001",
+          "messageAttributeList": [
+            {
+              "title": "未配置内容2",
+              "content": "",
+              "subtitle": "内容3-1惆怅长岑长错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错",
+              "styleType": "1",
+              "type": "1",
+              "phoneNum": "",
+              "link": "https://www.189.cn/?utm_scha=utm_ch-010001002009.utm_sch-hg_xxzx_fwxx-5-500090700001.utm_af-1000000037.utm_as-500110600001.utm_sd1-default",
+              "linkType": "2",
+              "provinceCode": "600105",
+              "sceneId": null,
+              "recommender": null,
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "",
+              "content": "",
+              "subtitle": "",
+              "styleType": "2",
+              "type": "1",
+              "phoneNum": "",
+              "link": "https://www.189.cn/?utm_scha=utm_ch-010001002009.utm_sch-hg_xxzx_fwxx-5-500090700001.utm_af-1000000037.utm_as-500110600001.utm_sd1-default",
+              "linkType": "2",
+              "provinceCode": "600105",
+              "sceneId": null,
+              "recommender": null,
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "title": "未配置内容三",
+              "content": "内容2-3",
+              "subtitle": "",
+              "styleType": "3",
+              "type": "1",
+              "phoneNum": "",
+              "link": "https://www.189.cn/?utm_scha=utm_ch-010001002009.utm_sch-hg_xxzx_fwxx-5-500090700001.utm_af-1000000037.utm_as-500110600001.utm_sd1-default",
+              "linkType": "2",
+              "provinceCode": "600105",
+              "sceneId": null,
+              "recommender": null,
+              "startTime": "",
+              "endTime": ""
+            }
+          ],
+          "messageOperateList": [
+            {
+              "title": "内容1超长惆怅长岑长错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错",
+              "content": "内容2超长惆怅长岑长错错错错错错错错错错错错错错错错错错错错错错错错错",
+              "subtitle": "",
+              "styleType": "4",
+              "type": "1",
+              "phoneNum": "",
+              "link": "https://www.189.cn/?utm_scha=utm_ch-010001002009.utm_sch-hg_xxzx_fwxx-5-500090700001.utm_af-1000000037.utm_as-500110600001.utm_sd1-default",
+              "linkType": "2",
+              "provinceCode": "600105",
+              "sceneId": null,
+              "recommender": null,
+              "startTime": "",
+              "endTime": ""
+            }
+          ]
+        },
+        {
+          "cardTypeInfo": null,
+          "iconUrl": "https://zsc.189.cn/bigdata/2024/1/18/111705546897628689.png",
+          "title": "翼支付商城",
+          "subtitle": "已支付，，，",
+          "link": "ww.baidu.com",
+          "linkType": "2",
+          "msgId": "500096400005199968019702024011917",
+          "showTime": "昨天 14:58",
+          "provinceCode": "600105",
+          "sceneId": "hg_sy_dtxx##2876##default##500096400005##010001002000##3##N##N##28##N##N##5000964",
+          "recommender": "cc-010001002000.rmc-hg_sy_dtxx.fd-0.od-28.eoc-500096400005",
+          "messageAttributeList": null,
+          "messageOperateList": [
+            {
+              "title": "查看详情",
+              "content": null,
+              "subtitle": null,
+              "styleType": "4",
+              "type": "1",
+              "phoneNum": null,
+              "link": "ww.baidu.com",
+              "linkType": "2",
+              "provinceCode": null,
+              "sceneId": null,
+              "recommender": null,
+              "startTime": null,
+              "endTime": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tabTitle": "实用功能",
+      "linkType": "",
+      "link": "",
+      "oneLevelMsgId": "7",
+      "redDotMsgNum": "",
+      "messageCardList": [
+        {
+          "cardTypeInfo": null,
+          "iconUrl": "https://zsc.189.cn/bigdata/2023/9/5/111693903801536155.jpg",
+          "title": "您关注的【天翼数字生活】开播啦",
+          "subtitle": "我是直播主题~~",
+          "link": "36",
+          "linkType": "42",
+          "msgId": "10089500001199968019702024011917",
+          "showTime": "前天 15:29",
+          "provinceCode": "600105",
+          "sceneId": "hg_sy_dtxx##2876##default##10089500001##010001002000##3##N##N##21##N##N##100895",
+          "recommender": "cc-010001002000.rmc-hg_sy_dtxx.fd-0.od-21.eoc-10089500001",
+          "messageAttributeList": null,
+          "messageOperateList": [
+            {
+              "title": "查看详情",
+              "content": null,
+              "subtitle": null,
+              "styleType": "4",
+              "type": "1",
+              "phoneNum": null,
+              "link": "36",
+              "linkType": "42",
+              "provinceCode": null,
+              "sceneId": null,
+              "recommender": null,
+              "startTime": null,
+              "endTime": null
+            }
+          ]
+        },
+        {
+          "cardTypeInfo": null,
+          "iconUrl": "https://zsc.189.cn/bigdata/2023/9/5/111693903801536155.jpg",
+          "title": "预约厅店，超长惆怅长岑长错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错错",
+          "subtitle": "预约厅已预约，，，超级“云”玩家·潍坊安丘青云山·品牌形象传播推广劳动竞赛",
+          "link": "36",
+          "linkType": "42",
+          "msgId": "10089700001199968019702024011917",
+          "showTime": "昨天 10:32",
+          "provinceCode": "600105",
+          "sceneId": "hg_sy_dtxx##2876##default##10089700001##010001002000##3##N##N##22##N##N##100897",
+          "recommender": "cc-010001002000.rmc-hg_sy_dtxx.fd-0.od-22.eoc-10089700001",
+          "messageAttributeList": null,
+          "messageOperateList": [
+            {
+              "title": "查看详情",
+              "content": null,
+              "subtitle": null,
+              "styleType": "4",
+              "type": "1",
+              "phoneNum": null,
+              "link": "36",
+              "linkType": "42",
+              "provinceCode": null,
+              "sceneId": null,
+              "recommender": null,
+              "startTime": null,
+              "endTime": null
+            }
+          ]
+        },
+        {
+          "cardTypeInfo": null,
+          "iconUrl": "https://zsc.189.cn/bigdata/2024/1/8/111704676822074428.jpg",
+          "title": "ran动态消息",
+          "subtitle": "副标题",
+          "link": "ww.baidu.com",
+          "linkType": "2",
+          "msgId": "500096500001199968019702024011917",
+          "showTime": "昨天 10:37",
+          "provinceCode": "600105",
+          "sceneId": "hg_sy_dtxx##2876##default##500096500001##010001002000##3##N##N##23##N##N##5000965",
+          "recommender": "cc-010001002000.rmc-hg_sy_dtxx.fd-0.od-23.eoc-500096500001",
+          "messageAttributeList": null,
+          "messageOperateList": [
+            {
+              "title": "查看详情",
+              "content": null,
+              "subtitle": null,
+              "styleType": "4",
+              "type": "1",
+              "phoneNum": null,
+              "link": "ww.baidu.com",
+              "linkType": "2",
+              "provinceCode": null,
+              "sceneId": null,
+              "recommender": null,
+              "startTime": null,
+              "endTime": null
+            }
+          ]
+        },
+        {
+          "cardTypeInfo": null,
+          "iconUrl": "https://zsc.189.cn/bigdata/2024/1/8/111704676822074428.jpg",
+          "title": "家庭圈",
+          "subtitle": "",
+          "link": "ww.baidu.com",
+          "linkType": "2",
+          "msgId": "500097400001199968019702024011917",
+          "showTime": "昨天 14:48",
+          "provinceCode": "600105",
+          "sceneId": "hg_sy_dtxx##2876##default##500097400001##010001002000##3##N##N##24##N##N##5000974",
+          "recommender": "cc-010001002000.rmc-hg_sy_dtxx.fd-0.od-24.eoc-500097400001",
+          "messageAttributeList": null,
+          "messageOperateList": [
+            {
+              "title": "查看详情",
+              "content": null,
+              "subtitle": null,
+              "styleType": "4",
+              "type": "1",
+              "phoneNum": null,
+              "link": "ww.baidu.com",
+              "linkType": "2",
+              "provinceCode": null,
+              "sceneId": null,
+              "recommender": null,
+              "startTime": null,
+              "endTime": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tabTitle": "IM互动",
+      "linkType": "5",
+      "link": "https://appg.189.cn:9443/client/html/AndroidTestDemo.html",
+      "oneLevelMsgId": "8",
+      "redDotMsgNum": "",
+      "messageCardList": []
+    }
+  ],
+  "bottomTip": "仅展示近30天内的信息"
+}

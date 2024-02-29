@@ -1,4 +1,4 @@
-package com.example.sunnyweather.adapter
+package com.example.sunnyweather.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.myapplication.recharge.view.property.Piggy
 import com.example.sunnyweather.MainActivity
 import com.example.sunnyweather.R
+import com.example.sunnyweather.adapter.ComponentsAdapter
 import com.example.sunnyweather.databinding.FragmentComponentsBinding
 import com.gyf.immersionbar.ImmersionBar
 

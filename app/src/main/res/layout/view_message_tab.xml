@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?><!-- custom_tab_view.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTabTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_333333"
+        android:textSize="14dp"
+        android:paddingEnd="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="订单物流(12)" />
+
+
+    <ImageView
+        android:id="@+id/ivRedDot"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginRight="1dp"
+        android:src="@drawable/bg_msg_red_dot"
+        app:layout_constraintRight_toRightOf="@id/tvTabTitle"
+        app:layout_constraintTop_toTopOf="@id/tvTabTitle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -38,6 +38,10 @@ import com.lxj.xpopup.core.BottomPopupView
                 dismiss()
             }
             tvConfirmDelete.setOnClickListener {
+                if (::onMessageDelete.isInitialized){
+                    onMessageDelete()
+                }
+                dismiss()
                 /*mItem.run {
                     val mMessageCenterHelper = MessageCenterHelper()
                     if (msgType == QueryMessageChannelData.MarketingMessageListBean.MSG_TYPE.JUMP) {

@@ -12,4 +12,13 @@ class CommonLinkItem {
         intent.putExtra("url", link)
         context.startActivity(intent)
     }
+
+    companion object {
+        fun goTarget(link: String?, linkType: String?, context: Context?) {
+            val commonLinkItem = CommonLinkItem()
+            commonLinkItem.link = link!!
+            commonLinkItem.linkType = linkType!!
+            commonLinkItem.goTarget(context!!)
+        }
+    }
 }
