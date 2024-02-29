@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     android:background="@color/gray_eeeeee"
     tools:context=".activity.TestActivity">
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvComponentsWaterfall"
+        android:id="@+id/rvFeed"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="6dp"
-        android:layout_marginBottom="10dp"
-        android:layout_height="match_parent"
-        />
+        android:layout_marginBottom="10dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

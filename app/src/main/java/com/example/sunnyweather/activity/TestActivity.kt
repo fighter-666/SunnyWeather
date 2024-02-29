@@ -1,10 +1,8 @@
 package com.example.sunnyweather.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.example.sunnyweather.R
 import com.example.sunnyweather.adapter.WaterfallAdapter
 import com.example.sunnyweather.data.GetFeedListData
 import com.example.sunnyweather.databinding.ActivityTestBinding
@@ -23,10 +21,7 @@ class TestActivity : AppCompatActivity() {
         val feedList = gson.fromJson(json, GetFeedListData::class.java)
         val myAdapter = WaterfallAdapter(feedList.feedList)
 
-        //掌厅
-        /*myAdapter = FeedAdapter(false)
-        myAdapter.setNewData(feedList.feedList)*/
-        binding.rvComponentsWaterfall.apply {
+        binding.rvFeed.apply {
             layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
             (layoutManager as StaggeredGridLayoutManager).gapStrategy =
                 StaggeredGridLayoutManager.GAP_HANDLING_NONE // 避免瀑布流跳动

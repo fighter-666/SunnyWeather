@@ -37,29 +37,23 @@ class ContentAreaListAdapter(data: MutableList<GetFeedListData.FeedListBean.Cont
             R.layout.item_feed_content_main_title
         )
         addItemType(
-            GetFeedListData.CONTENTAREA_TYPE.SALE_TIP.toInt(),
-            R.layout.item_feed_content_sale_tip
+            GetFeedListData.CONTENTAREA_TYPE.SALE_TIP.toInt(), R.layout.item_feed_content_sale_tip
         )
         addItemType(
-            GetFeedListData.CONTENTAREA_TYPE.PRICE.toInt(),
-            R.layout.item_feed_content_price
+            GetFeedListData.CONTENTAREA_TYPE.PRICE.toInt(), R.layout.item_feed_content_price
         )
         addItemType(
-            GetFeedListData.CONTENTAREA_TYPE.LOCATION.toInt(),
-            R.layout.item_feed_content_location
+            GetFeedListData.CONTENTAREA_TYPE.LOCATION.toInt(), R.layout.item_feed_content_location
         )
         addItemType(
-            GetFeedListData.CONTENTAREA_TYPE.COUNTDOWN.toInt(),
-            R.layout.item_feed_content_countdown
+            GetFeedListData.CONTENTAREA_TYPE.COUNTDOWN.toInt(), R.layout.item_feed_content_countdown
         )
         addItemType(GetFeedListData.CONTENTAREA_TYPE.NUM.toInt(), R.layout.item_feed_content_num)
         addItemType(
-            GetFeedListData.CONTENTAREA_TYPE.PIC_ONE.toInt(),
-            R.layout.item_feed_content_pic_one
+            GetFeedListData.CONTENTAREA_TYPE.PIC_ONE.toInt(), R.layout.item_feed_content_pic_one
         )
         addItemType(
-            GetFeedListData.CONTENTAREA_TYPE.PIC_TWO.toInt(),
-            R.layout.item_feed_content_pic_two
+            GetFeedListData.CONTENTAREA_TYPE.PIC_TWO.toInt(), R.layout.item_feed_content_pic_two
         )
         addItemType(
             GetFeedListData.CONTENTAREA_TYPE.COMPLETION.toInt(),
@@ -79,11 +73,10 @@ class ContentAreaListAdapter(data: MutableList<GetFeedListData.FeedListBean.Cont
                     if (item.saleTipList != null) {
                         //创建适配器
                         val myAdapter = SaleTipListAdapter(
-                            R.layout.adapter_recharge_contentarealist_saletiplist,
-                            item.saleTipList
+                            R.layout.adapter_recharge_contentarealist_saletiplist, item.saleTipList
                         )
 
-                        rvSaleTipList.visibility=View.VISIBLE
+                        rvSaleTipList.visibility = View.VISIBLE
                         //设置布局管理器和给 recyclerView设置适配器
                         rvSaleTipList.apply {
                             layoutManager =
@@ -92,7 +85,7 @@ class ContentAreaListAdapter(data: MutableList<GetFeedListData.FeedListBean.Cont
                         }
                         //saleTipList : 随销条
                     } else {
-                        rvSaleTipList.visibility=View.GONE
+                        rvSaleTipList.visibility = View.GONE
                     }
 
 
@@ -159,8 +152,7 @@ class ContentAreaListAdapter(data: MutableList<GetFeedListData.FeedListBean.Cont
                         //"isOriginalPriceLine": "原价是否划横线：0：否1：是"
                         if (item.price.isOriginalPriceLine == "1") {
                             //为文字设置删除线
-                            val spannableString4 =
-                                SpannableString(item.price.originalPrice)
+                            val spannableString4 = SpannableString(item.price.originalPrice)
                             val strikethroughSpan = StrikethroughSpan()
                             spannableString4.setSpan(
                                 strikethroughSpan,
@@ -183,12 +175,9 @@ class ContentAreaListAdapter(data: MutableList<GetFeedListData.FeedListBean.Cont
                                                     run {
                                                         tvIsShowPriceUnitWidth =
                                                             tvIsShowPriceUnit.width
-                                                        tvOriginalPriceWidth =
-                                                            tvOriginalPrice.width
-                                                        tvPriceDecimalWidth =
-                                                            tvPriceDecimal.width
-                                                        tvPriceIntegerWidth =
-                                                            tvPriceInteger.width
+                                                        tvOriginalPriceWidth = tvOriginalPrice.width
+                                                        tvPriceDecimalWidth = tvPriceDecimal.width
+                                                        tvPriceIntegerWidth = tvPriceInteger.width
                                                         //当售价和原价过长出现交叉时仅展示原价
                                                         if (item.price.priceInteger != "" && item.price.originalPrice != "") {
                                                             val totalWidth =
@@ -218,10 +207,8 @@ class ContentAreaListAdapter(data: MutableList<GetFeedListData.FeedListBean.Cont
                                                             tvPriceInteger.isSingleLine = true
                                                             tvPriceInteger.ellipsize =
                                                                 TextUtils.TruncateAt.END
-                                                            tvPriceDecimal.visibility =
-                                                                View.GONE
-                                                            tvOriginalPrice.visibility =
-                                                                View.GONE
+                                                            tvPriceDecimal.visibility = View.GONE
+                                                            tvOriginalPrice.visibility = View.GONE
                                                         }
                                                     }
                                                 }
@@ -231,7 +218,7 @@ class ContentAreaListAdapter(data: MutableList<GetFeedListData.FeedListBean.Cont
                                 }
                             }
                         }
-                    }else{
+                    } else {
                         clIsShowPrice.visibility = View.GONE
                         tvPriceInteger.visibility = View.GONE
                         tvPriceDecimal.visibility = View.GONE
@@ -246,7 +233,7 @@ class ContentAreaListAdapter(data: MutableList<GetFeedListData.FeedListBean.Cont
                         tvLocationTitle.text = item.location.title
                         ivLocationIcon.visibility = View.VISIBLE
                         tvLocationTitle.visibility = View.VISIBLE
-                    }else{
+                    } else {
                         ivLocationIcon.visibility = View.GONE
                         tvLocationTitle.visibility = View.GONE
                     }
@@ -263,8 +250,7 @@ class ContentAreaListAdapter(data: MutableList<GetFeedListData.FeedListBean.Cont
 
                         if (shouldDisplayCount(countDownBean)) {
                             // 判断是显示距开始还是距结束
-                            val isCountingDownToStart =
-                                shouldDisplayCountdownToStart(countDownBean)
+                            val isCountingDownToStart = shouldDisplayCountdownToStart(countDownBean)
 
                             // 计算距离开始或结束的剩余时间
                             val remainingTimeInMillis =
@@ -280,8 +266,7 @@ class ContentAreaListAdapter(data: MutableList<GetFeedListData.FeedListBean.Cont
                                     override fun onTick(millisUntilFinished: Long) {
                                         //更新倒计时文本
                                         var countdownText = formatCountdownText(
-                                            millisUntilFinished,
-                                            isCountingDownToStart
+                                            millisUntilFinished, isCountingDownToStart
                                         )
                                         if (isCountingDownToStart) {
                                             countdownText = "距开始  $countdownText"
@@ -303,10 +288,7 @@ class ContentAreaListAdapter(data: MutableList<GetFeedListData.FeedListBean.Cont
                                             val colorSpan2 =
                                                 ForegroundColorSpan(Color.parseColor("#ffffff"))
                                             spannableString.setSpan(
-                                                colorSpan2,
-                                                0,
-                                                3,
-                                                Spanned.SPAN_INCLUSIVE_EXCLUSIVE
+                                                colorSpan2, 0, 3, Spanned.SPAN_INCLUSIVE_EXCLUSIVE
                                             )
                                             tvCountDown.text = spannableString
                                         } else {
@@ -317,10 +299,7 @@ class ContentAreaListAdapter(data: MutableList<GetFeedListData.FeedListBean.Cont
                                             val colorSpan =
                                                 ForegroundColorSpan(Color.parseColor("#ffffff"))
                                             spannableString.setSpan(
-                                                colorSpan,
-                                                0,
-                                                3,
-                                                Spanned.SPAN_INCLUSIVE_EXCLUSIVE
+                                                colorSpan, 0, 3, Spanned.SPAN_INCLUSIVE_EXCLUSIVE
                                             )
                                             tvCountDown.text = spannableString
                                             tvCountDown.text = spannableString
@@ -351,8 +330,7 @@ class ContentAreaListAdapter(data: MutableList<GetFeedListData.FeedListBean.Cont
                     if (item.numText != null) {
                         tvNumText.text = item.numText
                         tvNumText.visibility = View.VISIBLE
-                        tvNumText.ellipsize =
-                            TextUtils.TruncateAt.END
+                        tvNumText.ellipsize = TextUtils.TruncateAt.END
                     } else {
                         tvNumText.visibility = View.GONE
                     }
@@ -363,18 +341,17 @@ class ContentAreaListAdapter(data: MutableList<GetFeedListData.FeedListBean.Cont
                     val rvPicList = getView<RecyclerView>(R.id.rvPicList)
                     if (item.picList != null) {
                         val rechargeAdapter = ContentAreaListPicListAdapter(
-                            R.layout.adapter_recharge_contentarealist_piclist,
-                            item.picList
+                            R.layout.adapter_recharge_contentarealist_piclist, item.picList
                         )
-                        rvPicList.visibility=View.VISIBLE
+                        rvPicList.visibility = View.VISIBLE
 
                         //设置布局管理器和给recyclerView 设置设配器
                         rvPicList.apply {
                             layoutManager = LinearLayoutManager(context)
                             adapter = rechargeAdapter
                         }
-                    }else{
-                        rvPicList.visibility=View.GONE
+                    } else {
+                        rvPicList.visibility = View.GONE
                     }
 
 
@@ -385,18 +362,17 @@ class ContentAreaListAdapter(data: MutableList<GetFeedListData.FeedListBean.Cont
                     val rvPicListDouble = getView<RecyclerView>(R.id.rvPicListDouble)
                     if (item.picList != null) {
                         val myAdapter = ContentAreaListGridAdapter(
-                            R.layout.adapter_recharge_contentarealist_piclist_double,
-                            item.picList
+                            R.layout.adapter_recharge_contentarealist_piclist_double, item.picList
                         )
 
-                        rvPicListDouble.visibility= View.VISIBLE
+                        rvPicListDouble.visibility = View.VISIBLE
                         //设置布局管理器和给recyclerView设置适配器
                         rvPicListDouble.apply {
                             layoutManager = GridLayoutManager(context, 2)
                             adapter = myAdapter
                         }
-                    }else{
-                        rvPicListDouble.visibility= View.GONE
+                    } else {
+                        rvPicListDouble.visibility = View.GONE
                     }
 
                 }
@@ -406,7 +382,7 @@ class ContentAreaListAdapter(data: MutableList<GetFeedListData.FeedListBean.Cont
                     if (item.completionInfo != null) {
                         tvNullTitleFirst.text = item.completionInfo.title
                         tvNullTitleFirst.visibility = View.VISIBLE
-                    }else{
+                    } else {
                         tvNullTitleFirst.visibility = View.GONE
                     }
 
@@ -428,8 +404,7 @@ class ContentAreaListAdapter(data: MutableList<GetFeedListData.FeedListBean.Cont
                                 Color.parseColor(item.mainTitle.color)
                             )
                         }
-                        tvMainTitleTitle.ellipsize =
-                            TextUtils.TruncateAt.END
+                        tvMainTitleTitle.ellipsize = TextUtils.TruncateAt.END
                         tvMainTitleTitle.text = item.mainTitle.title
                         tvMainTitleTitle.visibility = View.VISIBLE
                     } else {
@@ -515,8 +490,7 @@ class ContentAreaListAdapter(data: MutableList<GetFeedListData.FeedListBean.Cont
             if (isCountingDownToStart) countDownBean.startTime else countDownBean.endTime
         //计算剩余时间：使用日期格式化对象将目标时间和当前时间解析为Date对象，并通过调用time方法获取它们的时间戳（以毫秒为单位）
         return abs(
-            (dateFormat.parse(targetTime)?.time ?: 0) - (dateFormat.parse(currentTime)?.time
-                ?: 0)
+            (dateFormat.parse(targetTime)?.time ?: 0) - (dateFormat.parse(currentTime)?.time ?: 0)
         )
     }
 

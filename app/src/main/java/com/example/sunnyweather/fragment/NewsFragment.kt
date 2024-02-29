@@ -3,23 +3,32 @@ package com.example.sunnyweather.fragment
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.ct.base.ext.dp
 import com.ct.client.message.adapter.ServiceMessageAdapter
 import com.example.sunnyweather.R
 import com.example.sunnyweather.SunnyWeatherApplication
 import com.example.sunnyweather.activity.MessageAllServiceActivity
+import com.example.sunnyweather.adapter.DynamicFragmentAdapter
+import com.example.sunnyweather.adapter.FragmentStateAdapter2
 import com.example.sunnyweather.adapter.MarketMessageAdapter
 import com.example.sunnyweather.adapter.MessageClassifyAdapter
 import com.example.sunnyweather.adapter.MessageMarketingDecoration
+import com.example.sunnyweather.adapter.WaterfallAdapter
 import com.example.sunnyweather.base.binding.BaseBindingFragment
 import com.example.sunnyweather.data.AdItem
+import com.example.sunnyweather.data.GetFeedListData
 import com.example.sunnyweather.data.QueryMessageChannelData
 import com.example.sunnyweather.databinding.FragmentNewsBinding
 import com.example.sunnyweather.widget.MsgDataHelper
+import com.google.android.material.tabs.TabLayoutMediator
 import com.google.gson.Gson
 import com.gyf.immersionbar.ImmersionBar
 import com.scwang.smart.refresh.layout.api.RefreshLayout
@@ -30,7 +39,7 @@ import java.lang.Math.abs
 /**
  * 说明：1110 消息中心
  */
-class NewsFragment : BaseBindingFragment<FragmentNewsBinding>(){
+class NewsFragment : BaseBindingFragment<FragmentNewsBinding>() {
     private lateinit var messageClassifyAdapter: MessageClassifyAdapter // 营销消息分类
     private lateinit var serviceMessageAdapter: ServiceMessageAdapter // 服务消息
     private lateinit var marketMessageAdapter: MarketMessageAdapter // 营销消息
@@ -42,10 +51,6 @@ class NewsFragment : BaseBindingFragment<FragmentNewsBinding>(){
             .titleBar(binding.messageTitleBar)    //解决状态栏和布局重叠问题，任选其一
             .statusBarDarkFont(true)   //状态栏字体是深色，不写默认为亮色
             .init()
-
-
-
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -57,23 +62,26 @@ class NewsFragment : BaseBindingFragment<FragmentNewsBinding>(){
     }
 
     private fun initView() {
+
+
         val json: String = // 从文件中读取 JSON 数据，这里使用 assets 文件夹中的示例
-            SunnyWeatherApplication.context.assets.open("queryMessageChannel.json").bufferedReader().use { it.readText() }
+            SunnyWeatherApplication.context.assets.open("queryMessageChannel.json").bufferedReader()
+                .use { it.readText() }
         //使用了Gson库来将JSON数据转换为GetFeedTabData对象
         val gson = Gson()
         val data = gson.fromJson(json, QueryMessageChannelData::class.java)
 
         val adItems = ArrayList<AdItem>()
-            val adItem1 = AdItem()
-            adItem1.title = "中国电信APP发现新版本，快来升级体验吧"
-            adItem1.linkType = "1"
-            adItem1.link = "1000021"
-            adItems.add(adItem1)
+        val adItem1 = AdItem()
+        adItem1.title = "中国电信APP发现新版本，快来升级体验吧"
+        adItem1.linkType = "1"
+        adItem1.link = "1000021"
+        adItems.add(adItem1)
         // 公告
-            val adItem2 = AdItem()
-            adItem2.title = "您有一条新的公告消息待查看"
-            adItem2.linkType = "2"
-            adItems.add(adItem2)
+        val adItem2 = AdItem()
+        adItem2.title = "您有一条新的公告消息待查看"
+        adItem2.linkType = "2"
+        adItems.add(adItem2)
 
         binding.run {
             binding.messageInfoView.setNotices(adItems)
@@ -88,7 +96,7 @@ class NewsFragment : BaseBindingFragment<FragmentNewsBinding>(){
             // 服务消息列表
             serviceMessageAdapter = ServiceMessageAdapter()
             rvServiceMessage.apply {
-                layoutManager = object :LinearLayoutManager(context){
+                layoutManager = object : LinearLayoutManager(context) {
                     override fun canScrollVertically(): Boolean {
                         return false
                     }
@@ -99,7 +107,7 @@ class NewsFragment : BaseBindingFragment<FragmentNewsBinding>(){
             llServiceList.visibility = View.VISIBLE
             if (serviceMessageAdapter.data.size > 3) {
                 tvViewAll.visibility = View.VISIBLE
-            }else{
+            } else {
                 tvViewAll.visibility = View.GONE
             }
 
@@ -141,7 +149,29 @@ class NewsFragment : BaseBindingFragment<FragmentNewsBinding>(){
 
 
         }
+
+       /* val tabs = arrayOf("Box", "Recommend", "News", "MYy")
+
+        // offscreenPageLimit 离屏页面限制决定了在 ViewPager 的适配器中，当前页面两侧应该保留的页面数量
+        // tabs.size 被用来动态地根据标签数量设置离屏页面限制
+        binding.viewPager.offscreenPageLimit = tabs.size
+        binding.viewPager.isUserInputEnabled = false; //true:滑动，false：禁止滑动
+
+        val fragmentsList = listOf()
+        val adapter =
+        FragmentStateAdapter2(requireActivity(), fragmentsList)
+        binding.viewPager.adapter = adapter
+
+        val mediator = TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
+            val tabView =
+                LayoutInflater.from(context).inflate(R.layout.view_tab, null)
+            val tabTitle = tabView.findViewById<TextView>(R.id.tabTitle)
+            tabTitle.text = tabs[position]
+            tab.customView = tabView
+        }
+        mediator.attach()*/
     }
+
     private fun initListener() {
         binding.run {
             // 下拉刷新
@@ -205,12 +235,11 @@ class NewsFragment : BaseBindingFragment<FragmentNewsBinding>(){
         }
 
     }
+
     private fun initData() {
 
 
     }
-
-
 
 
 }

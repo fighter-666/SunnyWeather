@@ -41,6 +41,7 @@ class MessageAllServiceActivity : BaseBindingActivity<ActivityMessageAllServiceB
 
     private var mReceiver: MyReceiver? = null
     private val tabTitles = ArrayList<String>()
+
     //private lateinit var loadService: LoadService<Any>
     private val fragmentsList = ArrayList<Fragment>()
     private var currentItem = 0
@@ -53,32 +54,32 @@ class MessageAllServiceActivity : BaseBindingActivity<ActivityMessageAllServiceB
         initData()
         initListener()
 
-      /*  // 注册广播
-        mReceiver = MyReceiver()
-        val filter = IntentFilter()
-        filter.addAction(Constants.ACTION_LOGIN_SUCC)
-        registerReceiver(mReceiver, filter)
+        /*  // 注册广播
+          mReceiver = MyReceiver()
+          val filter = IntentFilter()
+          filter.addAction(Constants.ACTION_LOGIN_SUCC)
+          registerReceiver(mReceiver, filter)
 
-        HgXxSy.pageMessageAllService()*/
+          HgXxSy.pageMessageAllService()*/
     }
 
     private fun initViews() {
         ImmersionBar.with(this).titleBar(binding.titleBar)    //解决状态栏和布局重叠问题，任选其一
             .transparentStatusBar()  //透明状态栏，不写默认透明色
-         //.statusBarDarkFont(true)
-         .init()
+            //.statusBarDarkFont(true)
+            .init()
 
         binding.run {
 
-           /* val loadSir = LoadSir.Builder().addCallback(MsgServiceEmptyCallback())
-                .addCallback(MsgFailCallback()).build()
-            loadService = loadSir.register(binding.smartRefreshLayout)
-            loadService.setCallBack(MsgFailCallback::class.java) { context, view ->
-                val tvReload: TextView = view.findViewById(R.id.tv_reload)
-                tvReload.setOnClickListener {
-                    queryServiceMessage(false)
-                }
-            }*/
+            /* val loadSir = LoadSir.Builder().addCallback(MsgServiceEmptyCallback())
+                 .addCallback(MsgFailCallback()).build()
+             loadService = loadSir.register(binding.smartRefreshLayout)
+             loadService.setCallBack(MsgFailCallback::class.java) { context, view ->
+                 val tvReload: TextView = view.findViewById(R.id.tv_reload)
+                 tvReload.setOnClickListener {
+                     queryServiceMessage(false)
+                 }
+             }*/
 
             //初始化viewpage2的适配器
             vp2Message.adapter =
@@ -95,7 +96,8 @@ class MessageAllServiceActivity : BaseBindingActivity<ActivityMessageAllServiceB
     private fun initData() {
         //queryServiceMessage(false)
         val json: String = // 从文件中读取 JSON 数据，这里使用 assets 文件夹中的示例
-            SunnyWeatherApplication.context.assets.open("queryServiceeMessage.json").bufferedReader().use { it.readText() }
+            SunnyWeatherApplication.context.assets.open("queryServiceeMessage.json")
+                .bufferedReader().use { it.readText() }
         //使用了Gson库来将JSON数据转换为GetFeedTabData对象
         val gson = Gson()
         val data = gson.fromJson(json, QueryServiceMessageData::class.java)
@@ -147,27 +149,27 @@ class MessageAllServiceActivity : BaseBindingActivity<ActivityMessageAllServiceB
                     setTabLable(messageClassifyList)
 
                     //设置点击跳转的默认界面
-                   /* if (!isRefreshing) {
-                        val tabName = intent.getStringExtra("tabName")
-                        val tabIndex =
-                            messageClassifyList.indexOfFirst { it.tabTitle == tabName }
+                    /* if (!isRefreshing) {
+                         val tabName = intent.getStringExtra("tabName")
+                         val tabIndex =
+                             messageClassifyList.indexOfFirst { it.tabTitle == tabName }
 
-                        if (tabIndex == -1 || tabIndex == 0) {
-                            val tabAt = binding.tabMessage.getTabAt(0)
-                            tabAt?.let { updateTabFont(it, true) }
-                        } else {
-                            vp2Message.setCurrentItem(
-                                tabIndex, false
-                            )
-                        }
-                        // 在数据刷新后，设置 ViewPager2 的当前项为原来的项
-                    }else{
-                        if (currentItem < mMessageClassifyList.size) {
-                            val tabAt = binding.tabMessage.getTabAt(currentItem)
-                            tabAt?.let { updateTabFont(it, true) }
-                        }
-                        smartRefreshLayout.finishRefresh()
-                    }*/
+                         if (tabIndex == -1 || tabIndex == 0) {
+                             val tabAt = binding.tabMessage.getTabAt(0)
+                             tabAt?.let { updateTabFont(it, true) }
+                         } else {
+                             vp2Message.setCurrentItem(
+                                 tabIndex, false
+                             )
+                         }
+                         // 在数据刷新后，设置 ViewPager2 的当前项为原来的项
+                     }else{
+                         if (currentItem < mMessageClassifyList.size) {
+                             val tabAt = binding.tabMessage.getTabAt(currentItem)
+                             tabAt?.let { updateTabFont(it, true) }
+                         }
+                         smartRefreshLayout.finishRefresh()
+                     }*/
                 } else {
                     tabMessage.visibility = View.GONE
                     //loadService.showCallback(MsgServiceEmptyCallback::class.java)
@@ -244,13 +246,13 @@ class MessageAllServiceActivity : BaseBindingActivity<ActivityMessageAllServiceB
                 }
             })
 
-           /* supportFragmentManager.setFragmentResultListener(CommWebViewFragment.ON_OVER_SCROLLED,
-                mContext
-            ) { requestKey, result ->
-                val isClampedY = result.getBoolean("isClampedY")
-                smartRefreshLayout.setEnableRefresh(isClampedY)
-                Log.i("hssOnFragmentResult", "isClampedY:$isClampedY")
-            }*/
+            /* supportFragmentManager.setFragmentResultListener(CommWebViewFragment.ON_OVER_SCROLLED,
+                 mContext
+             ) { requestKey, result ->
+                 val isClampedY = result.getBoolean("isClampedY")
+                 smartRefreshLayout.setEnableRefresh(isClampedY)
+                 Log.i("hssOnFragmentResult", "isClampedY:$isClampedY")
+             }*/
         }
 
 
@@ -267,7 +269,7 @@ class MessageAllServiceActivity : BaseBindingActivity<ActivityMessageAllServiceB
                         val redFlag = tabAt.customView!!.findViewById<ImageView>(R.id.ivRedDot)
 
                         if (UtilOther.parseInt(entity.num) > 99) {
-                            tv.text  = "${entity.titleName}(99)"
+                            tv.text = "${entity.titleName}(99)"
                             redFlag.visibility = View.VISIBLE
                         } else if (UtilOther.parseInt(entity.num) > 0) {
                             tv.text = "${entity.titleName}(${entity.num})"
@@ -446,12 +448,12 @@ class MessageAllServiceActivity : BaseBindingActivity<ActivityMessageAllServiceB
                     tvTabTitle.text = "${bean.tabTitle}(99)"
                     ivRedDot.visibility = View.VISIBLE
                 } else if (sum > 0) {
-                        tvTabTitle.text = "${bean.tabTitle}($sum)"
-                        ivRedDot.visibility = View.VISIBLE
-                    } else {
-                        tvTabTitle.text = bean.tabTitle
-                        ivRedDot.visibility = View.GONE
-                    }
+                    tvTabTitle.text = "${bean.tabTitle}($sum)"
+                    ivRedDot.visibility = View.VISIBLE
+                } else {
+                    tvTabTitle.text = bean.tabTitle
+                    ivRedDot.visibility = View.GONE
+                }
             }
         }
     }
@@ -484,16 +486,16 @@ class MessageAllServiceActivity : BaseBindingActivity<ActivityMessageAllServiceB
                 ivRedDot.visibility = View.GONE
                 tvTabTitle.text = item.tabTitle
 
-               /* val mMessageCenterHelper = MessageCenterHelper()
-                // 一级消息设置已读
-                mMessageCenterHelper.markReadMsg(
-                    mContext,
-                    MarkReadMsgTask.MARK_READ_FLAG.ONELEVELMSG,
-                    oneLevelMsgId = item.oneLevelMsgId
-                ).onMessageRead = {
-                    // 回消息再首页刷新红点数
-                    Variable.isNeedRefreshMsgDot = true
-                }*/
+                /* val mMessageCenterHelper = MessageCenterHelper()
+                 // 一级消息设置已读
+                 mMessageCenterHelper.markReadMsg(
+                     mContext,
+                     MarkReadMsgTask.MARK_READ_FLAG.ONELEVELMSG,
+                     oneLevelMsgId = item.oneLevelMsgId
+                 ).onMessageRead = {
+                     // 回消息再首页刷新红点数
+                     Variable.isNeedRefreshMsgDot = true
+                 }*/
             }
 
             // 网页禁止左右滑动

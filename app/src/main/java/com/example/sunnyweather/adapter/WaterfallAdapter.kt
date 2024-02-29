@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import com.ct.base.ext.dp
@@ -32,10 +31,6 @@ import kotlinx.coroutines.launch
 
 class WaterfallAdapter(data: MutableList<GetFeedListData.FeedListBean>) :
     BaseMultiItemQuickAdapter<GetFeedListData.FeedListBean, BaseViewHolder>(data) {
-
-    //一个可为空的函数类型变量，用于保存点击事件的监听器
-    private var onItemClickListener: ((GetFeedListData.FeedListBean) -> Unit)? = null
-
     init {
         addItemType(
             GetFeedListData.FEED_ADAPTER_ITEM_TYPE.MANY_IMAGE,
@@ -52,7 +47,8 @@ class WaterfallAdapter(data: MutableList<GetFeedListData.FeedListBean>) :
         )
         addItemType(
             GetFeedListData.FEED_LIST_ITEM_TYPE.RECHARGE.toInt(),
-            R.layout.widget_multiple_item_recharge)
+            R.layout.widget_multiple_item_recharge
+        )
     }
 
     override fun convert(holder: BaseViewHolder, item: GetFeedListData.FeedListBean) {
@@ -73,7 +69,7 @@ class WaterfallAdapter(data: MutableList<GetFeedListData.FeedListBean>) :
                             isNestedScrollingEnabled = false
                         }
                         rvContentAreaList.visibility = View.VISIBLE
-                    }else{
+                    } else {
                         rvContentAreaList.visibility = View.GONE
                     }
 
@@ -93,7 +89,7 @@ class WaterfallAdapter(data: MutableList<GetFeedListData.FeedListBean>) :
                     // 处理空布局
                     val rvContentAreaList = getView<RecyclerView>(R.id.rvContentAreaList)
                     //contentAreaList : 内容区域
-                    if (!item.contentAreaList.isNullOrEmpty() ) {
+                    if (!item.contentAreaList.isNullOrEmpty()) {
                         rvContentAreaList.visibility = View.VISIBLE
                         val rechargeAdapter = ContentAreaListAdapter(item.contentAreaList)
 
@@ -143,7 +139,7 @@ class WaterfallAdapter(data: MutableList<GetFeedListData.FeedListBean>) :
                     val tvGetTelephoneNumber = getView<TextView>(R.id.tvGetTelephoneNumber)
                     val rlRecharge = getView<RecyclerView>(R.id.rlRecharge)
                     // 处理充值布局
-                   cvRecharge.isNestedScrollingEnabled = false
+                    cvRecharge.isNestedScrollingEnabled = false
                     GetTelephoneNumberManager.setGetTelephoneNumberListener(object :
                         GetTelephoneNumberManager.OnGetTelephoneNumberManager {
                         override fun onGetTelephoneNumber(number: String) {
@@ -181,8 +177,8 @@ class WaterfallAdapter(data: MutableList<GetFeedListData.FeedListBean>) :
                     //顶部标签
                     if (!item.picArea.topImage.isEmptyOrNull()) {
                         ivTopImage.visibility = View.VISIBLE
-                        UtilGlide.showImage(item.picArea.topImage,ivTopImage)
-                    }else{
+                        UtilGlide.showImage(item.picArea.topImage, ivTopImage)
+                    } else {
                         ivTopImage.visibility = View.GONE
                     }
 
@@ -196,7 +192,7 @@ class WaterfallAdapter(data: MutableList<GetFeedListData.FeedListBean>) :
                         tvCommentList.adapter = viewFlipperAdapter
                         tvCommentList.visibility = View.VISIBLE
                         clCommentList.visibility = View.VISIBLE
-                    }else{
+                    } else {
                         tvCommentList.visibility = View.GONE
                         clCommentList.visibility = View.GONE
                     }
@@ -205,7 +201,7 @@ class WaterfallAdapter(data: MutableList<GetFeedListData.FeedListBean>) :
                     if (!item.picArea.stock.isEmptyOrNull()) {
                         tvStockout.text = item.picArea.stock
                         tvStockout.visibility = View.VISIBLE
-                    }else{
+                    } else {
                         tvStockout.visibility = View.GONE
                     }
                     //比例
@@ -233,8 +229,8 @@ class WaterfallAdapter(data: MutableList<GetFeedListData.FeedListBean>) :
                             lp.bottomMargin = 5.dp
                             clContentAreaList.layoutParams = lp
                         }
-                        rvContentAreaList.visibility= View.VISIBLE
-                        clContentAreaList.visibility= View.VISIBLE
+                        rvContentAreaList.visibility = View.VISIBLE
+                        clContentAreaList.visibility = View.VISIBLE
 
                         //设置布局管理器和给recyclerView 设置设配器
                         rvContentAreaList.apply {
@@ -242,22 +238,15 @@ class WaterfallAdapter(data: MutableList<GetFeedListData.FeedListBean>) :
                             adapter = rechargeAdapter
                             isNestedScrollingEnabled = false
                         }
-                        UtilGlide.showImage(item.picArea.imageUrl,ivPicAreaImageUrl)
+                        UtilGlide.showImage(item.picArea.imageUrl, ivPicAreaImageUrl)
                     } else {
-                        UtilGlide.showImage(item.picArea.imageUrl,ivPicAreaImageUrl)
-                        rvContentAreaList.visibility= View.GONE
-                        clContentAreaList.visibility= View.GONE
+                        UtilGlide.showImage(item.picArea.imageUrl, ivPicAreaImageUrl)
+                        rvContentAreaList.visibility = View.GONE
+                        clContentAreaList.visibility = View.GONE
                     }
                 }
             }
         }
-    }
-
-    //它接受一个函数类型的参数 listener，该函数类型接受一个 Piggy 对象作为参数，并不返回任何结果
-    fun setOnItemClickListener(listener: (GetFeedListData.FeedListBean) -> Unit) {
-        //onItemClickListener 被赋值为传入的 listener，
-        // 从而将外部传入的点击事件监听器与适配器关联起来
-        onItemClickListener = listener
     }
 
     //第四位到第七位用*代替
@@ -274,32 +263,6 @@ class WaterfallAdapter(data: MutableList<GetFeedListData.FeedListBean>) :
 
         return hiddenText.toString()
     }
-
-    fun addMoreValue(
-        feedList: MutableList<GetFeedListData.FeedListBean>,
-        newData: List<GetFeedListData.FeedListBean>,
-    ) {
-        // 将新数据（newData）添加到现有的 feedList 集合中
-        feedList.addAll(newData)
-        // 或者，如果你希望新数据添加到开头，可以使用以下方式
-        // feedList.addAll(0, newData)
-    }
-
-/*    fun refreshValue(
-        feedList: MutableList<GetFeedListData.FeedListBean>,
-        newData: List<GetFeedListData.FeedListBean>,
-    ) {
-        // 创建临时变量保存删除前的数据
-        val deletedData = ArrayList(feedList)
-        // 清空现有的数据
-        feedList.clear()
-        // 添加新的数据
-        feedList.addAll(newData)
-        // 在需要恢复删除的数据时，将其添加回 feedList
-        feedList.addAll(deletedData)
-    }*/
-
-
 }
 
 
