@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -22,9 +23,12 @@ import com.example.sunnyweather.adapter.MarketMessageAdapter
 import com.example.sunnyweather.adapter.MessageClassifyAdapter
 import com.example.sunnyweather.adapter.MessageMarketingDecoration
 import com.example.sunnyweather.adapter.WaterfallAdapter
+import com.example.sunnyweather.base.CommWebViewFragment
+import com.example.sunnyweather.base.ExtraParams
 import com.example.sunnyweather.base.binding.BaseBindingFragment
 import com.example.sunnyweather.data.AdItem
 import com.example.sunnyweather.data.GetFeedListData
+import com.example.sunnyweather.data.GetFeedTabData
 import com.example.sunnyweather.data.QueryMessageChannelData
 import com.example.sunnyweather.databinding.FragmentNewsBinding
 import com.example.sunnyweather.widget.MsgDataHelper
@@ -44,6 +48,7 @@ class NewsFragment : BaseBindingFragment<FragmentNewsBinding>() {
     private lateinit var serviceMessageAdapter: ServiceMessageAdapter // 服务消息
     private lateinit var marketMessageAdapter: MarketMessageAdapter // 营销消息
     private lateinit var outMarketMessageAdapter: MarketMessageAdapter // 过时营销消息
+    private val fragmentsList = ArrayList<Fragment>()
     override fun lazyInit() {
         //沉浸式处理
         ImmersionBar.with(this)
@@ -147,29 +152,55 @@ class NewsFragment : BaseBindingFragment<FragmentNewsBinding>() {
                 )
             )
 
+            val json2: String = // 从文件中读取 JSON 数据，这里使用 assets 文件夹中的示例
+                requireContext().assets.open("getFeedTabData.json").bufferedReader().use { it.readText() }
+            //使用了Gson库来将JSON数据转换为GetFeedTabData对象
+            val tabItem = gson.fromJson(json2, GetFeedTabData::class.java)
+
+            val tabs = arrayOf("Box", "Recommend", "News", "MYy")
+
+            // offscreenPageLimit 离屏页面限制决定了在 ViewPager 的适配器中，当前页面两侧应该保留的页面数量
+            // tabs.size 被用来动态地根据标签数量设置离屏页面限制
+            binding.viewPager.isUserInputEnabled = false; //true:滑动，false：禁止滑动
+
+            fragmentsList.clear()
+            for (i in tabItem.tabList.indices) {
+                val tabItem = tabItem.tabList.get(i)
+                if (tabItem.link.isNullOrEmpty()) {
+                    //原生
+                    val bundle = Bundle()
+                    /*val data = messageClassifyList[i]
+                    bundle.putSerializable("queryServiceMessageData", data)*/
+                    val feedFragment = FeedFragment()
+                    feedFragment.arguments = bundle
+                    fragmentsList.add(feedFragment)
+                } else {
+                    // 网页
+                    val cWebKitFragment = CommWebViewFragment()
+                    val extraParams = ExtraParams()
+                    extraParams.data = tabItem.link
+                    cWebKitFragment.mExtraParams = extraParams
+                    fragmentsList.add(cWebKitFragment)
+                }
+            }
+            viewPager.offscreenPageLimit = fragmentsList.size
+            val adapter =
+                FragmentStateAdapter2(requireActivity(), fragmentsList)
+            binding.viewPager.adapter = adapter
+
+            val mediator = TabLayoutMediator(binding.tabFeed, binding.viewPager) { tab, position ->
+                val tabView =
+                    LayoutInflater.from(context).inflate(R.layout.view_tab, null)
+                val tabTitle = tabView.findViewById<TextView>(R.id.tabTitle)
+                tabTitle.text = tabItem.tabList[position].tabName
+                tab.customView = tabView
+            }
+            mediator.attach()
+
 
         }
 
-       /* val tabs = arrayOf("Box", "Recommend", "News", "MYy")
 
-        // offscreenPageLimit 离屏页面限制决定了在 ViewPager 的适配器中，当前页面两侧应该保留的页面数量
-        // tabs.size 被用来动态地根据标签数量设置离屏页面限制
-        binding.viewPager.offscreenPageLimit = tabs.size
-        binding.viewPager.isUserInputEnabled = false; //true:滑动，false：禁止滑动
-
-        val fragmentsList = listOf()
-        val adapter =
-        FragmentStateAdapter2(requireActivity(), fragmentsList)
-        binding.viewPager.adapter = adapter
-
-        val mediator = TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
-            val tabView =
-                LayoutInflater.from(context).inflate(R.layout.view_tab, null)
-            val tabTitle = tabView.findViewById<TextView>(R.id.tabTitle)
-            tabTitle.text = tabs[position]
-            tab.customView = tabView
-        }
-        mediator.attach()*/
     }
 
     private fun initListener() {
@@ -187,6 +218,8 @@ class NewsFragment : BaseBindingFragment<FragmentNewsBinding>() {
                     refreshLayout.finishRefresh(2000/*,false*/);//传入false表示加载失败
                 }
             })
+            //禁止上拉
+            smartRefreshLayout.setEnableLoadMore(false);//是否启用上拉加载功能
 
             appbar.addOnOffsetChangedListener { appBarLayout, verticalOffset ->
                 // 当垂直偏移量大于20dp对应的像素值时，关闭侧滑菜单
@@ -211,13 +244,13 @@ class NewsFragment : BaseBindingFragment<FragmentNewsBinding>() {
                 }
                 val offsetRatio = abs(verticalOffset).toFloat() / appBarLayout.totalScrollRange
 
-                /*if (offsetRatio == 1f) {
+                if (offsetRatio == 1f) {
                     // 当吸顶时
                     binding.tabFeed.setBackgroundColor(resources.getColor(R.color.white))
                 } else {
                     // 当未吸顶时，或者根据需要设置渐变效果
                     binding.tabFeed.setBackgroundColor(resources.getColor(R.color.gray_f8f8f8))
-                }*/
+                }
 
                 // 右下角回到顶部
                 ivSticky.setOnClickListener {

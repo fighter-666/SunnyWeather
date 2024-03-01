@@ -3,7 +3,7 @@ package com.example.sunnyweather.adapter
 import androidx.annotation.LayoutRes
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
-import com.example.myapplication.recharge.view.property.Piggy
+import com.example.sunnyweather.data.Piggy
 import com.example.sunnyweather.R
 
 class ComponentsAdapter(@LayoutRes layoutResId: Int, data: MutableList<Piggy>) :

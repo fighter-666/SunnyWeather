@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_base"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_top_corner_15"
+    android:orientation="vertical"
+    android:paddingHorizontal="13dp"
+    android:paddingTop="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_eeeeee_corner_18dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="12dp">
+
+            <EditText
+                android:id="@+id/et_signature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:hint="请创建您的电信签名哦！"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColorHint="@color/gray_999999"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="18"
+                android:textColor="@color/gray_999999"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="58dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="10dp"
+            android:alpha="0.5"
+            android:background="@drawable/bg_5b82ff_corner_18dp"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_signature_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="13dp"
+        android:text="签名模版"
+        android:textColor="@color/black_333333"
+        android:textSize="15dp"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_signature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

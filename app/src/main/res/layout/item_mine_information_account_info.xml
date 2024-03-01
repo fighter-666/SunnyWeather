@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_base"
+    android:layout_width="match_parent"
+    android:layout_height="65dp">
+
+    <!--上下轮播-->
+    <com.example.sunnyweather.widget.MineAccountInfoView
+        android:id="@+id/view_mine_account_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp" />
+
+    <View
+        android:id="@+id/view_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_eeeeee" />
+
+    <View
+        android:id="@+id/view_vertical"
+        android:layout_width="0.7dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@color/gray_eeeeee" />
+
+</RelativeLayout>
+
+

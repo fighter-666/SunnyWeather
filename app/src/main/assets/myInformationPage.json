@@ -1,0 +1,234 @@
+ {
+        "accountInformationFloor": {
+            "accountInformationList": [
+                {
+                    "accountDetailList": [
+                        {
+                            "iconUrl": "string",
+                            "link": "string",
+                            "linkType": "2",
+                            "provinceCode": "string",
+                            "recommender": "string",
+                            "sceneId": "string",
+                            "title": "666",
+                            "subtitle": "111"
+                        }
+                    ]
+                },
+                {
+                    "accountDetailList": [
+                        {
+                            "iconUrl": "string",
+                            "link": "string",
+                            "linkType": "string",
+                            "provinceCode": "string",
+                            "recommender": "string",
+                            "sceneId": "string",
+                            "title": "666",
+                            "subtitle": "111"
+                        },
+                        {
+                            "iconUrl": "string",
+                            "link": "string",
+                            "linkType": "string",
+                            "provinceCode": "string",
+                            "recommender": "string",
+                            "sceneId": "string",
+                            "title": "555",
+                            "subtitle": "111"
+                        },
+                        {
+                            "iconUrl": "string",
+                            "link": "string",
+                            "linkType": "string",
+                            "provinceCode": "string",
+                            "recommender": "string",
+                            "sceneId": "string",
+                            "title": "777",
+                            "subtitle": "111"
+                        }
+                    ]
+                },
+                {
+                    "accountDetailList": [
+                        {
+                            "iconUrl": "string",
+                            "link": "string",
+                            "linkType": "string",
+                            "provinceCode": "string",
+                            "recommender": "string",
+                            "sceneId": "string",
+                            "title": "666",
+                            "subtitle": "111"
+                        },
+                        {
+                            "iconUrl": "string",
+                            "link": "string",
+                            "linkType": "string",
+                            "provinceCode": "string",
+                            "recommender": "string",
+                            "sceneId": "string",
+                            "title": "555",
+                            "subtitle": "111"
+                        },
+                        {
+                            "iconUrl": "string",
+                            "link": "string",
+                            "linkType": "string",
+                            "provinceCode": "string",
+                            "recommender": "string",
+                            "sceneId": "string",
+                            "title": "777",
+                            "subtitle": "111"
+                        }
+                    ]
+                }
+            ],
+            "title": "娃哈哈"
+        },
+        "ctArchivesFloor": {
+            "archivesList": [
+                {
+                    "arrowIcon": "string",
+                    "backgroundImage": "https://img0.baidu.com/it/u=4035155680,782811820&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500",
+                    "link": "string",
+                    "linkType": "string",
+                    "provinceCode": "string",
+                    "recommender": "string",
+                    "sceneId": "string",
+                    "subtitle": "string",
+                    "subtitleColor": "string",
+                    "title": "string",
+                    "titleColor": "string"
+                },
+                {
+                    "arrowIcon": "string",
+                    "backgroundImage": "string",
+                    "link": "string",
+                    "linkType": "string",
+                    "provinceCode": "string",
+                    "recommender": "string",
+                    "sceneId": "string",
+                    "subtitle": "string",
+                    "subtitleColor": "string",
+                    "title": "string",
+                    "titleColor": "string"
+                },
+                {
+                    "arrowIcon": "string",
+                    "backgroundImage": "string",
+                    "link": "string",
+                    "linkType": "string",
+                    "provinceCode": "string",
+                    "recommender": "string",
+                    "sceneId": "string",
+                    "subtitle": "string",
+                    "subtitleColor": "string",
+                    "title": "string",
+                    "titleColor": "string"
+                },
+                {
+                    "arrowIcon": "string",
+                    "backgroundImage": "string",
+                    "link": "string",
+                    "linkType": "string",
+                    "provinceCode": "string",
+                    "recommender": "string",
+                    "sceneId": "string",
+                    "subtitle": "string",
+                    "subtitleColor": "string",
+                    "title": "string",
+                    "titleColor": "string"
+                }
+            ],
+            "subtitle": "string",
+            "title": "string"
+        },
+        "medalFloor": {
+            "backgroundImage": "https://img0.baidu.com/it/u=2687431006,3654583729&fm=253&fmt=auto&app=138&f=JPEG?w=768&h=500",
+            "floorStructure": {
+                "arrowIcon": "string",
+                "link": "string",
+                "linkType": "string",
+                "provinceCode": "string",
+                "recommender": "string",
+                "sceneId": "string",
+                "subtitle": "string",
+                "subtitleColor": "string",
+                "subtitleHighLight": "string",
+                "subtitleHighLightColor": "string",
+                "title": "我的勋章墙",
+                "titleColor": "string"
+            },
+            "medalList": [
+                {
+                    "iconUrl": "https://n.sinaimg.cn/sinacn14/300/w1200h1500/20180724/eb69-hftenhz5846026.jpg",
+                    "link": "string",
+                    "linkType": "string",
+                    "provinceCode": "string",
+                    "recommender": "string",
+                    "sceneId": "string",
+                    "title": "string",
+                    "titleColor": "string"
+                },
+                {
+                    "iconUrl": "https://n.sinaimg.cn/sinacn14/300/w1200h1500/20180724/eb69-hftenhz5846026.jpg",
+                    "link": "string",
+                    "linkType": "string",
+                    "provinceCode": "string",
+                    "recommender": "string",
+                    "sceneId": "string",
+                    "title": "2",
+                    "titleColor": "string"
+                },
+                {
+                    "iconUrl": "https://n.sinaimg.cn/sinacn14/300/w1200h1500/20180724/eb69-hftenhz5846026.jpg",
+                    "link": "string",
+                    "linkType": "string",
+                    "provinceCode": "string",
+                    "recommender": "string",
+                    "sceneId": "string",
+                    "title": "3",
+                    "titleColor": "string"
+                },
+                {
+                    "iconUrl": "https://n.sinaimg.cn/sinacn14/300/w1200h1500/20180724/eb69-hftenhz5846026.jpg",
+                    "link": "string",
+                    "linkType": "string",
+                    "provinceCode": "string",
+                    "recommender": "string",
+                    "sceneId": "string",
+                    "title": "4",
+                    "titleColor": "string"
+                },
+                {
+                    "iconUrl": "https://n.sinaimg.cn/sinacn14/300/w1200h1500/20180724/eb69-hftenhz5846026.jpg",
+                    "link": "string",
+                    "linkType": "string",
+                    "provinceCode": "string",
+                    "recommender": "string",
+                    "sceneId": "string",
+                    "title": "5",
+                    "titleColor": "string"
+                }
+            ]
+        },
+        "userInformation": {
+            "electronicSignature": "string",
+            "headImagePendantIcon": "string",
+            "signatureTemplateList": [
+                "string"
+            ]
+        },
+        "userInformationAdList": [
+            {
+                "iconUrl": "string",
+                "link": "string",
+                "linkType": "string",
+                "provinceCode": "string",
+                "recommender": "string",
+                "sceneId": "string",
+                "title": "string"
+            }
+        ]
+    }

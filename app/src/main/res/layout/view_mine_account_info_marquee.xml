@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llContent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingDefaultResource">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/gray_999999"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@id/tvSubTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="您成功充值了xx元话费您成功充值了xx元话费您成功充值了xx元话费您成功充值了xx元话费" />
+
+    <TextView
+        android:id="@+id/tvSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/black_111111"
+        android:textSize="14dp"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/ivArrow"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        tools:text="您成功您成功费您成功您成功充了充值了xx元话费您成功您成功费您成功您成功充了充值了xx元话费" />
+
+    <ImageView
+        android:id="@+id/ivArrow"
+        android:layout_width="5dp"
+        android:layout_height="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvSubTitle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvSubTitle"
+        tools:src="@drawable/ic_mine_account_arrow" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

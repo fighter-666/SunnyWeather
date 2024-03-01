@@ -1,0 +1,20 @@
+{
+    "MySettingList": [
+      {
+        "title": "测试",
+        "link": "https://www.baidu.com",
+        "linkType": "2"
+      },
+      {
+        "title": "测试",
+        "link": "https://www.baidu.com",
+        "linkType": "2"
+      },
+      {
+        "title": "测试",
+        "link": "https://www.baidu.com",
+        "linkType": "2"
+      }
+    ]
+
+}

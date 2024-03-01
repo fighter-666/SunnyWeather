@@ -100,8 +100,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/messageTitleBar"
+
         app:srlAccentColor="@color/transparent"
-        app:srlFooterTranslationViewId="@+id/rcData">
+        app:srlFooterTranslationViewId="@+id/rvFeed">
 
         <com.scwang.smart.refresh.header.ClassicsHeader
             android:layout_width="match_parent"
@@ -261,9 +262,9 @@
                 </LinearLayout>
 
                 <com.google.android.material.tabs.TabLayout
-                    android:id="@+id/tabLayout"
+                    android:id="@+id/tabFeed"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:background="@drawable/shape_rectangle6"
                     android:minHeight="?attr/actionBarSize"
                     android:theme="@style/Theme.AppCompat"
@@ -299,11 +300,11 @@
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:orientation="horizontal"
+                android:layout_height="match_parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/tabLayout"
-                app:layout_constraintLeft_toLeftOf="parent"/>
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
            <!-- <com.ct.client.homepage.widget.FeedViewPager
                 android:id="@+id/feedViewPager"
