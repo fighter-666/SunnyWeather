@@ -1,10 +1,5 @@
 package com.ct.client.database.repository
 
-import com.ct.base.ext.isEmptyOrNull
-import com.ct.client.database.AppRoomDataBase
-import com.ct.net.model.MessageInfo
-import com.example.sunnyweather.base.Constants
-
 /**
  * 消息数据库操作
  */
