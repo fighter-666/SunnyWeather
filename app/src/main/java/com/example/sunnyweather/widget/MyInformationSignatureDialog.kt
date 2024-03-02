@@ -55,9 +55,9 @@ class MyInformationSignatureDialog(context: Context) : BottomSheetDialog(context
 
     fun initView() {
         binding.run {
-          /*  llBase.layoutParams.run {
+            llBase.layoutParams.run {
                 height = (1080 * 435 / 720f).toInt()
-            }*/
+            }
             etSignature.addTextChangedListener(object : TextWatcher {
                 override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 

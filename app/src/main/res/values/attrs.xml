@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <declare-styleable name="ScratchCardViewGroup">
+        <attr name="scratchSrc" format="reference" />
+        <attr name="scratchSrc2" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomFlipCardViewGroup">
+        <attr name="cardSrc" format="reference" />
+        <attr name="cardSrcCopy" format="reference" />
+        <attr name="cardSrc2" format="reference" />
+        <attr name="cardSrc3" format="reference" />
+    </declare-styleable>
+
     <attr name="icvp_min_page_scale_offset" format="dimension" />
     <attr name="icvp_center_page_scale_offset" format="dimension" />
     <attr name="icvp_min_page_scale" format="float" />

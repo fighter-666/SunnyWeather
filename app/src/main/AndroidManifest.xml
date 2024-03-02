@@ -18,6 +18,13 @@
             android:name=".activity.TestActivity"
             android:exported="false" />
         <activity
+            android:name=".activity.DataUsageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CardActivity"
+            android:exported="false"
+            android:theme="@style/TranslucentStyle"/>
+        <activity
             android:name=".activity.MyInformationActivity"
             android:exported="false" />
         <activity

@@ -1,17 +1,22 @@
 {
     "MySettingList": [
       {
-        "title": "测试",
+        "title": "家庭成员",
+        "link": "https://www.bilibili.com",
+        "linkType": "2"
+      },
+      {
+        "title": "城市信息",
         "link": "https://www.baidu.com",
         "linkType": "2"
       },
       {
-        "title": "测试",
+        "title": "个人订单",
         "link": "https://www.baidu.com",
         "linkType": "2"
       },
       {
-        "title": "测试",
+        "title": "隐私政策",
         "link": "https://www.baidu.com",
         "linkType": "2"
       }
