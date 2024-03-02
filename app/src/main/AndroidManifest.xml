@@ -18,6 +18,9 @@
             android:name=".activity.TestActivity"
             android:exported="false" />
         <activity
+            android:name=".activity.HotListActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.DataUsageActivity"
             android:exported="false" />
         <activity

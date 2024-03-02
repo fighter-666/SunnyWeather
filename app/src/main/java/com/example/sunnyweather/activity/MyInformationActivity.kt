@@ -57,9 +57,9 @@ class MyInformationActivity : BaseBindingActivity<ActivityMyInformationBinding>(
 
     override fun onDestroy() {
         super.onDestroy()
-        mReceiver?.run {
+      /*  mReceiver?.run {
             unregisterReceiver(this)
-        }
+        }*/
     }
 
     private fun initView() {
@@ -100,7 +100,7 @@ class MyInformationActivity : BaseBindingActivity<ActivityMyInformationBinding>(
         val filter = IntentFilter()
         filter.addAction(Constants.ACTION_UPDATE_NAME)
         filter.addAction(Constants.ACTION_GET_USER_IMAGE_URL_SUCCESS)
-        registerReceiver(mReceiver, filter)
+        //registerReceiver(mReceiver, filter)
     }
 
     private fun queryMyInformationPage(){

@@ -1,8 +1,9 @@
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
 }
-
 android {
     namespace = "com.example.sunnyweather"
     compileSdk = 34
@@ -18,6 +19,8 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+
     }
 
     buildTypes {
@@ -48,7 +51,15 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
 }
+
+kapt {
+    arguments {
+        arg("room.schemaLocation", "${projectDir}/schemas")
+    }
+}
+
 
 dependencies {
 
@@ -89,7 +100,8 @@ dependencies {
     implementation ("androidx.room:room-runtime:2.4.2")
     implementation ("androidx.room:room-ktx:2.4.2")
     implementation("androidx.databinding:databinding-runtime:8.2.2")
-    annotationProcessor("androidx.room:room-compiler:2.4.2")
+    kapt("androidx.room:room-compiler:2.4.2")
+
 
     implementation ("com.gongwen:marqueelibrary:1.1.3") //跑马灯
 
