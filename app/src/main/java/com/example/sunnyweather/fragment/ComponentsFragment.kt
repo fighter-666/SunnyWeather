@@ -12,6 +12,7 @@ import com.example.sunnyweather.data.Piggy
 import com.example.sunnyweather.MainActivity
 import com.example.sunnyweather.R
 import com.example.sunnyweather.activity.DataUsageActivity
+import com.example.sunnyweather.activity.HotListActivity
 import com.example.sunnyweather.activity.MyInformationActivity
 import com.example.sunnyweather.activity.TestActivity
 import com.example.sunnyweather.adapter.ComponentsAdapter
@@ -50,7 +51,7 @@ class ComponentsFragment : Fragment() {
             Pair(R.mipmap.icon_grid_tip_dialog, "TestActivity"),
             Pair(R.mipmap.icon_grid_tip_dialog, "MyInformationActivity"),
             Pair(R.mipmap.icon_grid_tip_dialog, "FeedStreamHomePageActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "WebViewActivity"),
+            Pair(R.mipmap.icon_grid_tip_dialog, "HotListActivity"),
             Pair(R.mipmap.icon_grid_tip_dialog, "CustomActivity"),
             Pair(R.mipmap.icon_grid_tip_dialog, "CommonControlActivity"),
             Pair(R.mipmap.icon_grid_tip_dialog, "ViewModelTestActivity"),
@@ -113,129 +114,129 @@ class ComponentsFragment : Fragment() {
                            startActivity(intent)
                        }
 
-                /*         4 -> {
-                             val intent = Intent(context, WebViewActivity::class.java)
-                             startActivity(intent)
-                         }
-
-                         5 -> {
-                             val intent = Intent(context, CustomActivity::class.java)
-                             startActivity(intent)
-                         }
-
-                         6 -> {
-                             val intent = Intent(context, CommonControlActivity::class.java)
-                             startActivity(intent)
-                         }
-
-                         7 -> {
-                             val intent = Intent(context, ViewModelTestActivity::class.java)
-                             startActivity(intent)
-                         }
-
-                         8 -> {
-                             val intent = Intent(context, LiveDataActivity::class.java)
-                             startActivity(intent)
-                         }
-
-                         9 -> {
-                             val intent = Intent(context, DataBindingActivity::class.java)
-                             startActivity(intent)
-                         }
-
-                         10 -> {
-                             val intent = Intent(context, ScoreActivity::class.java)
-                             startActivity(intent)
-                         }
-
-                         11 -> {
-                             val intent = Intent(context, SharedPreferencesActivity::class.java)
-                             startActivity(intent)
-                         }
-
-                         12 -> {
-                             val intent = Intent(context, PhoneActivity::class.java)
-                             startActivity(intent)
-                         }
-
-                         13 -> {
-                             val intent = Intent(context, BannerActivity::class.java)
-                             startActivity(intent)
-                         }
-
-                         14 -> {
-                             val intent = Intent(context, RoomActivity::class.java)
-                             startActivity(intent)
-                         }
-
-                         15 -> {
-                             val intent = Intent(context, Room2Activity::class.java)
-                             startActivity(intent)
-                         }
-
-                         16 -> {
-                             val intent = Intent(context, OkhttpActivity::class.java)
-                             startActivity(intent)
-                         }
-
-                         17 -> {
-                             val intent = Intent(context, ServiceActivity::class.java)
-                             startActivity(intent)
-                         }
-
-                         18 -> {
-                             val intent = Intent(context, BroadcastReceiverActivity::class.java)
-                             startActivity(intent)
-                         }
-
-                         19 -> {
-                             val intent = Intent(context, AdvertisingActivity::class.java)
-                             startActivity(intent)
-                         }
-                         20 -> {
-                             val intent = Intent(context, AsyncServiceActivity::class.java)
-                             startActivity(intent)
-                         }
-                         21 -> {
-                             val intent = Intent(context, StudentActivity::class.java)
-                             startActivity(intent)
-                         }
-                         22 -> {
-                             val intent = Intent(context, UserActivity::class.java)
-                             startActivity(intent)
-                         }
-                         23 -> {
-                             val intent = Intent(context, BaseApplication::class.java)
-                             startActivity(intent)
-                         }
-                         24 -> {
-                             val intent = Intent(context, FirstRoomActivity::class.java)
-                             startActivity(intent)
-                         }
-                         25 -> {
+                        4 -> {
                              val intent = Intent(context, HotListActivity::class.java)
                              startActivity(intent)
                          }
-                         26 -> {
-                             val intent = Intent(context, ViewpageActivity::class.java)
-                             startActivity(intent)
-                         }
-                         27 -> {
-                             val intent = Intent(context, TreeListActivity::class.java)
-                             startActivity(intent)
-                         }
-                         28 -> {
-                             val intent = Intent(context, DataUsageActivity::class.java)
-                             startActivity(intent)
-                         }
-                         29 -> {
-                             val intent = Intent(context, SQLiteActivity::class.java)
-                             startActivity(intent)
-                         }
-                         30 -> {
-                             val intent = Intent(context, RecyclerViewActivity::class.java)
-                             startActivity(intent)
-                         }*/
+
+                /*           5 -> {
+                              val intent = Intent(context, CustomActivity::class.java)
+                              startActivity(intent)
+                          }
+
+                          6 -> {
+                              val intent = Intent(context, CommonControlActivity::class.java)
+                              startActivity(intent)
+                          }
+
+                          7 -> {
+                              val intent = Intent(context, ViewModelTestActivity::class.java)
+                              startActivity(intent)
+                          }
+
+                          8 -> {
+                              val intent = Intent(context, LiveDataActivity::class.java)
+                              startActivity(intent)
+                          }
+
+                          9 -> {
+                              val intent = Intent(context, DataBindingActivity::class.java)
+                              startActivity(intent)
+                          }
+
+                          10 -> {
+                              val intent = Intent(context, ScoreActivity::class.java)
+                              startActivity(intent)
+                          }
+
+                          11 -> {
+                              val intent = Intent(context, SharedPreferencesActivity::class.java)
+                              startActivity(intent)
+                          }
+
+                          12 -> {
+                              val intent = Intent(context, PhoneActivity::class.java)
+                              startActivity(intent)
+                          }
+
+                          13 -> {
+                              val intent = Intent(context, BannerActivity::class.java)
+                              startActivity(intent)
+                          }
+
+                          14 -> {
+                              val intent = Intent(context, RoomActivity::class.java)
+                              startActivity(intent)
+                          }
+
+                          15 -> {
+                              val intent = Intent(context, Room2Activity::class.java)
+                              startActivity(intent)
+                          }
+
+                          16 -> {
+                              val intent = Intent(context, OkhttpActivity::class.java)
+                              startActivity(intent)
+                          }
+
+                          17 -> {
+                              val intent = Intent(context, ServiceActivity::class.java)
+                              startActivity(intent)
+                          }
+
+                          18 -> {
+                              val intent = Intent(context, BroadcastReceiverActivity::class.java)
+                              startActivity(intent)
+                          }
+
+                          19 -> {
+                              val intent = Intent(context, AdvertisingActivity::class.java)
+                              startActivity(intent)
+                          }
+                          20 -> {
+                              val intent = Intent(context, AsyncServiceActivity::class.java)
+                              startActivity(intent)
+                          }
+                          21 -> {
+                              val intent = Intent(context, StudentActivity::class.java)
+                              startActivity(intent)
+                          }
+                          22 -> {
+                              val intent = Intent(context, UserActivity::class.java)
+                              startActivity(intent)
+                          }
+                          23 -> {
+                              val intent = Intent(context, BaseApplication::class.java)
+                              startActivity(intent)
+                          }
+                          24 -> {
+                              val intent = Intent(context, FirstRoomActivity::class.java)
+                              startActivity(intent)
+                          }
+                          25 -> {
+                              val intent = Intent(context, HotListActivity::class.java)
+                              startActivity(intent)
+                          }
+                          26 -> {
+                              val intent = Intent(context, ViewpageActivity::class.java)
+                              startActivity(intent)
+                          }
+                          27 -> {
+                              val intent = Intent(context, TreeListActivity::class.java)
+                              startActivity(intent)
+                          }
+                          28 -> {
+                              val intent = Intent(context, DataUsageActivity::class.java)
+                              startActivity(intent)
+                          }
+                          29 -> {
+                              val intent = Intent(context, SQLiteActivity::class.java)
+                              startActivity(intent)
+                          }
+                          30 -> {
+                              val intent = Intent(context, RecyclerViewActivity::class.java)
+                              startActivity(intent)
+                          }*/
                 // 其他Piggy对象的处理逻辑...
 
                 else -> {

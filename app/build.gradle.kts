@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -30,11 +31,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 
     buildFeatures{
@@ -49,6 +50,7 @@ android {
         }
     }
 }
+
 
 dependencies {
 
@@ -90,6 +92,7 @@ dependencies {
     implementation ("androidx.room:room-ktx:2.4.2")
     implementation("androidx.databinding:databinding-runtime:8.2.2")
     annotationProcessor("androidx.room:room-compiler:2.4.2")
+    kapt("androidx.room:room-compiler:2.4.2")
 
     implementation ("com.gongwen:marqueelibrary:1.1.3") //跑马灯
 

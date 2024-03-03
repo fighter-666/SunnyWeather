@@ -1,21 +1,341 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlContent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:background="@color/white">
 
-    <!--标题栏-->
-    <com.example.sunnyweather.widget.CommonTitleBar
-        android:id="@+id/titleBar"
+    <ImageView
+        android:id="@+id/ivTop"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:custom_title="推荐"
-        android:background="@color/white"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_recommend"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--标题栏-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/messageTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="51dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17.5dp"
+            android:maxLines="1"
+            android:text="消息"
+            android:textColor="@color/black_121212"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvIsRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:maxLines="1"
+            android:textColor="@color/black_111111"
+            android:textSize="13dp"
+            android:visibility="gone"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvTitle"
+            app:layout_constraintLeft_toRightOf="@id/tvTitle"
+            tools:text="(123)" />
+
+        <TextView
+            android:id="@+id/tvClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:drawableLeft="@drawable/ic_message_clear"
+            android:drawablePadding="4.5dp"
+            android:text="清除未读"
+            android:textColor="@color/gray_666666"
+            android:textSize="14dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvTitle"
+            app:layout_constraintLeft_toRightOf="@id/tvIsRead" />
+
+        <ImageView
+            android:id="@+id/ivCusButton2"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+            app:layout_constraintRight_toLeftOf="@id/ivCusButton1"
+            app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+
+        <ImageView
+            android:id="@+id/ivCusButton1"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+            app:layout_constraintRight_toLeftOf="@id/ivMessageSetting"
+            app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+        <ImageView
+            android:id="@+id/ivMessageSetting"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:layout_marginEnd="8dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_message_setting"
+            app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/smartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/messageTitleBar"
+
+        app:srlAccentColor="@color/transparent"
+        app:srlFooterTranslationViewId="@+id/rvFeed">
+
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/coordinator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:elevation="0dp"
+                app:layout_behavior=".base.FixAppBarLayoutBehavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll"
+                    android:orientation="vertical"
+                    tools:ignore="ExtraText">
+
+                    <!--顶部消息条-->
+                    <com.example.sunnyweather.widget.MessageInfoView
+                        android:id="@+id/messageInfoView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="18dp"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginTop="6dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@id/rvMessageClassify"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="visible" />
+
+                    <!--服务消息分类-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvMessageClassify"
+                        android:layout_width="match_parent"
+                        android:layout_height="107.5dp"
+                        android:layout_marginHorizontal="18dp"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_white_corner_10dp"
+                        android:elevation="5dp"
+                        android:outlineAmbientShadowColor="@color/gray_999999"
+                        android:outlineSpotShadowColor="@color/gray_999999"
+                        app:layout_constraintBottom_toTopOf="@id/llMsgAll"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/messageInfoView" />
+
+                    <!--消息列表-->
+                    <LinearLayout
+                        android:id="@+id/llMsgAll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gray_f8f8f8"
+                        android:orientation="vertical"
+                        android:paddingBottom="18dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rvMessageClassify">
+
+                        <!--服务消息-->
+                        <LinearLayout
+                            android:id="@+id/llServiceList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_white_bottom_corner_10"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:paddingTop="6dp"
+                            android:layout_marginBottom="6dp"
+                            tools:visibility="visible">
+
+                            <!--最多展示3条 写死高度并且禁止滑动-->
+                            <com.example.sunnyweather.widget.MaxHeightRecyclerView
+                                android:id="@+id/rvServiceMessage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="18dp"
+                                app:maxHeight="225dp" />
+
+                            <TextView
+                                android:id="@+id/tvViewAll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:drawableRight="@drawable/ic_message_arrow"
+                                android:drawablePadding="2dp"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="13dp"
+                                android:text="查看全部"
+                                android:textColor="@color/gray_999999"
+                                android:textSize="12dp"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <!--营销消息-->
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvMarketingMessage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/bg_white_corner_10dp"
+                            android:clickable="true"
+                            android:focusable="true" />
+
+                        <!--1周前消息-->
+                        <LinearLayout
+                            android:id="@+id/llOutMsg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/bg_white_corner_10dp"
+                            android:orientation="vertical"
+                            tools:visibility="visible">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16.5dp"
+                                android:layout_marginTop="9.5dp"
+                                android:drawableLeft="@drawable/ic_message_warn"
+                                android:drawablePadding="10dp"
+                                android:text="1周前的消息，提醒将弱化"
+                                android:textColor="@color/gray_999999"
+                                android:textSize="11dp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_marginHorizontal="18dp"
+                                android:layout_marginTop="9dp"
+                                android:background="@color/gray_eeeeee" />
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvOutMarketMessage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabFeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/shape_rectangle6"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="@style/Theme.AppCompat"
+                    app:tabIndicatorHeight="0dp"
+                    app:layout_collapseMode="pin"
+                    app:tabMaxWidth="200dp"
+                    app:tabMinWidth="100dp"
+                    app:tabMode="fixed"
+                    app:layout_constraintTop_toBottomOf="@id/viewPager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <!--   <com.ct.client.homepage.widget.FeedTabView
+                       android:id="@+id/tabFeed"
+                       android:layout_width="match_parent"
+                       android:layout_height="@dimen/feedTabHeight"
+                       android:layout_centerVertical="true"
+                       android:background="@color/gray_f8f8f8"
+                       android:visibility="gone"
+                       app:layout_collapseMode="pin"
+                       app:tabGravity="fill"
+                       app:tabIndicatorHeight="0dp"
+                       app:tabMinWidth="0dp"
+                       app:tabMode="scrollable"
+                       app:tabPaddingEnd="0dp"
+                       app:tabPaddingStart="0dp"
+                       app:tabRippleColor="@null" />-->
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tabLayout"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+            <!-- <com.ct.client.homepage.widget.FeedViewPager
+                 android:id="@+id/feedViewPager"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:background="@color/gray_f8f8f8"
+                 android:visibility="gone"
+                 app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+ -->
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <com.scwang.smart.refresh.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    <!--回到顶部-->
+    <ImageView
+        android:id="@+id/ivSticky"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="68dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_message_sticky"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>
