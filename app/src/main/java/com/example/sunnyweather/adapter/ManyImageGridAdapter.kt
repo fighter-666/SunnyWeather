@@ -9,6 +9,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import com.example.sunnyweather.R
 import com.example.sunnyweather.data.GetFeedListData
+import com.example.sunnyweather.util.CommonLinkItem
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -37,6 +38,12 @@ class ManyImageGridAdapter(
             layoutParams.dimensionRatio = item.imageRatio // 例如，设置宽高比为16:9
 
             ivImageUrl.layoutParams = layoutParams
+
+            item.run {
+                ivImageUrl.setOnClickListener {
+                    CommonLinkItem.goTarget(link, linkType, mContext)
+                }
+            }
 
             //val imageWeight = recyclerView.measuredWidth/2
             // 在协程中加载网络图片或在后台线程中加载大量图片。

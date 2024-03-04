@@ -62,8 +62,27 @@
                 "sceneId": "string",
                 "title": "云游四川1"
             },
-            "type": "2",
-            "videoBean": null
+            "type": "1",
+            "videoBean": {
+                "endTime": "string",
+                "imageUrl": "https://w.189.cn/bigdata/2023/1/10/111654674164033852.png",
+                "link": "string",
+                "linkType": "string",
+                "playType": "string",
+                "provinceCode": "string",
+                "recommender": "string",
+                "sceneId": "string",
+                "startTime": "string",
+                "title": "福州",
+                "topImage": "string",
+                "topImageBeforeLive": "string",
+                "topImageLiving": "string",
+                "type": "1",
+                "videoCommerceId": "string",
+                "videoDuration": "string",
+                "videoStreamUrl": "string",
+                "videoStreamUrlType": "string"
+            }
         },
         {
             "advertisingList":  [
@@ -126,7 +145,7 @@
                 "sceneId": "string",
                 "title": "222222置顶"
             },
-            "type": "2",
+            "type": "1",
             "videoBean": {
                 "endTime": "string",
                 "imageUrl": "https://w.189.cn/bigdata/2023/1/10/111654674164033852.png",
@@ -209,8 +228,27 @@
                 "sceneId": "string",
                 "title": "333333"
             },
-            "type": "2",
-            "videoBean": null
+            "type": "1",
+            "videoBean": {
+                "endTime": "string",
+                "imageUrl": "https://w.189.cn/bigdata/2023/1/10/111654674164033852.png",
+                "link": "string",
+                "linkType": "string",
+                "playType": "string",
+                "provinceCode": "string",
+                "recommender": "string",
+                "sceneId": "string",
+                "startTime": "string",
+                "title": "福州",
+                "topImage": "string",
+                "topImageBeforeLive": "string",
+                "topImageLiving": "string",
+                "type": "1",
+                "videoCommerceId": "string",
+                "videoDuration": "string",
+                "videoStreamUrl": "string",
+                "videoStreamUrlType": "string"
+            }
         },
         {
             "advertisingList": [
@@ -273,8 +311,27 @@
                 "sceneId": "string",
                 "title": "444444"
             },
-            "type": "2",
-            "videoBean": null
+            "type": "1",
+            "videoBean": {
+                "endTime": "string",
+                "imageUrl": "https://w.189.cn/bigdata/2023/1/10/111654674164033852.png",
+                "link": "string",
+                "linkType": "string",
+                "playType": "string",
+                "provinceCode": "string",
+                "recommender": "string",
+                "sceneId": "string",
+                "startTime": "string",
+                "title": "福州",
+                "topImage": "string",
+                "topImageBeforeLive": "string",
+                "topImageLiving": "string",
+                "type": "1",
+                "videoCommerceId": "string",
+                "videoDuration": "string",
+                "videoStreamUrl": "string",
+                "videoStreamUrlType": "string"
+            }
         }
     ]
 }

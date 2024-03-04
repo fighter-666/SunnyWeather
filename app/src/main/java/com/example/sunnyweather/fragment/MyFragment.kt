@@ -1,11 +1,16 @@
 package com.example.sunnyweather.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ct.base.ext.dp
+import com.example.sunnyweather.MainActivity
 import com.example.sunnyweather.R
+import com.example.sunnyweather.activity.DataUsageActivity
+import com.example.sunnyweather.activity.MyInformationActivity
+import com.example.sunnyweather.activity.TestActivity
 import com.example.sunnyweather.adapter.MessageMarketingDecoration
 import com.example.sunnyweather.adapter.MySettingAdapter
 import com.example.sunnyweather.base.binding.BaseBindingFragment
@@ -41,6 +46,10 @@ class MyFragment : BaseBindingFragment<FragmentMyBinding>() {
 
     private fun initListener() {
         binding.run {
+            tvAccountSecurity.setOnClickListener {
+                val intent = Intent(context, MyInformationActivity::class.java)
+                startActivity(intent)
+            }
 
         }
 
@@ -58,7 +67,8 @@ class MyFragment : BaseBindingFragment<FragmentMyBinding>() {
 
         binding.run {
             binding.rvSetting.layoutManager = LinearLayoutManager(requireContext())
-            binding.rvSetting.adapter = MySettingAdapter().apply { setNewData(data.MySettingList) }
+            val mySettingAdapter = MySettingAdapter().apply { setNewData(data.MySettingList) }
+            binding.rvSetting.adapter = mySettingAdapter
 
             binding.rvSetting.addItemDecoration(
                 MessageMarketingDecoration(
@@ -70,6 +80,30 @@ class MyFragment : BaseBindingFragment<FragmentMyBinding>() {
                     requireContext().resources.getColor(R.color.gray_eeeeee)
                 )
             )
+
+            mySettingAdapter.setOnItemClickListener { _, view, position ->
+                when (position) {
+                    0 -> {
+                        val intent = Intent(context, MainActivity::class.java)
+                        startActivity(intent)
+                    }
+
+                    1 -> {
+                        val intent = Intent(context, TestActivity::class.java)
+                        startActivity(intent)
+                    }
+
+                    2 -> {
+                        val intent = Intent(context, MyInformationActivity::class.java)
+                        startActivity(intent)
+                    }
+
+                    3 -> {
+                        val intent = Intent(context, DataUsageActivity::class.java)
+                        startActivity(intent)
+                    }
+                }
+            }
         }
     }
 }

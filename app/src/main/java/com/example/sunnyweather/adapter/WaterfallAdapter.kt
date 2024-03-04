@@ -19,6 +19,7 @@ import com.ct.base.ext.isEmptyOrNull
 import com.example.sunnyweather.R
 import com.example.sunnyweather.data.GetFeedListData
 import com.example.sunnyweather.databinding.ActivityBannerBinding
+import com.example.sunnyweather.util.CommonLinkItem
 import com.example.sunnyweather.util.UtilGlide
 import com.example.sunnyweather.widget.GetTelephoneNumberManager
 import com.youth.banner.adapter.BannerImageAdapter
@@ -57,6 +58,7 @@ class WaterfallAdapter(data: MutableList<GetFeedListData.FeedListBean>) :
                 GetFeedListData.FEED_ADAPTER_ITEM_TYPE.MANY_IMAGE -> {
                     val rvContentAreaList = getView<RecyclerView>(R.id.rvContentAreaList)
                     val rvPicAreaImageUrl = getView<RecyclerView>(R.id.rvPicAreaImageUrl)
+                    val clPicAreaImageUrl = getView<ConstraintLayout>(R.id.clPicAreaImageUrl)
 
                     //contentAreaList : 内容区域
                     if (!item.contentAreaList.isNullOrEmpty()) {
@@ -67,6 +69,11 @@ class WaterfallAdapter(data: MutableList<GetFeedListData.FeedListBean>) :
                             layoutManager = LinearLayoutManager(context)
                             adapter = rechargeAdapter
                             isNestedScrollingEnabled = false
+                        }
+                        rechargeAdapter.setOnItemClickListener { adapter, view, position ->
+                            item.run {
+                                CommonLinkItem.goTarget(link, linkType, mContext)
+                            }
                         }
                         rvContentAreaList.visibility = View.VISIBLE
                     } else {
@@ -82,6 +89,12 @@ class WaterfallAdapter(data: MutableList<GetFeedListData.FeedListBean>) :
                         layoutManager = GridLayoutManager(context, 2)
                         adapter = myAdapter
                         isNestedScrollingEnabled = false
+                    }
+
+                    item.run {
+                        clPicAreaImageUrl.setOnClickListener {
+                            CommonLinkItem.goTarget(link, linkType, mContext)
+                        }
                     }
                 }
 
@@ -102,6 +115,7 @@ class WaterfallAdapter(data: MutableList<GetFeedListData.FeedListBean>) :
                     } else {
                         rvContentAreaList.visibility = View.GONE
                     }
+
                 }
 
                 GetFeedListData.FEED_LIST_ITEM_TYPE.ADVERTISE.toInt() -> {
@@ -174,6 +188,16 @@ class WaterfallAdapter(data: MutableList<GetFeedListData.FeedListBean>) :
                     val clContentAreaList = holder.getView<ConstraintLayout>(R.id.clContentAreaList)
                     val tvStockout = holder.getView<TextView>(R.id.tvStockout)
                     val rvContentAreaList = holder.getView<RecyclerView>(R.id.rvContentAreaList)
+                    val cl = holder.getView<ConstraintLayout>(R.id.cl)
+                    item.run {
+                        cl.setOnClickListener {
+                            CommonLinkItem.goTarget(link, linkType, mContext)
+                        }
+                        rvContentAreaList.setOnClickListener {
+                            CommonLinkItem.goTarget(link, linkType, mContext)
+                        }
+                    }
+
                     //顶部标签
                     if (!item.picArea.topImage.isEmptyOrNull()) {
                         ivTopImage.visibility = View.VISIBLE
@@ -218,6 +242,12 @@ class WaterfallAdapter(data: MutableList<GetFeedListData.FeedListBean>) :
                     //contentAreaList : 内容区域
                     if (!item.contentAreaList.isNullOrEmpty()) {
                         val rechargeAdapter = ContentAreaListAdapter(item.contentAreaList)
+
+                        rechargeAdapter.setOnItemClickListener { adapter, view, position ->
+                            item.run {
+                                CommonLinkItem.goTarget(link, linkType, mContext)
+                            }
+                        }
 
                         if (item.contentAreaList[0].type != "7" && item.contentAreaList[0].type != "8"
                             && item.contentAreaList[item.contentAreaList.size - 1].type != "7"

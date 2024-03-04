@@ -8,6 +8,7 @@
     app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPicAreaImageUrl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/shape_rectangle19">

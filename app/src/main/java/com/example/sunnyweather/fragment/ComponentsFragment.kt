@@ -47,37 +47,11 @@ class ComponentsFragment : Fragment() {
         //创建了一个包含多个 Piggy 对象的可变列表 piggies，
         // 每个 Piggy 对象都包含了一个图片资源 ID 和一个帮助文本
         val piggies = listOf(
-            Pair(R.mipmap.icon_grid_tip_dialog, "RechargePageActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "TestActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "MyInformationActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "FeedStreamHomePageActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "HotListActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "CustomActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "CommonControlActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "ViewModelTestActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "LiveDataActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "DataBindingActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "ScoreActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "SharedPreferencesActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "PhoneActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "BannerActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "RoomActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "Room2Activity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "OkhttpActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "ServiceActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "BroadcastReceiverActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "AdvertisingActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "AsyncServiceActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "StudentActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "UserActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "BaseApplicationActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "FirstRoomActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "HotListActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "ViewpageActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "TreeListActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "DataUsageActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "SQLiteActivity"),
-            Pair(R.mipmap.icon_grid_tip_dialog, "RecyclerViewActivity"),
+            Pair(R.drawable.ic_sunny, "天气"),
+            Pair(R.drawable.ic_draw, "抽奖"),
+            Pair(R.drawable.ic_personal_information, "个人信息"),
+            Pair(R.drawable.ic_traffic_query, "油量查询"),
+            Pair(R.drawable.ic_recommend, "热门推荐"),
         ).map { (imageResId, helperText) ->
             Piggy(imageResId, helperText)
         }.toMutableList()
@@ -92,7 +66,6 @@ class ComponentsFragment : Fragment() {
         }
 
         myAdapter.setOnItemClickListener { _, view, position ->
-            Toast.makeText(context, "onItemClick $position", Toast.LENGTH_SHORT).show()
             when (position) {
                 0 -> {
                     val intent = Intent(context, MainActivity::class.java)

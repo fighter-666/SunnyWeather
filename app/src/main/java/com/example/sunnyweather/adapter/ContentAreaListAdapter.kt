@@ -19,6 +19,7 @@ import com.chad.library.adapter.base.BaseViewHolder
 import com.ct.base.ext.dp
 import com.example.sunnyweather.R
 import com.example.sunnyweather.data.GetFeedListData
+import com.example.sunnyweather.util.CommonLinkItem
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale

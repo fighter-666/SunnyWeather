@@ -30,9 +30,9 @@ class MySettingAdapter : BaseBindingQuickAdapter<MySettingData.MySettingListBean
         helper.getViewBinding<ItemMineSettingBinding>().apply {
             item.run {
                 tvTitle.setContent(title)
-                llBase.setOnClickListener {
+               /* llBase.setOnClickListener {
                     CommonLinkItem.goTarget(link, linkType, mContext)
-                }
+                }*/
             }
         }
     }

@@ -10,16 +10,13 @@
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_rectangle6"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="@style/Theme.AppCompat"
+        android:minHeight="0dp"
         app:tabIndicatorHeight="0dp"
-        app:tabMaxWidth="200dp"
-        app:tabMinWidth="100dp"
         app:tabMode="fixed"
         app:layout_constraintTop_toBottomOf="@id/viewPager"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
