@@ -362,7 +362,6 @@ class CardActivity : AppCompatActivity() {
                 })
                 .into(imageView)
         }
-
     }
 
     override fun onDestroy() {

@@ -1,4 +1,4 @@
-package com.example.sunnyweather.activity
+package com.example.sunnyweather.fragment
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -11,12 +11,11 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ct.base.ext.dp
 import com.example.sunnyweather.R
-import com.example.sunnyweather.SunnyWeatherApplication
 import com.example.sunnyweather.adapter.AccountInformationAdapter
 import com.example.sunnyweather.adapter.CtArchivesAdapter
 import com.example.sunnyweather.adapter.MedalAdapter
 import com.example.sunnyweather.base.Constants
-import com.example.sunnyweather.base.binding.BaseBindingActivity
+import com.example.sunnyweather.base.binding.BaseBindingFragment
 import com.example.sunnyweather.data.CompoundAdItem
 import com.example.sunnyweather.data.MyInformationPageData
 import com.example.sunnyweather.databinding.ActivityMyInformationBinding
@@ -24,7 +23,6 @@ import com.example.sunnyweather.util.GetScreenUtils
 import com.example.sunnyweather.util.UtilBitmap
 import com.example.sunnyweather.util.UtilGlide
 import com.example.sunnyweather.util.UtilText
-import com.example.sunnyweather.widget.Log
 import com.example.sunnyweather.widget.MyInformationSignatureDialog
 import com.google.gson.Gson
 import com.gyf.immersionbar.ImmersionBar
@@ -40,12 +38,11 @@ import com.gyf.immersionbar.ImmersionBar
  * @版本
  * @修改内容
  */
-class MyInformationActivity : BaseBindingActivity<ActivityMyInformationBinding>() {
+class MyInformationFragment : BaseBindingFragment<ActivityMyInformationBinding>() {
     private var mReceiver: MyReceiver? = null
     private var mSignatureDialog: MyInformationSignatureDialog? = null
     private var mUserInformationAdList = ArrayList<CompoundAdItem>()
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun lazyInit() {
         ImmersionBar.with(this)
             .titleBar(binding.ivBack)    //解决状态栏和布局重叠问题，任选其一
             .statusBarDarkFont(true).init()
@@ -53,6 +50,11 @@ class MyInformationActivity : BaseBindingActivity<ActivityMyInformationBinding>(
         initBroadcastReceiver()
         loadUserInfo()
         queryMyInformationPage()
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
     }
 
     override fun onDestroy() {
@@ -69,24 +71,25 @@ class MyInformationActivity : BaseBindingActivity<ActivityMyInformationBinding>(
                 //topMargin = UtilView.getStatusBarHeight()
             }
             ivBack.setOnClickListener {
-                finish()
+                val intent = Intent(requireContext(), com.example.sunnyweather.activity.MyActivity::class.java)
+                requireContext().startActivity(intent)
             }
             rlAvatar.setOnClickListener {
                 val params = ivAvatar.layoutParams
-                //SelectAvatarActivity.goActivity(mContext, params.height, params.width, mUserInformationAdList)
+                //SelectAvatarActivity.goActivity(requireContext(), params.height, params.width, mUserInformationAdList)
             }
             llSignature.setOnClickListener {
                 mSignatureDialog?.onShow(binding.tvSignature.text.toString())
             }
             ivMedalBackground.layoutParams.apply {
-                width = GetScreenUtils.getScreenWidth(mContext)-26.dp
+                width = GetScreenUtils.getScreenWidth(requireContext())-26.dp
                 height = (width * 134f / 334).toInt()
             }
             rvMedal.layoutParams.apply {
-                width = GetScreenUtils.getScreenWidth(mContext)-26.dp
+                width = GetScreenUtils.getScreenWidth(requireContext())-26.dp
             }
         }
-        mSignatureDialog = MyInformationSignatureDialog(mContext).apply {
+        mSignatureDialog = MyInformationSignatureDialog(requireContext()).apply {
             setCallback(object : MyInformationSignatureDialog.Callback {
                 override fun onSuccess(signature: String) {
                     binding.tvSignature.text = signature
@@ -105,7 +108,7 @@ class MyInformationActivity : BaseBindingActivity<ActivityMyInformationBinding>(
 
     private fun queryMyInformationPage(){
         val json: String = // 从文件中读取 JSON 数据，这里使用 assets 文件夹中的示例
-            SunnyWeatherApplication.context.assets.open("myInformationPage.json").bufferedReader()
+            requireContext().assets.open("myInformationPage.json").bufferedReader()
                 .use { it.readText() }
         //使用了Gson库来将JSON数据转换为GetFeedTabData对象
         val gson = Gson()
@@ -145,7 +148,7 @@ class MyInformationActivity : BaseBindingActivity<ActivityMyInformationBinding>(
                 binding.rlMedal.visibility = View.GONE
             } else {
                 binding.rlMedal.visibility = View.VISIBLE
-                binding.rvMedal.layoutManager = LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false)
+                binding.rvMedal.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
                 binding.rvMedal.adapter = MedalAdapter().apply { setNewData(medalList) }
             }
         } ?: run {
@@ -163,7 +166,7 @@ class MyInformationActivity : BaseBindingActivity<ActivityMyInformationBinding>(
                 binding.llArchives.visibility = View.GONE
             } else {
                 binding.llArchives.visibility = View.VISIBLE
-                binding.rvArchives.layoutManager = GridLayoutManager(mContext, 3)
+                binding.rvArchives.layoutManager = GridLayoutManager(requireContext(), 3)
                 binding.rvArchives.adapter = CtArchivesAdapter().apply { setNewData(archivesList) }
             }
         } ?: run {
@@ -180,7 +183,7 @@ class MyInformationActivity : BaseBindingActivity<ActivityMyInformationBinding>(
                 binding.llInfo.visibility = View.GONE
             } else {
                 binding.llInfo.visibility = View.VISIBLE
-                binding.rvInfo.layoutManager = GridLayoutManager(mContext, 2)
+                binding.rvInfo.layoutManager = GridLayoutManager(requireContext(), 2)
                 binding.rvInfo.adapter = AccountInformationAdapter().apply { setNewData(accountInformationList) }
             }
         } ?: run {
@@ -194,7 +197,7 @@ class MyInformationActivity : BaseBindingActivity<ActivityMyInformationBinding>(
 
     fun loadUserInfo() {
         UtilText.setText(binding.tvName, "吴道满", "您好!")
-        UtilBitmap.setImageBitmap(mContext, binding.ivAvatar, UtilBitmap.getloadlBitmap("https://image.baidu.com/search/albumsdetail?tn=albumsdetail&word=蛋糕&fr=albumslist&album_tab=人物&album_id=43&rn=30", 100, 100), R.drawable.ic_mine_avatar_default, true)
+        UtilBitmap.setImageBitmap(requireContext(), binding.ivAvatar, UtilBitmap.getloadlBitmap("https://image.baidu.com/search/albumsdetail?tn=albumsdetail&word=蛋糕&fr=albumslist&album_tab=人物&album_id=43&rn=30", 100, 100), R.drawable.ic_mine_avatar_default, true)
     }
 
     private inner class MyReceiver : BroadcastReceiver() {

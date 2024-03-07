@@ -1,26 +1,15 @@
 package com.example.sunnyweather.fragment
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
-import com.example.sunnyweather.data.Piggy
-import com.example.sunnyweather.MainActivity
-import com.example.sunnyweather.R
-import com.example.sunnyweather.activity.DataUsageActivity
-import com.example.sunnyweather.activity.HotListActivity
-import com.example.sunnyweather.activity.MyInformationActivity
-import com.example.sunnyweather.activity.TestActivity
-import com.example.sunnyweather.adapter.ComponentsAdapter
 import com.example.sunnyweather.databinding.FragmentComponentsBinding
 import com.gyf.immersionbar.ImmersionBar
 
 
-class ComponentsFragment : Fragment() {
+class SunnyFragment : Fragment() {
     private lateinit var binding: FragmentComponentsBinding
 
 
@@ -44,7 +33,7 @@ class ComponentsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //创建了一个包含多个 Piggy 对象的可变列表 piggies，
+      /*  //创建了一个包含多个 Piggy 对象的可变列表 piggies，
         // 每个 Piggy 对象都包含了一个图片资源 ID 和一个帮助文本
         val piggies = listOf(
             Pair(R.drawable.ic_sunny, "天气"),
@@ -92,7 +81,7 @@ class ComponentsFragment : Fragment() {
                              startActivity(intent)
                          }
 
-                /*           5 -> {
+                *//*           5 -> {
                               val intent = Intent(context, CustomActivity::class.java)
                               startActivity(intent)
                           }
@@ -209,7 +198,7 @@ class ComponentsFragment : Fragment() {
                           30 -> {
                               val intent = Intent(context, RecyclerViewActivity::class.java)
                               startActivity(intent)
-                          }*/
+                          }*//*
                 // 其他Piggy对象的处理逻辑...
 
                 else -> {
@@ -218,116 +207,7 @@ class ComponentsFragment : Fragment() {
                     startActivity(intent)
                 }
             }
-        }
-        /* myAdapter.setOnItemClickListener { piggy ->
-             // 处理列表项点击事件
-             Toast.makeText(context, piggy.name, Toast.LENGTH_SHORT).show()
-             when (piggy.name) {
-                 "RechargePageActivity" -> {
-                     val intent = Intent(context, RechargePageActivity::class.java)
-                     intent.putExtra("piggyName", piggy.name)
-                     startActivity(intent)
-                 }
-
-                 "VariousTextviewActivity" -> {
-                     val intent = Intent(context, VariousTextviewActivity::class.java)
-                     intent.putExtra("piggyName", piggy.name)
-                     startActivity(intent)
-                 }
-
-                 "QWUIDrawableHelper" -> {
-                     val intent = Intent(context, ThirdActivity::class.java)
-                     intent.putExtra("piggyName", piggy.name)
-                     startActivity(intent)
-                 }
-
-                 "FeedStreamHomePageActivity" -> {
-                     val intent = Intent(context, FeedStreamHomePageActivity::class.java)
-                     intent.putExtra("piggyName", piggy.name)
-                     startActivity(intent)
-                 }
-
-                 "WebViewActivity" -> {
-                     val intent = Intent(context, WebViewActivity::class.java)
-                     intent.putExtra("piggyName", piggy.name)
-                     startActivity(intent)
-                 }
-
-                 "CustomActivity" -> {
-                     val intent = Intent(context, CustomActivity::class.java)
-                     intent.putExtra("piggyName", piggy.name)
-                     startActivity(intent)
-                 }
-
-                 "CommonControlActivity" -> {
-                     val intent = Intent(context, CommonControlActivity::class.java)
-                     intent.putExtra("piggyName", piggy.name)
-                     startActivity(intent)
-                 }
-
-                 "ViewModelTestActivity" -> {
-                     val intent = Intent(context, ViewModelTestActivity::class.java)
-                     intent.putExtra("piggyName", piggy.name)
-                     startActivity(intent)
-                 }
-
-                 "LiveDataActivity" -> {
-                     val intent = Intent(context, LiveDataActivity::class.java)
-                     intent.putExtra("piggyName", piggy.name)
-                     startActivity(intent)
-                 }
-
-                 "DataBindingActivity" -> {
-                     val intent = Intent(context, DataBindingActivity::class.java)
-                     intent.putExtra("piggyName", piggy.name)
-                     startActivity(intent)
-                 }
-
-                 "ScoreActivity" -> {
-                     val intent = Intent(context, ScoreActivity::class.java)
-                     intent.putExtra("piggyName", piggy.name)
-                     startActivity(intent)
-                 }
-
-                 "SharedPreferencesActivity" -> {
-                     val intent = Intent(context, SharedPreferencesActivity::class.java)
-                     intent.putExtra("piggyName", piggy.name)
-                     startActivity(intent)
-                 }
-
-                 "PhoneActivity" -> {
-                     val intent = Intent(context, PhoneActivity::class.java)
-                     intent.putExtra("piggyName", piggy.name)
-                     startActivity(intent)
-                 }
-
-                 "BannerActivity" -> {
-                     val intent = Intent(context, BannerActivity::class.java)
-                     intent.putExtra("piggyName", piggy.name)
-                     startActivity(intent)
-                 }
-
-                 "RoomActivity" -> {
-                     val intent = Intent(context, RoomActivity::class.java)
-                     intent.putExtra("piggyName", piggy.name)
-                     startActivity(intent)
-                 }
-
-                 "Room2Activity" -> {
-                     val intent = Intent(context, Room2Activity::class.java)
-                     intent.putExtra("piggyName", piggy.name)
-                     startActivity(intent)
-                 }
-                 // 其他Piggy对象的处理逻辑...
-
-                 else -> {
-                     // 默认的页面跳转逻辑
-                     val intent = Intent(context, RechargePageActivity::class.java)
-                     intent.putExtra("piggyName", piggy.name)
-                     startActivity(intent)
-                 }
-             }
-         }*/
+        }*/
 
     }
 

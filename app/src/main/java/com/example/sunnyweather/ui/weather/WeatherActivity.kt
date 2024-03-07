@@ -1,6 +1,7 @@
 package com.example.sunnyweather.ui.weather
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,7 +14,9 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.sunnyweather.MainActivity
 import com.example.sunnyweather.R
+import com.example.sunnyweather.activity.HotListActivity
 import com.example.sunnyweather.databinding.ActivityWeatherBinding
 import com.example.sunnyweather.logic.model.Weather
 import com.example.sunnyweather.logic.model.getSky
@@ -70,6 +73,11 @@ class WeatherActivity : AppCompatActivity() {
         //调用DrawerLayout的openDrawer()方法来打开滑动菜单
         binding.now.navBtn.setOnClickListener {
             binding.drawerLayout.openDrawer(GravityCompat.START)
+        }
+
+        binding.now.navHome.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
         //当滑动菜单被隐藏的时候，同时也要隐藏输入法
         binding.drawerLayout.addDrawerListener(object : DrawerLayout.DrawerListener{

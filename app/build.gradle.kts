@@ -38,7 +38,7 @@ android {
         jvmTarget = "17"
     }
 
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
     }
     composeOptions {
@@ -54,66 +54,50 @@ android {
 
 dependencies {
 
-        implementation("androidx.core:core-ktx:1.12.0")
-        implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
-        implementation("androidx.activity:activity-compose:1.7.0")
-        implementation("androidx.recyclerview:recyclerview:1.3.2")
-        implementation("com.google.android.material:material:1.10.0")
-        implementation("com.squareup.retrofit2:retrofit:2.9.0")
-        implementation("com.squareup.retrofit2:converter-gson:2.6.1")
-
-        implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0")
-
-        implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1") //lifecucle
-        implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
-        implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
-
-        implementation ("com.geyifeng.immersionbar:immersionbar:3.2.2")   //沉浸式
-
-
-        implementation  ("io.github.scwang90:refresh-layout-kernel:2.1.0")      //核心必须依赖   // 下拉刷新
-        implementation  ("io.github.scwang90:refresh-header-classics:2.1.0")    //经典刷新头
-
-    implementation ("com.github.cymchad:BaseRecyclerViewAdapterHelper:2.9.50") //改成2.9.50
-
-    implementation ("com.github.li-xiaojun:XPopup:2.4.9")     // 弹窗
-
-    implementation ("org.simpleframework:simple-xml:2.7.1")
-
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+    implementation("androidx.activity:activity-compose:1.7.0")
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("com.google.android.material:material:1.10.0")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.6.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1") //lifecucle
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
+    implementation("com.geyifeng.immersionbar:immersionbar:3.2.2")   //沉浸式
+    implementation("io.github.scwang90:refresh-layout-kernel:2.1.0")      //核心必须依赖   // 下拉刷新
+    implementation("io.github.scwang90:refresh-header-classics:2.1.0")    //经典刷新头
+    implementation("com.github.cymchad:BaseRecyclerViewAdapterHelper:2.9.50") //改成2.9.50
+    implementation("com.github.li-xiaojun:XPopup:2.4.9")     // 弹窗
+    implementation("org.simpleframework:simple-xml:2.7.1")
     // 已过时(禁止使用, 最后会移除)
-    implementation ("org.litepal.guolindev:core:3.2.2") // 数据库litePal
-
-    implementation ("io.github.youth5201314:banner:2.2.2")                //轮播图
-
-
-
+    implementation("org.litepal.guolindev:core:3.2.2") // 数据库litePal
+    implementation("io.github.youth5201314:banner:2.2.2")                //轮播图
     //room
-    implementation ("androidx.room:room-runtime:2.4.2")
-    implementation ("androidx.room:room-ktx:2.4.2")
+    implementation("androidx.room:room-runtime:2.4.2")
+    implementation("androidx.room:room-ktx:2.4.2")
     implementation("androidx.databinding:databinding-runtime:8.2.2")
     annotationProcessor("androidx.room:room-compiler:2.4.2")
     kapt("androidx.room:room-compiler:2.4.2")
-
-    implementation ("com.gongwen:marqueelibrary:1.1.3") //跑马灯
-
-
+    implementation("com.gongwen:marqueelibrary:1.1.3") //跑马灯
     //glide
-    implementation ("com.github.bumptech.glide:glide:4.12.0")
-    annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
+    implementation("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
 
-        implementation(platform("androidx.compose:compose-bom:2023.03.00"))
-        implementation("androidx.compose.ui:ui")
-        implementation("androidx.compose.ui:ui-graphics")
-        implementation("androidx.compose.ui:ui-tooling-preview")
-        implementation("androidx.compose.material3:material3")
-        implementation("androidx.appcompat:appcompat:1.6.1")
-        implementation("androidx.annotation:annotation:1.7.0")
-        implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-        testImplementation("junit:junit:4.13.2")
-        androidTestImplementation("androidx.test.ext:junit:1.1.5")
-        androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-        androidTestImplementation(platform("androidx.compose:compose-bom:2023.03.00"))
-        androidTestImplementation("androidx.compose.ui:ui-test-junit4")
-        debugImplementation("androidx.compose.ui:ui-tooling")
-        debugImplementation("androidx.compose.ui:ui-test-manifest")
+    implementation(platform("androidx.compose:compose-bom:2023.03.00"))
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.ui:ui-graphics")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    implementation("androidx.compose.material3:material3")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.annotation:annotation:1.7.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation(platform("androidx.compose:compose-bom:2023.03.00"))
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+    debugImplementation("androidx.compose.ui:ui-tooling")
+    debugImplementation("androidx.compose.ui:ui-test-manifest")
 }

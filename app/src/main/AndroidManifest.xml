@@ -15,6 +15,48 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".activity.MultimediaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.HighTechActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.DataStoringActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AnimeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.KotlinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.JavaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.WebAccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.UserInteractionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ImageLoadingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.FourComponentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CommonControlActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.BasicsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.IntentActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.TestActivity"
             android:exported="false" />
         <activity
@@ -24,14 +66,14 @@
             android:name=".activity.DataUsageActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.CardActivity"
-            android:exported="false"
-            android:theme="@style/TranslucentStyle"/>
-        <activity
-            android:name=".activity.MyInformationActivity"
+            android:name=".activity.MyActivity"
             android:exported="false" />
         <activity
-            android:name=".MyActivity"
+            android:name=".activity.CardActivity"
+            android:exported="false"
+            android:theme="@style/TranslucentStyle" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,9 +90,6 @@
         <activity
             android:name=".util.WebViewActivity"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false"></activity>
     </application>
 
 </manifest>

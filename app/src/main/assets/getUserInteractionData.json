@@ -1,0 +1,22 @@
+{
+    "MyRecommendList": [
+      {
+        "title": "Toast",
+        "subTitle": "Toast",
+        "link": "https://blog.csdn.net/chali1314/article/details/124017039",
+        "linkType": "2"
+      },
+      {
+        "title": "Dialog",
+        "subTitle": "Dialog",
+        "link": "https://blog.csdn.net/weixin_44563573/article/details/106839523",
+        "linkType": "2"
+      },
+      {
+        "title": "PopupWindow",
+        "subTitle": "PopupWindow",
+        "link": "https://blog.csdn.net/qq_42420293/article/details/122468623",
+        "linkType": "2"
+      }
+    ]
+}

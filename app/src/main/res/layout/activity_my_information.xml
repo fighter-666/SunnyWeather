@@ -10,10 +10,11 @@
 
     <ImageView
         android:id="@+id/iv_back"
-        android:layout_width="45dp"
+        android:layout_width="20dp"
         android:layout_height="45dp"
+        android:layout_marginStart="345dp"
         android:contentDescription="返回"
-        android:src="@drawable/ic_titlebar_back_black" />
+        android:src="@drawable/ic_message_setting" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"

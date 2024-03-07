@@ -1,0 +1,34 @@
+{
+    "MyRecommendList": [
+      {
+        "title": "四大组件汇总",
+        "subTitle": "四大组件",
+        "link": "https://www.php.cn/faq/498233.html",
+        "linkType": "2"
+      },
+      {
+        "title": "Activity",
+        "subTitle": "Activity",
+        "link": "https://blog.csdn.net/weixin_42182599/article/details/123711619",
+        "linkType": "2"
+      },
+      {
+        "title": "Service",
+        "subTitle": "Service",
+        "link": "https://blog.csdn.net/weixin_42602900/article/details/119650222",
+        "linkType": "2"
+      },
+      {
+        "title": "BroadcastReceiver",
+        "subTitle": "BroadcastReceiver",
+        "link": "https://www.jb51.net/article/256174.htm",
+        "linkType": "2"
+      },
+      {
+        "title": "ContentProvider",
+        "subTitle": "ContentProvider",
+        "link": "https://blog.csdn.net/zenmela2011/article/details/120728504",
+        "linkType": "2"
+      }
+    ]
+}

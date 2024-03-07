@@ -5,6 +5,17 @@
         <item name="cornerSize">50%</item>
     </style>
 
+    <declare-styleable name="CustomTitleBarViewGroup">
+        <attr name="title" format="string" />
+        <attr name="right_title" format="string" />
+        <attr name="back_src" format="reference" />
+        <attr name="right_src" format="reference" />
+        <attr name="imageWidth3" format="dimension" />
+        <attr name="right_imageWidth3" format="dimension" />
+        <attr name="imageHeight3" format="dimension" />
+        <attr name="right_imageHeight3" format="dimension" />
+    </declare-styleable>
+
     <style name="ProgressBar_Mini_blue" parent="@android:style/Widget.ProgressBar.Horizontal">
         <item name="android:maxHeight">50dip</item>
         <item name="android:minHeight">5dip</item>

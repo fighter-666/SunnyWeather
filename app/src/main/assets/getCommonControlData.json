@@ -1,0 +1,22 @@
+{
+    "MyRecommendList": [
+      {
+        "title": "基础UI控件",
+        "subTitle": "基础UI控件",
+        "link": "https://www.jianshu.com/p/98b354afce88",
+        "linkType": "2"
+      },
+      {
+        "title": "ViewPager",
+        "subTitle": "ViewPager",
+        "link": "https://blog.csdn.net/chennai1101/article/details/83094786",
+        "linkType": "2"
+      },
+      {
+        "title": "Fragment",
+        "subTitle": "Fragment",
+        "link": "https://zhuanlan.zhihu.com/p/652005787",
+        "linkType": "2"
+      }
+    ]
+}

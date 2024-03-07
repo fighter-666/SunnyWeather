@@ -14,13 +14,25 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.example.sunnyweather.widget.CommonTitleBar
+    <com.example.sunnyweather.widget.CustomTitleBarViewGroup
         android:id="@+id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        app:custom_title="设置"
-        />
+        android:gravity="center"
+        android:paddingStart="13dp"
+        android:paddingEnd="13dp"
+        android:textColor="#333333"
+        app:back_src="@drawable/arrow_white"
+        app:imageHeight3="16dp"
+        app:imageWidth3="8dp"
+        app:layout_collapseMode="pin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:right_imageHeight3="20dp"
+        app:right_imageWidth3="22dp"
+        app:right_src="@drawable/service"
+        app:title="流量查询" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinator"

@@ -1,0 +1,16 @@
+{
+    "MyRecommendList": [
+      {
+        "title": "入门知识点",
+        "subTitle": "入门知识点",
+        "link": "https://blog.csdn.net/beiye_/article/details/130273891",
+        "linkType": "2"
+      },
+      {
+        "title": "协程",
+        "subTitle": "协程",
+        "link": "https://developer.android.google.cn/kotlin/coroutines?hl=zh-cn",
+        "linkType": "2"
+      }
+    ]
+}

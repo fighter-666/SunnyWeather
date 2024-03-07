@@ -1,0 +1,34 @@
+{
+    "MyRecommendList": [
+      {
+        "title": "webView",
+        "subTitle": "webView",
+        "link": "https://developer.android.google.cn/develop/ui/views/layout/webapps/webview?hl=de",
+        "linkType": "2"
+      },
+      {
+        "title": "网络基础",
+        "subTitle": "网络基础",
+        "link": "https://blog.csdn.net/lizhichao628/article/details/120410369",
+        "linkType": "2"
+      },
+      {
+        "title": "okhttp",
+        "subTitle": "okhttp",
+        "link": "https://blog.51cto.com/zhenchao125/1727020",
+        "linkType": "2"
+      },
+      {
+        "title": "retrofit",
+        "subTitle": "retrofit",
+        "link": "https://blog.csdn.net/xubo667/article/details/126292045",
+        "linkType": "2"
+      },
+      {
+        "title": "数据解析",
+        "subTitle": "数据解析",
+        "link": "https://blog.51cto.com/u_16099303/6867311",
+        "linkType": "2"
+      }
+    ]
+}

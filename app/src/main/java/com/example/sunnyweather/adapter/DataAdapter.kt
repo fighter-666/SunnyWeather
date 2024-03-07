@@ -4,6 +4,7 @@ import com.ct.base.ext.setContent
 import com.example.sunnyweather.base.binding.BaseBindingQuickAdapter
 import com.example.sunnyweather.data.RecommendData
 import com.example.sunnyweather.databinding.ItemRecommendBinding
+import com.example.sunnyweather.util.CommonLinkItem
 
 /**
  * 说明：我的信息-我的勋章适配器
@@ -16,16 +17,16 @@ import com.example.sunnyweather.databinding.ItemRecommendBinding
  * @版本
  * @修改内容
  */
-class RecommendAdapter : BaseBindingQuickAdapter<RecommendData.MyRecommendListBean, ItemRecommendBinding>(){
+class DataAdapter : BaseBindingQuickAdapter<RecommendData.MyRecommendListBean, ItemRecommendBinding>(){
 
     override fun convert(helper: BaseBindingHolder, item: RecommendData.MyRecommendListBean) {
         helper.getViewBinding<ItemRecommendBinding>().apply {
             item.run {
                 tvTitle.setContent(title)
                 tvSubTitle.setContent(subTitle)
-                /*llBase.setOnClickListener {
+                llBase.setOnClickListener {
                     CommonLinkItem.goTarget(link, linkType, mContext)
-                }*/
+                }
             }
         }
     }

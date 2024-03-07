@@ -1,0 +1,22 @@
+{
+    "MyRecommendList": [
+      {
+        "title": "常规动画",
+        "subTitle": "常规动画",
+        "link": "https://blog.csdn.net/qq_29848853/article/details/131355185",
+        "linkType": "2"
+      },
+      {
+        "title": "属性动画",
+        "subTitle": "属性动画",
+        "link": "https://blog.csdn.net/weixin_53431933/article/details/126044835",
+        "linkType": "2"
+      },
+      {
+        "title": "转场动画",
+        "subTitle": "转场动画",
+        "link": "https://blog.csdn.net/DgboSql/article/details/132957096",
+        "linkType": "2"
+      }
+    ]
+}

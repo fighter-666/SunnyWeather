@@ -1,0 +1,10 @@
+{
+    "MyRecommendList": [
+      {
+        "title": "开发环境",
+        "subTitle": "Android Studio相关",
+        "link": "https://developer.android.google.cn/topic/arc/development-environment?hl=zh-cn",
+        "linkType": "2"
+      }
+    ]
+}

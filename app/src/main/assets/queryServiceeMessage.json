@@ -5,7 +5,7 @@
       "linkType": "",
       "link": "",
       "oneLevelMsgId": "5",
-      "redDotMsgNum": "",
+      "redDotMsgNum": "5",
       "messageCardList": [
         {
           "cardTypeInfo": {
@@ -44,19 +44,19 @@
               "endTime": ""
             },
             {
-              "title": "内容1-2",
+              "title": "打电话",
               "content": "内容2-2",
               "subtitle": "内容3-2",
               "styleType": "2",
-              "type": "1",
-              "phoneNum": "",
+              "type": "2",
+              "phoneNum": "10086",
               "link": "https://www.189.cn/?utm_scha=utm_ch-010001002009.utm_sch-hg_xxzx_fwxx-2-500090500001.utm_af-1000000037.utm_as-1951900164.utm_sd1-default",
               "linkType": "2",
               "provinceCode": "600105",
               "sceneId": null,
               "recommender": null,
-              "startTime": "",
-              "endTime": ""
+              "startTime": "00:00",
+              "endTime": "23:59"
             },
             {
               "title": "内容1-3",

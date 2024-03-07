@@ -17,9 +17,6 @@ import java.util.Random
 import kotlin.math.abs
 
 
-interface OnScratchTouchListener {
-    fun onScratch()
-}
 
 class ScratchCardView : View {
     private lateinit var mBitmapBackground: Bitmap
@@ -41,8 +38,6 @@ class ScratchCardView : View {
     private var showFullResult = false
     private var scaleWidth: Float = 0f
     private var scaleHeight: Float = 0f
-    var number: Int = 0
-    var onScratchTouchListener: OnScratchTouchListener? = null
 
 
     constructor(context: Context?) : super(context) {
@@ -140,9 +135,6 @@ class ScratchCardView : View {
                 path.moveTo(event.x - mBitmapFrontWidth, event.y - mBitmapFrontHeight) //原点移动至手指的触摸点
                 startX = event.x
                 startY = event.y
-                // 通知外部发生了触摸
-                onScratchTouchListener?.onScratch()
-
             }
 
             MotionEvent.ACTION_MOVE -> {
@@ -228,10 +220,5 @@ class ScratchCardView : View {
 
         // 得到新的图片
         return Bitmap.createBitmap(bm, 0, 0, width, height, matrix, true)
-    }
-
-    // 添加重新再刮一次的方法
-    fun resetScratchCard() {
-        invalidate()
     }
 }

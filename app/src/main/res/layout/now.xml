@@ -17,6 +17,14 @@
             android:layout_height="30dp"
             android:layout_marginStart="15dp"
             android:layout_gravity="center_vertical"
+            android:background="@drawable/ic_sunny" />
+
+        <Button
+            android:id="@+id/navHome"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="355dp"
+            android:layout_gravity="center_vertical"
             android:background="@drawable/ic_home" />
 
         <TextView
