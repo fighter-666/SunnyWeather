@@ -10,13 +10,6 @@ import com.example.sunnyweather.databinding.ItemMineInformationAccountInfoBindin
 /**
  * 说明：我的信息-我的账户信息列表适配器
  *
- * @作者 luohao
- * @创建时间 2024/2/21 09:54
- * @版本 11.2.0
- * @------修改记录-------
- * @修改人
- * @版本
- * @修改内容
  */
 
 class AccountInformationAdapter : BaseBindingQuickAdapter<AccountInformationListBean, ItemMineInformationAccountInfoBinding>(){

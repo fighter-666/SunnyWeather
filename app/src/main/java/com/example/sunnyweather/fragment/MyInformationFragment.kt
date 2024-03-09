@@ -31,13 +31,6 @@ import com.gyf.immersionbar.ImmersionBar
 /**
  * 说明：我的信息
  *
- * @作者 luohao
- * @创建时间 2024/2/21 09:54
- * @版本 11.2.0
- * @------修改记录-------
- * @修改人
- * @版本
- * @修改内容
  */
 class MyInformationFragment : BaseBindingFragment<ActivityMyInformationBinding>() {
     private var mReceiver: MyReceiver? = null
@@ -67,10 +60,10 @@ class MyInformationFragment : BaseBindingFragment<ActivityMyInformationBinding>(
 
     private fun initView() {
         binding.run {
-            ivBack.layoutParams.apply {
+          /*  ivBack.layoutParams.apply {
                 this as MarginLayoutParams
-                //topMargin = UtilView.getStatusBarHeight()
-            }
+                topMargin = UtilView.getStatusBarHeight()
+            }*/
             ivBack.setOnClickListener {
                 val intent = Intent(requireContext(), com.example.sunnyweather.activity.MyActivity::class.java)
                 requireContext().startActivity(intent)
@@ -202,7 +195,7 @@ class MyInformationFragment : BaseBindingFragment<ActivityMyInformationBinding>(
 
     fun loadUserInfo() {
         UtilText.setText(binding.tvName, "吴道满", "您好!")
-        UtilBitmap.setImageBitmap(requireContext(), binding.ivAvatar, UtilBitmap.getloadlBitmap("https://image.baidu.com/search/albumsdetail?tn=albumsdetail&word=蛋糕&fr=albumslist&album_tab=人物&album_id=43&rn=30", 100, 100), R.drawable.ic_mine_avatar_default, true)
+        UtilBitmap.setImageBitmap(requireContext(), binding.ivAvatar, UtilBitmap.getloadlBitmap("https://w.189.cn/bigdata/2023/1/10/111654674164033852.png", 100, 100), R.drawable.ic_mine_avatar_default, true)
     }
 
     private inner class MyReceiver : BroadcastReceiver() {

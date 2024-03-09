@@ -64,7 +64,5 @@ class AnimeActivity : BaseBindingActivity<ActivityIntentBinding>() {
                 )
             )
         }
-
-
     }
 }

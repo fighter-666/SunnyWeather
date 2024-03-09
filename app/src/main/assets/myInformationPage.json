@@ -215,9 +215,17 @@
         },
         "userInformation": {
             "electronicSignature": "string",
-            "headImagePendantIcon": "string",
+            "headImagePendantIcon": "https://w.189.cn/bigdata/2023/1/10/111654674164033852.png",
             "signatureTemplateList": [
-                "string"
+                "string",
+                "string2",
+                "string3",
+                "string4",
+                "string5",
+                "string6",
+                "string7",
+                "string8",
+                "string9"
             ]
         },
         "userInformationAdList": [

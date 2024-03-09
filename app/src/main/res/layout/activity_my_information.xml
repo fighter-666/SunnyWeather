@@ -20,7 +20,6 @@
             android:layout_width="20dp"
             android:layout_height="45dp"
             android:layout_marginStart="15dp"
-            android:contentDescription="返回"
             android:src="@drawable/ic_scan" />
 
         <ImageView
@@ -28,7 +27,6 @@
             android:layout_width="20dp"
             android:layout_height="45dp"
             android:layout_marginStart="325dp"
-            android:contentDescription="返回"
             android:src="@drawable/ic_message_setting" />
 
     </LinearLayout>

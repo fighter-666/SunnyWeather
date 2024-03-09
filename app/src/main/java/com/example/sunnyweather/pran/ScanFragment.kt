@@ -13,17 +13,12 @@ import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.blankj.utilcode.util.ActivityUtils
 import com.example.sunnyweather.R
 import com.example.sunnyweather.SunnyWeatherApplication
-import com.example.sunnyweather.base.binding.BaseBindingFragment
-import com.example.sunnyweather.databinding.FragmentComponentsBinding
 import com.example.sunnyweather.databinding.FragmentPRanScanBinding
 import com.example.sunnyweather.util.CommonLinkItem
 import com.example.sunnyweather.util.MyToastD
-import com.example.sunnyweather.util.UtilText
 import com.example.sunnyweather.widget.Log
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.Result
@@ -37,165 +32,159 @@ import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
-import org.json.JSONObject
 import java.io.IOException
-import java.nio.charset.StandardCharsets
 import java.util.concurrent.TimeUnit
 
 /**
- * 描述　: 扫一扫
+ * 扫一扫Fragment，用于处理二维码扫描功能。
  */
-
 class ScanFragment : Fragment(),
     OnScannerCompletionListener, SensorEventListener {
+    // 使用lateinit延迟初始化Fragment的视图绑定。
     private lateinit var binding: FragmentPRanScanBinding
 
+    // 传感器管理器对象，用于访问设备传感器。
+    private var mSensorManager: SensorManager? = null
+
+    // 光线传感器对象。
+    private var mSensor: Sensor? = null
+
+    // 用于定时提示扫描二维码的Disposable对象。
+    private var scanTipDisposable: Disposable? = null
+
+    // 标记扫描是否初始化了，用于控制是否显示“屏幕内未识别到二维码”的提示。
+    private var scanInit = false
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?,
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?,
     ): View {
+        // 初始化视图绑定。
         binding = FragmentPRanScanBinding.inflate(inflater, container, false)
         return binding.root
     }
 
-
-
-    //传感器管理器对象
-    private var mSensorManager: SensorManager? = null
-
-    private var mSensor: Sensor? = null
-
-    private var scanTipDisposable: Disposable? = null
-
-    /**
-     * 扫描是否初始化了，初始化了才会显示屏幕内没有二维码
-     */
-    private var scanInit = false
-
-
-    override fun onDestroyView() {
-        binding.scannerView.toggleLight(false)
-        super.onDestroyView()
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //UtilOperationRecord.scan()
+        //沉浸式
+        ImmersionBar.with(this)
+            .transparentStatusBar()  //透明状态栏，不写默认透明色
+            .init()
+        // 初始化扫描视图和传感器管理器。
         initScannerView()
         initSensorManager()
+
+        // 创建并启动一个定时器，定期提示用户扫描二维码。
         scanTipDisposable?.dispose()
-        scanTipDisposable = Observable.interval(10, TimeUnit.SECONDS).subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread()).subscribe {
+        scanTipDisposable = Observable.interval(10, TimeUnit.SECONDS)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe {
                 if (scanInit) {
                     MyToastD.show("屏幕内未识别到二维码")
                 }
             }
     }
 
-
-    override fun onDestroy() {
-        super.onDestroy()
-        mSensorManager?.unregisterListener(this)
-        scanTipDisposable?.dispose()
+    override fun onDestroyView() {
+        // 在视图销毁时关闭手电筒。
+        binding.scannerView.toggleLight(false)
+        super.onDestroyView()
     }
 
+    override fun onDestroy() {
+        // 在Fragment销毁时注销传感器监听器并取消定时器。
+        mSensorManager?.unregisterListener(this)
+        scanTipDisposable?.dispose()
+        super.onDestroy()
+    }
+
+    /**
+     * 初始化传感器管理器，用于获取光线传感器。
+     */
     private fun initSensorManager() {
-        mSensorManager = SunnyWeatherApplication.context.getSystemService(Context.SENSOR_SERVICE) as SensorManager
+        mSensorManager =
+            SunnyWeatherApplication.context.getSystemService(Context.SENSOR_SERVICE) as SensorManager
         mSensor = mSensorManager?.getDefaultSensor(Sensor.TYPE_LIGHT)
     }
 
-    public fun decodeQR(originalUri: Uri) {
-        if (originalUri != null) {
-            try {
-                val photo = MediaStore.Images.Media.getBitmap(
-                    SunnyWeatherApplication.context.contentResolver, originalUri
-                )
-                QRDecode.decodeQR(photo, this)
-            } catch (e: IOException) {
-                e.printStackTrace()
-            }
+    /**
+     * 处理从图库选择的图片，尝试解码二维码。
+     */
+    fun decodeQR(originalUri: Uri) {
+        try {
+            val photo = MediaStore.Images.Media.getBitmap(
+                SunnyWeatherApplication.context.contentResolver, originalUri
+            )
+            QRDecode.decodeQR(photo, this)
+        } catch (e: IOException) {
+            e.printStackTrace()
         }
     }
 
+    /**
+     * 初始化扫描视图的配置。
+     */
     private fun initScannerView() {
         binding.scannerView.setOnScannerCompletionListener(this)
         val builder = ScannerOptions.Builder()
-        builder.setFrameStrokeColor(Color.RED).setFrameStrokeWidth(1.5f)
-            .setMediaResId(R.raw.scan_succ_music)
-            //                .setFrameSize(256, 256)
-            //                .setFrameCornerLength(22)
-            //                .setFrameCornerWidth(2)
-            //                .setFrameCornerColor(0xff06c1ae)
-            //                .setFrameCornerInside(true)
-            //                .setLaserLineColor(0xff06c1ae)
-            //                .setLaserLineHeight(18)
-            .setLaserStyle(ScannerOptions.LaserStyle.RES_LINE, R.drawable.scan_line)
-            //                .setLaserStyle(ScannerOptions.LaserStyle.RES_GRID, R.mipmap.zfb_grid_scan_line)//网格图
-            //                .setFrameCornerColor(0xFF26CEFF)//支付宝颜色
-            .setScanFullScreen(true).setFrameHide(true).setTipText("")
-            //                .setFrameCornerHide(false)
-            //                .setLaserMoveFullScreen(false)
-            //                .setViewfinderCallback((view, canvas, frame) -> {
-            //                    Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
-            //                    canvas.drawBitmap(bmp, frame.right / 2, frame.top - bmp.getHeight(), null);
-            //                })
-            .setScanMode(BarcodeFormat.QR_CODE).setTipTextSize(14)
+            .setFrameStrokeColor(Color.RED) // 设置扫描框边框颜色
+            .setFrameStrokeColor(Color.RED) // 设置扫描框边框颜色
+            .setFrameStrokeWidth(1.5f) // 设置扫描框边框宽度
+            .setLaserStyle(ScannerOptions.LaserStyle.RES_LINE, R.drawable.scan_line) // 设置扫描线样式
+            .setScanFullScreen(true) // 设置全屏扫描
+            .setFrameHide(true) // 隐藏扫描框
+            .setTipText("") // 设置扫描提示文本
+            .setScanMode(BarcodeFormat.QR_CODE) // 设置扫描模式为二维码
+            .setTipTextSize(14) // 设置提示文本大小
         binding.scannerView.setScannerOptions(builder.build())
-        scanInit = true
+        scanInit = true // 标记扫描已初始化
     }
 
     override fun onResume() {
-        binding.scannerView.onResume()
         super.onResume()
-        //为加速度传感器注册监听器
+        binding.scannerView.onResume() // 恢复扫描视图
+        // 为光线传感器注册监听器
         mSensorManager?.registerListener(this, mSensor, SensorManager.SENSOR_DELAY_GAME)
-//        MainScope().launch {
-//            delay(10000)
-//            // 注册光线感应监听，第二个参数：传感器对象 光线传感器类型的常量：TYPE_LIGHT 第三个参数：传感器数据的频率
-//            sensorManager.registerListener(
-//                this@ScanFragment,
-//                sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT),
-//                SensorManager.SENSOR_DELAY_GAME
-//            )
-//        }
     }
 
     override fun onPause() {
-        binding.scannerView.onPause()
+        binding.scannerView.onPause() // 暂停扫描视图
         super.onPause()
     }
 
     /**
-     * 扫描结果
+     * 扫描结果回调方法。
      */
     override fun onScannerCompletion(
-        rawResult: Result?, parsedResult: ParsedResult?, barcode: Bitmap?
+        rawResult: Result?, parsedResult: ParsedResult?, barcode: Bitmap?,
     ) {
         try {
-            val result = RecodeUtils.recode(rawResult?.text)
-            if (result != null){
-                    val item = CommonLinkItem()
-                    item.linkType = "2"
-                    item.link = result
-                    item.goTarget(requireContext())
+            val result = rawResult?.text // 获取扫描结果文本
+            if (result != null) {
+                val item = CommonLinkItem()
+                item.linkType = "2"
+                item.link = result
+                item.goTarget(requireContext()) // 处理扫描结果
             }
-
         } catch (e: Exception) {
             LogUtils.e("扫描结果")
             MyToastD.show("屏幕内未识别到二维码")
-            binding.scannerView.restartPreviewAfterDelay(3000)
+            binding.scannerView.restartPreviewAfterDelay(3000) // 3秒后重启预览
         }
     }
 
     /**
-     *  当传感器的值，发生变化时，回调的方法
+     * 当传感器的值发生变化时回调的方法。
+     * onSensorChanged(event: SensorEvent) 方法是传感器事件监听器的回调方法，当传感器数值发生变化时会被调用。
+     *
+     * event.values 是一个浮点数数组，表示传感器当前的数值。不同传感器的数值含义不同，在这个例子中，我们关注的是光线传感器的数值。
+     *
+     * event.sensor.type 获取当前传感器的类型，通过和 Sensor.TYPE_LIGHT 进行比较判断是否为光线传感器。
+     *
+     * 如果传感器类型是光线传感器 (Sensor.TYPE_LIGHT)，则判断光线的强度是否小于 10。如果是，则显示一个提示消息，告知用户光线太暗，请开启手电筒。
      */
     override fun onSensorChanged(event: SensorEvent) {
-        //获取传感器的值
         val values = event.values
-        //获取传感器类型
         val sensorType = event.sensor.type
         if (sensorType == Sensor.TYPE_LIGHT) {
             Log.i("onSensorChanged", values[0].toString())
@@ -205,13 +194,14 @@ class ScanFragment : Fragment(),
         }
     }
 
-    //当传感器的精度，发生变化时，回调的方法
+    // 当传感器精度发生变化时回调的方法，此处未使用。
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
     }
 
+    /**
+     * 控制手电筒的开关。
+     */
     fun toggleLight(openLight: Boolean) {
         binding.scannerView.toggleLight(openLight)
     }
-
-
 }

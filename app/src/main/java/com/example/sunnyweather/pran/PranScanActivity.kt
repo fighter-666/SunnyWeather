@@ -5,7 +5,6 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.blankj.utilcode.util.BarUtils
 import com.blankj.utilcode.util.FragmentUtils
 import com.example.sunnyweather.R
 import com.example.sunnyweather.databinding.ActivityPRanScanBinding
@@ -30,8 +29,10 @@ class PranScanActivity : AppCompatActivity() {
         // 初始化binding对象，用于访问布局中的视图。
         binding = ActivityPRanScanBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        // 设置状态栏为暗色模式。
-        BarUtils.setStatusBarLightMode(this, false)
+        //沉浸式
+        ImmersionBar.with(this)
+            .transparentStatusBar()  //透明状态栏，不写默认透明色
+            .init()
 
         // 设置标题栏的返回按钮点击事件，点击时结束当前Activity。
         binding.run {

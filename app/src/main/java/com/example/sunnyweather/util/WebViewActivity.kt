@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
-import com.example.sunnyweather.R
 import com.example.sunnyweather.databinding.ActivityWebviewBinding
 
 class WebViewActivity : AppCompatActivity() {
@@ -14,6 +13,8 @@ class WebViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityWebviewBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
         val url = intent.getStringExtra("url") ?: "http://www.baidu.com"
         binding.webView.loadUrl(url)
         //binding.webView.settings.javaScriptEnabled = true
