@@ -13,6 +13,9 @@ import com.example.sunnyweather.adapter.MySettingAdapter
 import com.example.sunnyweather.base.binding.BaseBindingActivity
 import com.example.sunnyweather.data.MySettingData
 import com.example.sunnyweather.databinding.FragmentMyBinding
+import com.example.sunnyweather.pran.Camera2Activity
+import com.example.sunnyweather.pran.CameraActivity
+import com.example.sunnyweather.pran.PranScanActivity
 import com.example.sunnyweather.widget.Log
 import com.google.gson.Gson
 import com.gyf.immersionbar.ImmersionBar
@@ -84,17 +87,20 @@ class MyActivity : BaseBindingActivity<FragmentMyBinding>() {
                     }
 
                     1 -> {
-                        val intent = Intent(context, TestActivity::class.java)
+                        //val intent = Intent(context, TestActivity::class.java)
+                        val intent = Intent(context, Camera2Activity::class.java)
                         startActivity(intent)
                     }
 
                     2 -> {
-                        val intent = Intent(context, HotListActivity::class.java)
+                        //val intent = Intent(context, HotListActivity::class.java)
+                        val intent = Intent(context, PranScanActivity::class.java)
                         startActivity(intent)
                     }
 
                     3 -> {
-                        val intent = Intent(context, DataUsageActivity::class.java)
+                        //val intent = Intent(context, DataUsageActivity::class.java)
+                        val intent = Intent(context, CameraActivity::class.java)
                         startActivity(intent)
                     }
                 }

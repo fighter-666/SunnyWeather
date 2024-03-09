@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/black">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.sunnyweather.pran.TitleBar
+        android:id="@+id/tb_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ivTitleBarLeft="@drawable/icon_p_scan_back"
+        app:ivTitleBarRight="@drawable/icon_p_scan_picture"
+        app:rlTitleBarBackgroundColor="@color/transparent"
+        app:tvTitleBarTitle="扫一扫"
+        app:tvTitleColor="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_scan_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_124"
+        android:text="识别翼相连二维码"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp_16" />
+
+    <CheckBox
+        android:id="@+id/cb_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_55"
+        android:background="@drawable/btn_scan_flashlight"
+        android:button="@null" />
+
+</RelativeLayout>

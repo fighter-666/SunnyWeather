@@ -25,9 +25,6 @@ class SunnyFragment : Fragment() {
             .statusBarDarkFont(true) //状态栏字体是深色，不写默认为亮色
             .init()
         return binding.root
-
-
-
     }
 
 

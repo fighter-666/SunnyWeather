@@ -19,6 +19,7 @@ import com.example.sunnyweather.base.binding.BaseBindingFragment
 import com.example.sunnyweather.data.CompoundAdItem
 import com.example.sunnyweather.data.MyInformationPageData
 import com.example.sunnyweather.databinding.ActivityMyInformationBinding
+import com.example.sunnyweather.pran.PranScanActivity
 import com.example.sunnyweather.util.GetScreenUtils
 import com.example.sunnyweather.util.UtilBitmap
 import com.example.sunnyweather.util.UtilGlide
@@ -44,7 +45,7 @@ class MyInformationFragment : BaseBindingFragment<ActivityMyInformationBinding>(
     private var mUserInformationAdList = ArrayList<CompoundAdItem>()
     override fun lazyInit() {
         ImmersionBar.with(this)
-            .titleBar(binding.ivBack)    //解决状态栏和布局重叠问题，任选其一
+            .titleBar(binding.llTitle)    //解决状态栏和布局重叠问题，任选其一
             .statusBarDarkFont(true).init()
         initView()
         initBroadcastReceiver()
@@ -72,6 +73,10 @@ class MyInformationFragment : BaseBindingFragment<ActivityMyInformationBinding>(
             }
             ivBack.setOnClickListener {
                 val intent = Intent(requireContext(), com.example.sunnyweather.activity.MyActivity::class.java)
+                requireContext().startActivity(intent)
+            }
+            ivScan.setOnClickListener {
+                val intent = Intent(requireContext(), PranScanActivity::class.java)
                 requireContext().startActivity(intent)
             }
             rlAvatar.setOnClickListener {

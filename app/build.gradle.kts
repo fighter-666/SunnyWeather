@@ -81,6 +81,12 @@ dependencies {
     annotationProcessor("androidx.room:room-compiler:2.4.2")
     kapt("androidx.room:room-compiler:2.4.2")
     implementation("com.gongwen:marqueelibrary:1.1.3") //跑马灯
+    implementation ("com.mylhyl:zxingscanner:2.1.6")
+    //implementation ("com.mylhyl:zxingscanner:2.2.0")//二维码
+    implementation ("io.reactivex.rxjava2:rxjava:2.2.2")     // Rx
+    implementation ("io.reactivex.rxjava2:rxandroid:2.0.1")
+    //implementation ("com.blankj:utilcode:1.31.1")
+    implementation ("com.blankj:utilcode:1.30.7")//工具类
     //glide
     implementation("com.github.bumptech.glide:glide:4.12.0")
     annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")

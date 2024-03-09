@@ -5,6 +5,29 @@
         <item name="cornerSize">50%</item>
     </style>
 
+    <declare-styleable name="TitleBar">
+        <attr name="ivTitleBarLeft" format="integer" />
+        <attr name="tvTitleBarTitle" format="string" />
+        <attr name="tvTitleColor" format="color" />
+        <attr name="tvTitleRightColor" format="color" />
+        <attr name="ivTitleBarRight" format="integer" />
+        <attr name="tvTitleBarRightBarBackground" format="integer" />
+        <attr name="rlTitleBarBackground" format="integer" />
+        <attr name="rlTitleBarBackgroundColor" format="integer" />
+        <attr name="titleBarHeight" format="dimension" />
+        <attr name="tvTitleBarRight" format="string" />
+        <attr name="tvTitleBarRightDrawables" format="integer" />
+        <attr name="ivMsg" format="boolean" />
+        <attr name="tvTrafficRecords" format="boolean" />
+        <attr name="ivName" format="boolean" />
+        <attr name="ivTitle" format="boolean" />
+        <attr name="ivMenu" format="boolean" />
+        <attr name="rlFab" format="boolean" />
+        <attr name="llCollection" format="boolean" />
+        <attr name="btnQuestion" format="boolean" />
+        <attr name="ivClose" format="boolean" />
+    </declare-styleable>
+
     <declare-styleable name="CustomTitleBarViewGroup">
         <attr name="title" format="string" />
         <attr name="right_title" format="string" />
