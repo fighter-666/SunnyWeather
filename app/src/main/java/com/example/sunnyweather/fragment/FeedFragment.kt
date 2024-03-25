@@ -195,7 +195,5 @@ class FeedFragment : BaseBindingFragment<FragmentFeedBinding>() {
                 adapter = waterfallAdapter
             }
         }
-
     }
-
 }

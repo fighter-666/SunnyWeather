@@ -12,8 +12,8 @@ import com.example.sunnyweather.fragment.SunnyFragment
 class DynamicFragmentAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
     FragmentStateAdapter(fragmentManager, lifecycle) {
     private val fragments = listOf(
-        SunnyFragment(),
         KnowladgeFragment(),
+        SunnyFragment(),
         NewsFragment(),
         MyInformationFragment(),
         //加载更多的 Fragment 实例

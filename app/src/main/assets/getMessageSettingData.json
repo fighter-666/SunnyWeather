@@ -1,0 +1,28 @@
+{
+  "MyRecommendList": [
+    {
+      "title": "抽奖",
+      "subTitle": "翻卡  刮刮卡",
+      "link": "https://blog.csdn.net/beiye_/article/details/130273891",
+      "linkType": "2"
+    },
+    {
+      "title": "流量查询",
+      "subTitle": "流量查询",
+      "link": "https://developer.android.google.cn/kotlin/coroutines?hl=zh-cn",
+      "linkType": "2"
+    },
+    {
+      "title": "热门推荐",
+      "subTitle": "热门推荐",
+      "link": "https://developer.android.google.cn/kotlin/coroutines?hl=zh-cn",
+      "linkType": "2"
+    },
+    {
+      "title": "折线图",
+      "subTitle": "折线图",
+      "link": "https://developer.android.google.cn/kotlin/coroutines?hl=zh-cn",
+      "linkType": "2"
+    }
+  ]
+}

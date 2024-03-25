@@ -87,6 +87,7 @@ dependencies {
     implementation ("io.reactivex.rxjava2:rxandroid:2.0.1")
     //implementation ("com.blankj:utilcode:1.31.1")
     implementation ("com.blankj:utilcode:1.30.7")//工具类
+    implementation ("com.github.PhilJay:MPAndroidChart:v3.0.3")//折线图
     //glide
     implementation("com.github.bumptech.glide:glide:4.12.0")
     annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")

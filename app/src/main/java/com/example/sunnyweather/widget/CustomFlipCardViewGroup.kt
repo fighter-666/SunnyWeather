@@ -7,6 +7,8 @@ import android.graphics.Canvas
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
+import androidx.core.util.Pair
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.ActivityOptionsCompat
@@ -166,7 +168,7 @@ class CustomFlipCardViewGroup : ConstraintLayout {
             myActivityLauncher.launch(intent, options)
         }
 
-     /*   //第二张卡片的点击事件
+        //第二张卡片的点击事件
           binding.ivSecondCard.setOnClickListener {
               val intent = Intent(getContext(), CardActivity::class.java)
 
@@ -200,6 +202,6 @@ class CustomFlipCardViewGroup : ConstraintLayout {
 
               // 启动活动并应用转场动画
               myActivityLauncher3.launch(intent, options)
-          }*/
+          }
     }
 }

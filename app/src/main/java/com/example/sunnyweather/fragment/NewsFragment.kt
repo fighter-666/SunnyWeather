@@ -17,6 +17,7 @@ import com.ct.client.message.adapter.ServiceMessageAdapter
 import com.example.sunnyweather.R
 import com.example.sunnyweather.SunnyWeatherApplication
 import com.example.sunnyweather.activity.MessageAllServiceActivity
+import com.example.sunnyweather.activity.MessageSettingActivity
 import com.example.sunnyweather.adapter.DynamicFragmentAdapter
 import com.example.sunnyweather.adapter.FragmentStateAdapter2
 import com.example.sunnyweather.adapter.MarketMessageAdapter
@@ -205,6 +206,11 @@ class NewsFragment : BaseBindingFragment<FragmentNewsBinding>() {
 
     private fun initListener() {
         binding.run {
+            ivMessageSetting.setOnClickListener {
+                val intent = Intent(requireContext(), MessageSettingActivity::class.java)
+                requireContext().startActivity(intent)
+            }
+
             // 下拉刷新
             smartRefreshLayout.setOnRefreshLoadMoreListener(object : OnRefreshLoadMoreListener {
                 override fun onLoadMore(refreshLayout: RefreshLayout) {
